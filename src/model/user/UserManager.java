@@ -21,7 +21,7 @@ public class UserManager extends BasePersistence<User> {
 		return add(user);
 	}
 
-	public boolean updateProduct(User user) {
+	public boolean updateUser(User user) {
 		if (user != null) {
 			updateById(user);
 			return true;
