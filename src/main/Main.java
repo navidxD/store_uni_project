@@ -10,6 +10,7 @@ import model.product.Inventory;
 public class Main {
 	
 	public static void main(String[] args) {
+		System.out.println("--Inicio del programa--");
 		StoreController storeController = new StoreController();
 		storeController.init();
 	}
