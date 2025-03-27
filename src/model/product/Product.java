@@ -24,12 +24,17 @@ public class Product extends BaseModel {
         this.price = price;
     }
 
-	protected String getName() {
+    public String getName() {
 		return name;
 	}
 
-	protected void setName(String name) {
+    public void setName(String name) {
 		this.name = name;
+	}
+
+	@Override
+	public String toString() {
+		return "[productId=" + productId + ", name=" + name + ", price=" + price + "]";
 	}
     
     

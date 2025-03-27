@@ -10,12 +10,12 @@ public class ProductManager extends BasePersistence<Product> {
 	public void init() {
 	}
 	
-	public boolean createProduct(String name, double price) {
+	public boolean createProduct(Product p) {
 		Product product = new Product();
 		
 		product.setProductId(getIdProduct());
-		product.setPrice(price);
-		product.setName(name);
+		product.setPrice(p.getPrice());
+		product.setName(p.getName());
 		
 		return add(product);
 	}

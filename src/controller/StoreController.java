@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JFrame;
 
 import model.cart.CartManager;
+import model.product.Product;
 import model.product.ProductManager;
 import model.user.UserManager;
 import view.MenuView;
@@ -21,6 +22,10 @@ public class StoreController {
 			if (cmd == ViewControllerListener.CMD_INVENTORY) {
 				dismissAllView();
 				showProductMenu();
+			}
+			if (cmd == ViewControllerListener.CMD_INVENTORY_ADD) {
+				inventory.createProduct(productView.getProductFromForm());
+				productView.updateListProduct(inventory.getAll());
 			}
 			
 			if (cmd == ViewControllerListener.CMD_MENU) {
@@ -45,7 +50,7 @@ public class StoreController {
 	}
 	
 	private void showMainMenu() {
-		if (menuView != null) {
+		if (menuView == null) {
 			menuView = new MenuView();
 		}
 		menuView.setViewControllerListener(viewControllerListener);
@@ -53,7 +58,7 @@ public class StoreController {
 	}
 	
 	private void showProductMenu() {
-		if (productView != null) {
+		if (productView == null) {
 			productView = new ProductView();
 		}
 		productView.setViewControllerListener(viewControllerListener);
