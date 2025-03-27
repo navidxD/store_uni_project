@@ -29,7 +29,7 @@ public class CartManager extends BasePersistence<Cart> {
         if (quantity <= 0) {
             throw new IllegalArgumentException("Quantity must be greater than 0");
         }
-        
+
         for (int i = 0; i < quantity; i++) {
             this.cart.getProducts().add(product);
         }
@@ -40,7 +40,7 @@ public class CartManager extends BasePersistence<Cart> {
         if (product == null) {
             throw new IllegalArgumentException("Product cannot be null");
         }
-        
+
         int currentQuantity = productQuantities.getOrDefault(product, 0);
         if (currentQuantity < quantity) {
             throw new IllegalArgumentException("Cannot remove more items than exist in cart");
@@ -49,7 +49,7 @@ public class CartManager extends BasePersistence<Cart> {
         for (int i = 0; i < quantity; i++) {
             this.cart.getProducts().remove(product);
         }
-        
+
         if (currentQuantity == quantity) {
             productQuantities.remove(product);
         } else {

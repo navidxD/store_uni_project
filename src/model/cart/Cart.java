@@ -26,18 +26,22 @@ public class Cart extends BaseModel {
 		this.products = products;
 		updateTotalPrice();  // Update total when products change
 	}
-	public boolean isCheckout() {
-		return checkout;
-	}
-	public void setCheckout(boolean checkout) {
-		this.checkout = checkout;
+
+	public double calculateTotal() {
+		double total = 0;
+
+		for (Product p : products) {
+			total = total + p.getPrice();
+		}
+
+		return total;
 	}
 	public double getTotalPrice() {
 		return totalPrice;
 	}
-	
+
 	private void updateTotalPrice() {
-		this.totalPrice = products != null ? 
+		this.totalPrice = products != null ?
 			products.stream()
 				.mapToDouble(Product::getPrice)
 				.sum() : 0.0;

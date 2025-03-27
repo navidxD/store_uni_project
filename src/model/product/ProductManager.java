@@ -2,7 +2,7 @@ package model.product;
 
 import model.base.BasePersistence;
 
-public class Inventory extends BasePersistence<Product> {
+public class ProductManager extends BasePersistence<Product> {
 	
 	private static int BASE_ID = 1;
 
@@ -10,12 +10,12 @@ public class Inventory extends BasePersistence<Product> {
 	public void init() {
 	}
 	
-	public boolean createProduct(String name, double price) {
+	public boolean createProduct(Product p) {
 		Product product = new Product();
 		
 		product.setProductId(getIdProduct());
-		product.setPrice(price);
-		product.setName(name);
+		product.setPrice(p.getPrice());
+		product.setName(p.getName());
 		
 		return add(product);
 	}
@@ -23,6 +23,14 @@ public class Inventory extends BasePersistence<Product> {
 	public boolean updateProduct(Product product) {
 		if (product != null) {
 			updateById(product);
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean deleteProduct(Product product) {
+		if (product != null) {
+			deleteById(product.getId());
 			return true;
 		}
 		return false;
