@@ -11,6 +11,7 @@ public class Cart extends BaseModel {
 	private User user;
 	private ArrayList<Product> products;
 	private boolean checkout;
+	private double totalPrice;  // New field for accumulated prices
 	
 	public User getUser() {
 		return user;
@@ -23,6 +24,7 @@ public class Cart extends BaseModel {
 	}
 	public void setProducts(ArrayList<Product> products) {
 		this.products = products;
+		updateTotalPrice();  // Update total when products change
 	}
 	public boolean isCheckout() {
 		return checkout;
@@ -30,7 +32,14 @@ public class Cart extends BaseModel {
 	public void setCheckout(boolean checkout) {
 		this.checkout = checkout;
 	}
+	public double getTotalPrice() {
+		return totalPrice;
+	}
 	
-	
-	
+	private void updateTotalPrice() {
+		this.totalPrice = products != null ? 
+			products.stream()
+				.mapToDouble(Product::getPrice)
+				.sum() : 0.0;
+	}
 }
