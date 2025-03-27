@@ -17,14 +17,14 @@ public abstract class BasePersistence<T extends BaseModel> {
 	protected boolean add(T model) {
 		model.id = Integer.toString(getIdModel());
 		
-		return models.add(model);
+		return models.add(getCopy(model));
 	}
 	
 	public ArrayList<T> getAll() {
 		ArrayList<T> res = new ArrayList<T>();
 		
 		for (T m : models) {
-			res.add(m);
+			res.add(getCopy(m));
 		}
 		
 		return res;
@@ -36,7 +36,7 @@ public abstract class BasePersistence<T extends BaseModel> {
 		int index = getIndexByID(id);
 		
 		if (index != -1) {
-			res = models.get(index);
+			res = getCopy(models.get(index));
 		}
 		
 		return res;
@@ -48,7 +48,7 @@ public abstract class BasePersistence<T extends BaseModel> {
 		int index = getIndexByID(model.id);
 		
 		if (index != -1) {
-			models.set(index, model);
+			models.set(index, getCopy(model));
 			res = true;
 		}
 		
@@ -81,6 +81,16 @@ public abstract class BasePersistence<T extends BaseModel> {
 	
 	private int getIdModel() {
 		return BASE_ID++;
+	}
+	
+	private T getCopy(T model) {
+		try {
+			return (T) model.clone();
+		} catch (CloneNotSupportedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 }

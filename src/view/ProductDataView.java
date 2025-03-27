@@ -40,6 +40,9 @@ public class ProductDataView extends JPanel {
 		informacion.add(txtNombre);		
 		informacion.add(labPrecio);
 		informacion.add(txtPrecio);		
+		
+		txtNombre.setText("");
+		txtPrecio.setText("");
 	}
 	
 	public String getNombre() {
@@ -57,6 +60,15 @@ public class ProductDataView extends JPanel {
 			return Double.parseDouble(txtPrecio.getText());	
 		}
 	}
+
+	public void setName(String value) {
+		txtNombre.setText(value);
+	}
+	
+	public void setPrecio(double value) {
+		txtPrecio.setText(Double.toString(value));
+	}
+	
 	
 	public boolean isInputEmpty(JTextField jTextField) {
 		return jTextField.getText() == null || jTextField.getText().isEmpty();

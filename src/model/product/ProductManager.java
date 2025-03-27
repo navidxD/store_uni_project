@@ -28,6 +28,14 @@ public class ProductManager extends BasePersistence<Product> {
 		return false;
 	}
 	
+	public boolean deleteProduct(Product product) {
+		if (product != null) {
+			deleteById(product.getId());
+			return true;
+		}
+		return false;
+	}
+	
 	private int getIdProduct() {
 		return BASE_ID++;
 	}

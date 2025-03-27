@@ -27,6 +27,14 @@ public class StoreController {
 				inventory.createProduct(productView.getProductFromForm());
 				productView.updateListProduct(inventory.getAll());
 			}
+			if (cmd == ViewControllerListener.CMD_INVENTORY_DELETE) {
+				inventory.deleteProduct(productView.getProductFromForm());
+				productView.updateListProduct(inventory.getAll());
+			}
+			if (cmd == ViewControllerListener.CMD_INVENTORY_UPDATE) {
+				inventory.updateProduct(productView.getProductFromForm());
+				productView.updateListProduct(inventory.getAll());
+			}
 			
 			if (cmd == ViewControllerListener.CMD_MENU) {
 				dismissAllView();
@@ -62,6 +70,7 @@ public class StoreController {
 			productView = new ProductView();
 		}
 		productView.setViewControllerListener(viewControllerListener);
+		productView.updateListProduct(inventory.getAll());
 		showView(productView);
 	}
 
