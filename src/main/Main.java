@@ -5,7 +5,7 @@ import java.util.List;
 
 import controller.StoreController;
 import model.product.Product;
-import model.product.Inventory;
+import model.product.ProductManager;
 
 public class Main {
 	

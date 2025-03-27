@@ -2,7 +2,7 @@ package model.product;
 
 import model.base.BasePersistence;
 
-public class Inventory extends BasePersistence<Product> {
+public class ProductManager extends BasePersistence<Product> {
 	
 	private static int BASE_ID = 1;
 

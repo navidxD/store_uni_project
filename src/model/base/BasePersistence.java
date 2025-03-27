@@ -30,6 +30,7 @@ public abstract class BasePersistence<T extends BaseModel> {
 		return res;
 	}
 	
+	
 	protected T getById(String id) {
 		T res = null;
 		int index = getIndexByID(id);

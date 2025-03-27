@@ -10,7 +10,6 @@ public class Cart extends BaseModel {
 	
 	private User user;
 	private ArrayList<Product> products;
-	private boolean checkout;
 	
 	public User getUser() {
 		return user;
@@ -24,13 +23,15 @@ public class Cart extends BaseModel {
 	public void setProducts(ArrayList<Product> products) {
 		this.products = products;
 	}
-	public boolean isCheckout() {
-		return checkout;
-	}
-	public void setCheckout(boolean checkout) {
-		this.checkout = checkout;
-	}
 	
-	
+	public double calculateTotal() {
+		double total = 0;
+		
+		for (Product p : products) {
+			total = total + p.getPrice();
+		}
+		
+		return total;
+	}
 	
 }
