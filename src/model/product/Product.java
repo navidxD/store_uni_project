@@ -6,6 +6,7 @@ public class Product extends BaseModel {
 	
     private int productId;
     private String name;
+    private String descrption;
     private double price;
 
     public int getProductId() {
@@ -30,6 +31,15 @@ public class Product extends BaseModel {
 
     public void setName(String name) {
 		this.name = name;
+	}
+    
+    
+	public String getDescrption() {
+		return descrption;
+	}
+
+	public void setDescrption(String descrption) {
+		this.descrption = descrption;
 	}
 
 	@Override

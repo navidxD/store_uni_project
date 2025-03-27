@@ -11,25 +11,24 @@ public class CartManager extends BasePersistence<Cart> {
     private Cart cart;
     private Map<Product, Integer> productQuantities;
 
-    public CartManager(User user) {
-        if (user == null) {
-            throw new IllegalArgumentException("User cannot be null");
-        }
-        this.cart = new Cart();
-        this.cart.setUser(user);
-        this.cart.setProducts(new ArrayList<>());
-        this.cart.setCheckout(false);
-        this.productQuantities = new HashMap<>();
+    @Override
+    public void init() {
+        // TODO Auto-generated method stub
+
+    }
+
+    public void startSale() {
+        ArrayList<Product> products = new ArrayList<Product>();
+
+        this.cart.setUser(getUserDefault());
+        this.cart.setProducts(products);
+    }
+    
+    public void completeSale() {
+    	add(cart);
     }
 
     public void addProduct(Product product, int quantity) {
-        if (product == null) {
-            throw new IllegalArgumentException("Product cannot be null");
-        }
-        if (quantity <= 0) {
-            throw new IllegalArgumentException("Quantity must be greater than 0");
-        }
-
         for (int i = 0; i < quantity; i++) {
             this.cart.getProducts().add(product);
         }
@@ -37,14 +36,7 @@ public class CartManager extends BasePersistence<Cart> {
     }
 
     public void removeProduct(Product product, int quantity) {
-        if (product == null) {
-            throw new IllegalArgumentException("Product cannot be null");
-        }
-
         int currentQuantity = productQuantities.getOrDefault(product, 0);
-        if (currentQuantity < quantity) {
-            throw new IllegalArgumentException("Cannot remove more items than exist in cart");
-        }
 
         for (int i = 0; i < quantity; i++) {
             this.cart.getProducts().remove(product);
@@ -59,6 +51,7 @@ public class CartManager extends BasePersistence<Cart> {
 
     public void clearCart() {
         this.cart.getProducts().clear();
+        this.cart.setUser(getUserDefault());
         this.productQuantities.clear();
     }
 
@@ -68,24 +61,26 @@ public class CartManager extends BasePersistence<Cart> {
                 .sum();
     }
 
-    public boolean checkout() {
-        if (this.cart.getProducts().isEmpty()) {
-            throw new IllegalStateException("Cannot checkout an empty cart");
-        }
-
-        try {
-            this.cart.setCheckout(true);
-            return true;
-        } catch (Exception e) {
-            return false;
-        }
-    }
-
     public Cart getCart() {
         return this.cart;
+    }
+    
+    public void setUser(User user) {
+    	this.cart.setUser(user);
     }
 
     public Map<Product, Integer> getProductQuantities() {
         return new HashMap<>(productQuantities);
+    }
+    
+    private User getUserDefault() {
+        User user = new User();
+
+        user.setEmail("N/A");
+        user.setIdUser("DESCONOCIDO");
+        user.setLastName("N/A");
+        user.setName("N/A");
+        
+        return user;
     }
 }

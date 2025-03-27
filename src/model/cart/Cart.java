@@ -10,7 +10,6 @@ public class Cart extends BaseModel {
 	
 	private User user;
 	private ArrayList<Product> products;
-	private boolean checkout;
 	private double totalPrice;  // New field for accumulated prices
 	
 	public User getUser() {

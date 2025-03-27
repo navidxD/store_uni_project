@@ -1,4 +1,4 @@
-package model.interface_menu;
+package view;
 
 import java.util.Scanner;
 import model.product.Product;
@@ -54,7 +54,11 @@ public class UserInterface {
         System.out.print("Ingrese el precio del producto: ");
         double price = scanner.nextDouble();
         
-        Product product = new Product(name, description, price);
+        Product product = new Product();
+        product.setName(name);
+        product.setDescrption(description);
+        product.setPrice(price);
+        
         System.out.println("¡Producto creado exitosamente!");
     }
 
@@ -69,7 +73,10 @@ public class UserInterface {
         System.out.print("Ingrese la contraseña: ");
         String password = scanner.nextLine();
         
-        User user = new User(username, email, password);
+        User user = new User();
+        user.setEmail(email);
+        user.setName(username);
+        
         System.out.println("¡Usuario creado exitosamente!");
     }
 
@@ -80,7 +87,9 @@ public class UserInterface {
         
         User user = findUserByEmail(email);
         if (user != null) {
-            CartManager cartManager = new CartManager(user);
+            CartManager cartManager = new CartManager();
+            cartManager.startSale();
+            cartManager.setUser(user);
             System.out.println("¡Carrito de compras creado exitosamente!");
         } else {
             System.out.println("Usuario no encontrado. Por favor, cree un usuario primero.");
