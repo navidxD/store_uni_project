@@ -69,6 +69,11 @@ public class ProductDataView extends JPanel {
 		txtPrecio.setText(Double.toString(value));
 	}
 	
+	public void clean() {
+		txtNombre.setText("");
+		txtPrecio.setText("");
+	}
+	
 	
 	public boolean isInputEmpty(JTextField jTextField) {
 		return jTextField.getText() == null || jTextField.getText().isEmpty();

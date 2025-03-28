@@ -1,6 +1,7 @@
 package model.user;
 
 import model.base.BasePersistence;
+import model.product.Product;
 
 public class UserManager extends BasePersistence<User> {
 	
@@ -10,20 +11,21 @@ public class UserManager extends BasePersistence<User> {
 	public void init() {
 	}
 	
-	public boolean createProduct(String idUser, String name, String lastName, String email) {
-		User user = new User();
-		
-		user.setIdUser(idUser);
-		user.setName(name);
-		user.setLastName(lastName);
-		user.setEmail(email);
-		
+	public boolean createUser(User user) {		
 		return add(user);
 	}
 
 	public boolean updateUser(User user) {
 		if (user != null) {
 			updateById(user);
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean deleteUser(User user) {
+		if (user != null) {
+			deleteById(user.getId());
 			return true;
 		}
 		return false;

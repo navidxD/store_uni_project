@@ -17,32 +17,35 @@ import javax.swing.event.ListSelectionListener;
 
 import controller.ViewControllerListener;
 import model.product.Product;
+import model.user.User;
 
-public class ProductView extends JFrame implements BaseView {
+public class UserView extends JFrame implements BaseView {
 	
 	private ViewControllerListener viewControllerListener;
-	private ProductDataView productDataView;
+	private UserDataView userDataView;
 	
-	private JList productList;//declaramos La Lista
+	private JList userList;//declaramos La Lista
 	private DefaultListModel model;//declaramos el Modelo
 	private JScrollPane scrollList;
-	private ArrayList<Product> products;
+	private ArrayList<User> users;
 	
 	private ListSelectionListener liListSelectionListener = new ListSelectionListener() {
 	    public void valueChanged(ListSelectionEvent event) {
-	        if (!event.getValueIsAdjusting() && !products.isEmpty()){
+	        if (!event.getValueIsAdjusting() && !users.isEmpty()){
 	            JList source = (JList)event.getSource();
 	            int selected = source.getSelectedIndex();
 	            if (selected >= 0) {	
-	            	Product p = products.get(selected);
-	            	productDataView.setName(p.getName());
-	            	productDataView.setPrecio(p.getPrice());
+	            	User u = users.get(selected);
+	            	userDataView.setCedula(u.getIdUser());
+	            	userDataView.setName(u.getName());
+	            	userDataView.setApellido(u.getLastName());
+	            	userDataView.setMail(u.getEmail());
 	            }
 	        }
 	    }
 	};
 	
-	public ProductView() {
+	public UserView() {
 		setTitle(BaseView.title);
 		setSize(600, 350);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -51,40 +54,40 @@ public class ProductView extends JFrame implements BaseView {
 		centro.setLayout(new BorderLayout());
 		add(centro, BorderLayout.NORTH);
 		
-		productDataView = new ProductDataView();
-		centro.add(productDataView, BorderLayout.CENTER);
+		userDataView = new UserDataView();
+		centro.add(userDataView, BorderLayout.CENTER);
 		
 		//instanciamos la lista
-		productList = new JList();
-		productList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION );
-		productList.addListSelectionListener(liListSelectionListener);
+		userList = new JList();
+		userList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION );
+		userList.addListSelectionListener(liListSelectionListener);
 		  
 		//instanciamos el modelo
 		model = new DefaultListModel();
-		productList.setModel(model);
+		userList.setModel(model);
 		     
 		//instanciamos el Scroll que tendra la lista
 		scrollList = new JScrollPane();
 		scrollList.setBounds(20, 120,220, 80);
-		scrollList.setViewportView(productList);
+		scrollList.setViewportView(userList);
 		add(scrollList, BorderLayout.CENTER);
 		
 		JButton btnNewButton_1 = new JButton("AGREGAR");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				viewControllerListener.onReceiveComand(e, ViewControllerListener.CMD_INVENTORY_ADD);
+				viewControllerListener.onReceiveComand(e, ViewControllerListener.CMD_USER_ADD);
 			}
 		});
 		JButton btnNewButton_2 = new JButton("ACTUALIZAR");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				viewControllerListener.onReceiveComand(e, ViewControllerListener.CMD_INVENTORY_UPDATE);
+				viewControllerListener.onReceiveComand(e, ViewControllerListener.CMD_USER_UPDATE);
 			}
 		});
 		JButton btnNewButton_3 = new JButton("BORRAR");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				viewControllerListener.onReceiveComand(e, ViewControllerListener.CMD_INVENTORY_DELETE);
+				viewControllerListener.onReceiveComand(e, ViewControllerListener.CMD_USER_DELETE);
 			}
 		});
 		JButton btnNewButton_0 = new JButton("REGRESAR");
@@ -110,32 +113,34 @@ public class ProductView extends JFrame implements BaseView {
 		this.viewControllerListener = viewControllerListener;
 	}
 	
-	public Product getProductFromForm() {
-		Product product = new Product();
+	public User getUserFromForm() {
+		User user = new User();
 		
-		if (!products.isEmpty() && productList.getSelectedIndex() >= 0) {
-			product = products.get(productList.getSelectedIndex());
+		if (!users.isEmpty() && userList.getSelectedIndex() >= 0) {
+			user = users.get(userList.getSelectedIndex());
 		}
 		
-		product.setPrice(productDataView.getPrecio());
-		product.setName(productDataView.getNombre());
+		user.setIdUser(userDataView.getCedula());
+		user.setName(userDataView.getNombre());
+		user.setLastName(userDataView.getApellido());
+		user.setEmail(userDataView.getMail());
 		
-		return product;
+		return user;
 	}
 	
-	public void updateListProduct(ArrayList<Product> list) {
-		this.products = list;
+	public void updateListUser(ArrayList<User> list) {
+		this.users = list;
 		model = new DefaultListModel();
 		
-		for (Product p : products) {
-			model.addElement(p.toString());
+		for (User p : users) {
+			model.addElement(p.toString());;
 		}
 		
-		productList.setModel(model);
+		userList.setModel(model);
 	}
 	
 	public void clean() {
-		productDataView.clean();
+		userDataView.clean();
 	}
 
 }

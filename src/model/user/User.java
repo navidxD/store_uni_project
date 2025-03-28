@@ -41,8 +41,10 @@ public class User extends BaseModel {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
-	
-	
+
+	@Override
+	public String toString() {
+		return "User [idUser=" + idUser + ", name=" + name + ", lastName=" + lastName + ", email=" + email + "]";
+	}
 
 }

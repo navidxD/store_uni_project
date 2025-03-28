@@ -6,6 +6,9 @@ public interface ViewControllerListener {
 
 	public int CMD_MENU = 0;
 	public int CMD_USER = 1;
+	public int CMD_USER_ADD = 11;
+	public int CMD_USER_UPDATE = 12;
+	public int CMD_USER_DELETE = 13;
 	public int CMD_INVENTORY = 2;
 	public int CMD_INVENTORY_ADD = 21;
 	public int CMD_INVENTORY_UPDATE = 22;

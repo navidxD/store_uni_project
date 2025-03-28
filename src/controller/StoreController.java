@@ -10,6 +10,7 @@ import model.product.ProductManager;
 import model.user.UserManager;
 import view.MenuView;
 import view.ProductView;
+import view.UserView;
 
 public class StoreController {
 	
@@ -23,6 +24,10 @@ public class StoreController {
 				dismissAllView();
 				showProductMenu();
 			}
+			if (cmd == ViewControllerListener.CMD_USER) {
+				dismissAllView();
+				showUserMenu();
+			}
 			if (cmd == ViewControllerListener.CMD_INVENTORY_ADD) {
 				inventory.createProduct(productView.getProductFromForm());
 				productView.updateListProduct(inventory.getAll());
@@ -33,6 +38,18 @@ public class StoreController {
 			}
 			if (cmd == ViewControllerListener.CMD_INVENTORY_UPDATE) {
 				inventory.updateProduct(productView.getProductFromForm());
+				productView.updateListProduct(inventory.getAll());
+			}
+			if (cmd == ViewControllerListener.CMD_USER_ADD) {
+				userManager.createUser(userView.getUserFromForm());
+				userView.updateListUser(userManager.getAll());
+			}
+			if (cmd == ViewControllerListener.CMD_USER_UPDATE) {
+				userManager.updateUser(userView.getUserFromForm());
+				userView.updateListUser(userManager.getAll());
+			}
+			if (cmd == ViewControllerListener.CMD_USER_DELETE) {
+				userManager.deleteUser(userView.getUserFromForm());
 				productView.updateListProduct(inventory.getAll());
 			}
 			
@@ -48,6 +65,7 @@ public class StoreController {
 	private CartManager cartManager;
 	private MenuView menuView;
 	private ProductView productView;
+	private UserView userView;
 	
 	public void init() {
 		inventory = new ProductManager();
@@ -69,14 +87,25 @@ public class StoreController {
 		if (productView == null) {
 			productView = new ProductView();
 		}
+		productView.clean();
 		productView.setViewControllerListener(viewControllerListener);
 		productView.updateListProduct(inventory.getAll());
 		showView(productView);
+	}
+	
+	private void showUserMenu() {
+		if (userView == null) {
+			userView = new UserView();
+		}
+		userView.setViewControllerListener(viewControllerListener);
+		userView.updateListUser(userManager.getAll());
+		showView(userView);
 	}
 
 	private void dismissAllView() {
 		dismissView(menuView);
 		dismissView(productView);
+		dismissView(userView);
 	}
 	
 	private void showView(JFrame view) {
