@@ -56,7 +56,6 @@ public class UserInterface {
         
         Product product = new Product();
         product.setName(name);
-        product.setDescrption(description);
         product.setPrice(price);
         
         System.out.println("¡Producto creado exitosamente!");

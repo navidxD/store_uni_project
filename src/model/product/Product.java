@@ -12,8 +12,6 @@ public class Product extends BaseModel {
     private int productId;
     /** Nombre del producto */
     private String name;
-    /** Descripción del producto */
-    private String descrption;
     /** Precio del producto */
     private double price;
     /** Cantidad del producto */
@@ -65,22 +63,6 @@ public class Product extends BaseModel {
      */
     public void setName(String name) {
 		this.name = name;
-	}
-    
-    /**
-     * Obtiene la descripción del producto
-     * @return la descripción del producto
-     */
-	public String getDescrption() {
-		return descrption;
-	}
-
-    /**
-     * Establece la descripción del producto
-     * @param descrption la nueva descripción a establecer
-     */
-	public void setDescrption(String descrption) {
-		this.descrption = descrption;
 	}
 
     public int getQuantity() {

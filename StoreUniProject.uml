@@ -4,7 +4,7 @@
     <eAnnotations xmi:id="_E2RZYAq0EfCy7KhTqrRxJg" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_E2SAcAq0EfCy7KhTqrRxJg" source="codegen">
         <details xmi:id="_E2SAcQq0EfCy7KhTqrRxJg" key="codegenDirectory" value="/StoreUniProject/src"/>
-        <details xmi:id="_HEUlUAq0EfCy7KhTqrRxJg" key="AssociatedSourceCode" value="/StoreUniProject/src/controller/StoreController.java;2989703736/1;/StoreUniProject/src/controller/ViewControllerListener.java;1950744534/1;/StoreUniProject/src/main/Main.java;1476352287/1;/StoreUniProject/src/model/base/BaseModel.java;2851195164/1;/StoreUniProject/src/model/base/BasePersistence.java;1422959765/1;/StoreUniProject/src/model/cart/Cart.java;1769809225/1;/StoreUniProject/src/model/cart/CartManager.java;3352264328/1;/StoreUniProject/src/model/product/Product.java;58143642/1;/StoreUniProject/src/model/user/User.java;2945834077/1;/StoreUniProject/src/model/user/UserManager.java;1922253817/1;/StoreUniProject/src/view/BaseView.java;101862168/1;/StoreUniProject/src/view/MenuView.java;1090676136/1;"/>
+        <details xmi:id="_HEUlUAq0EfCy7KhTqrRxJg" key="AssociatedSourceCode" value="/StoreUniProject/src/controller/StoreController.java;2989703736/1;/StoreUniProject/src/controller/ViewControllerListener.java;1950744534/1;/StoreUniProject/src/main/Main.java;1476352287/1;/StoreUniProject/src/model/base/BaseModel.java;2851195164/1;/StoreUniProject/src/model/base/BasePersistence.java;1422959765/1;/StoreUniProject/src/model/cart/Cart.java;1769809225/1;/StoreUniProject/src/model/cart/CartManager.java;3352264328/1;/StoreUniProject/src/model/product/Product.java;1477268608/1;/StoreUniProject/src/model/user/User.java;2945834077/1;/StoreUniProject/src/model/user/UserManager.java;1922253817/1;/StoreUniProject/src/view/BaseView.java;101862168/1;/StoreUniProject/src/view/MenuView.java;1090676136/1;"/>
       </contents>
       <contents xmi:type="ecore:EAnnotation" xmi:id="_KfdPYAt4EfC_gOdKAE1FpA" source="preferences">
         <contents xmi:type="ecore:EAnnotation" xmi:id="_Kfd2cAt4EfC_gOdKAE1FpA" source="com.yattasolutions.codegen.reverse">
@@ -326,7 +326,7 @@ Extiende de BasePersistence para manejar la persistencia de datos.</body>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_FCq2oQq0EfCy7KhTqrRxJg" name="product">
         <packagedElement xmi:type="uml:Class" xmi:id="_FExIYAq0EfCy7KhTqrRxJg" name="Product">
-          <ownedComment xmi:id="_zOcaCAwGEfCNffikzSLgAw">
+          <ownedComment xmi:id="_9NKToAwLEfCNffikzSLgAw">
             <body>Clase que representa un producto en el sistema.&#xD;
 Extiende de BaseModel para heredar funcionalidades básicas.</body>
           </ownedComment>
@@ -339,9 +339,6 @@ Extiende de BaseModel para heredar funcionalidades básicas.</body>
           </ownedAttribute>
           <ownedAttribute xmi:id="_FKlcgAq0EfCy7KhTqrRxJg" name="price">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
-          </ownedAttribute>
-          <ownedAttribute xmi:id="_LO2E8At4EfC_gOdKAE1FpA" name="descrption">
-            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
           </ownedAttribute>
           <ownedAttribute xmi:id="_LO2sAAt4EfC_gOdKAE1FpA" name="quantity">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
@@ -357,6 +354,7 @@ Extiende de BaseModel para heredar funcionalidades básicas.</body>
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_zOby8AwGEfCNffikzSLgAw" name="completeInfo" specification="_zNxroAwGEfCNffikzSLgAw">
             <ownedParameter xmi:id="_zOby8QwGEfCNffikzSLgAw" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedParameter>
             <language>java</language>
