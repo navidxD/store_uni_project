@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.diagrams="http://ns.yatta-solutions.com/umllab/diagrams/1.1.0" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_Ec3a4Aq0EfCy7KhTqrRxJg">
   <modelElement href="StoreUniProject.uml#_DOKzIAq0EfCy7KhTqrRxJg"/>
-  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_HJCtQAq0EfCy7KhTqrRxJg" sourceAnchor="87.0,0.0" targetAnchor="113.0,135.0" target="_HFN9MAq0EfCy7KhTqrRxJg" source="_HJfZMAq0EfCy7KhTqrRxJg">
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_HJCtQAq0EfCy7KhTqrRxJg" sourceAnchor="87.0,0.0" targetAnchor="113.0,344.0" target="_HFN9MAq0EfCy7KhTqrRxJg" source="_HJfZMAq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_FLYGsAq0EfCy7KhTqrRxJg"/>
     <stereotypes xmi:id="_HJOTcAq0EfCy7KhTqrRxJg" name="Reference">
       <modelElement href="StoreUniProject.uml#_FLYtwAq0EfCy7KhTqrRxJg"/>
     </stereotypes>
     <nameVisual xmi:id="_HJKCAAq0EfCy7KhTqrRxJg" text="">
-      <visualProperties xmi:id="_HlhN4Aq0EfCy7KhTqrRxJg" position="-39.00000000000003,1.1612903225806122"/>
+      <visualProperties xmi:id="_HlhN4Aq0EfCy7KhTqrRxJg" position="-39.00000000000003,1.0"/>
     </nameVisual>
     <sourceRole xmi:id="_HJNFUAq0EfCy7KhTqrRxJg" aggregationKind="NONE" name="">
       <modelElement href="StoreUniProject.uml#_FLYGsQq0EfCy7KhTqrRxJg"/>
-      <visualProperties xmi:id="_Hlf_wAq0EfCy7KhTqrRxJg" position="-17.0,-84.57142857142856"/>
+      <visualProperties xmi:id="_Hlf_wAq0EfCy7KhTqrRxJg" position="-17.0,-85.0"/>
       <visibility xmi:id="_HJSk4Qq0EfCy7KhTqrRxJg" label="+"/>
       <cardinality xmi:id="_HJSk4Aq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
     </sourceRole>
     <targetRole xmi:id="_HJNsYAq0EfCy7KhTqrRxJg" aggregationKind="NONE" name="viewControllerListener" navigable="true">
       <modelElement href="StoreUniProject.uml#_FKWzAAq0EfCy7KhTqrRxJg"/>
-      <visualProperties xmi:id="_Hlh08Aq0EfCy7KhTqrRxJg" position="-135.0,78.14285714285711"/>
+      <visualProperties xmi:id="_Hlh08Aq0EfCy7KhTqrRxJg" position="-135.00000000000006,78.0"/>
       <stereotypes xmi:id="_Rh_AkArAEfCy7KhTqrRxJg" name="LegacyStyledElement">
         <modelElement href="StoreUniProject.uml#_FKXaEAq0EfCy7KhTqrRxJg"/>
       </stereotypes>
@@ -25,48 +25,23 @@
       <cardinality xmi:id="_HJSk4gq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
     </targetRole>
   </edges>
-  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_HJYEcAq0EfCy7KhTqrRxJg" sourceAnchor="174.0,31.0" targetAnchor="176.0,154.0" source="_HJfZMAq0EfCy7KhTqrRxJg">
-    <modelElement href="StoreUniProject.uml#_FLYtwQq0EfCy7KhTqrRxJg"/>
-    <bendpoints xmi:id="_H97lgQrCEfCy7KhTqrRxJg" sourceX="1028" targetY="274"/>
-    <stereotypes xmi:id="_HJYEcQq0EfCy7KhTqrRxJg" name="Reference">
-      <modelElement href="StoreUniProject.uml#_FLZU0Aq0EfCy7KhTqrRxJg"/>
-    </stereotypes>
-    <nameVisual xmi:id="_HJYEcgq0EfCy7KhTqrRxJg" text="">
-      <visualProperties xmi:id="_HlkRMAq0EfCy7KhTqrRxJg" position="-42.5,-58.0"/>
-    </nameVisual>
-    <sourceRole xmi:id="_HJYEcwq0EfCy7KhTqrRxJg" aggregationKind="NONE" name="">
-      <modelElement href="StoreUniProject.uml#_FLYtwgq0EfCy7KhTqrRxJg"/>
-      <visualProperties xmi:id="_HljqIAq0EfCy7KhTqrRxJg" position="64.21875,-47.0"/>
-      <visibility xmi:id="_HJYEdAq0EfCy7KhTqrRxJg" label="+"/>
-      <cardinality xmi:id="_HJYEdQq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
-    </sourceRole>
-    <targetRole xmi:id="_HJYEdgq0EfCy7KhTqrRxJg" aggregationKind="NONE" name="inventory" navigable="true">
-      <modelElement href="StoreUniProject.uml#_FKXaEQq0EfCy7KhTqrRxJg"/>
-      <visualProperties xmi:id="_Hlk4QAq0EfCy7KhTqrRxJg" position="-66.5,33.428571428571445"/>
-      <stereotypes xmi:id="_Rh_noArAEfCy7KhTqrRxJg" name="LegacyStyledElement">
-        <modelElement href="StoreUniProject.uml#_FKYBIAq0EfCy7KhTqrRxJg"/>
-      </stereotypes>
-      <visibility xmi:id="_HJYEdwq0EfCy7KhTqrRxJg" label="-"/>
-      <cardinality xmi:id="_HJYEeAq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
-    </targetRole>
-  </edges>
-  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_HJagsAq0EfCy7KhTqrRxJg" sourceAnchor="121.0,0.0" targetAnchor="15.0,154.0" target="_HMtsUAq0EfCy7KhTqrRxJg" source="_HJfZMAq0EfCy7KhTqrRxJg">
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_HJagsAq0EfCy7KhTqrRxJg" sourceAnchor="121.0,0.0" targetAnchor="15.0,156.0" target="_HMtsUAq0EfCy7KhTqrRxJg" source="_HJfZMAq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_FLZ74Aq0EfCy7KhTqrRxJg"/>
     <stereotypes xmi:id="_HJagsQq0EfCy7KhTqrRxJg" name="Reference">
       <modelElement href="StoreUniProject.uml#_FLai8Aq0EfCy7KhTqrRxJg"/>
     </stereotypes>
     <nameVisual xmi:id="_HJagsgq0EfCy7KhTqrRxJg" text="">
-      <visualProperties xmi:id="_HlxskAq0EfCy7KhTqrRxJg" position="2.0,-74.20000000000005"/>
+      <visualProperties xmi:id="_HlxskAq0EfCy7KhTqrRxJg" position="2.0000000000000284,-75.0"/>
     </nameVisual>
     <sourceRole xmi:id="_HJagswq0EfCy7KhTqrRxJg" aggregationKind="NONE" name="">
       <modelElement href="StoreUniProject.uml#_FLZ74Qq0EfCy7KhTqrRxJg"/>
-      <visualProperties xmi:id="_HllfUAq0EfCy7KhTqrRxJg" position="-17.0,-77.83333333333337"/>
+      <visualProperties xmi:id="_HllfUAq0EfCy7KhTqrRxJg" position="-17.0,-78.0"/>
       <visibility xmi:id="_HJagtAq0EfCy7KhTqrRxJg" label="+"/>
       <cardinality xmi:id="_HJagtQq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
     </sourceRole>
     <targetRole xmi:id="_HJagtgq0EfCy7KhTqrRxJg" aggregationKind="NONE" name="userManager" navigable="true">
       <modelElement href="StoreUniProject.uml#_FKYBIQq0EfCy7KhTqrRxJg"/>
-      <visualProperties xmi:id="_HlxskQq0EfCy7KhTqrRxJg" position="1.9999999999999716,64.66666666666674"/>
+      <visualProperties xmi:id="_HlxskQq0EfCy7KhTqrRxJg" position="2.0,64.0"/>
       <stereotypes xmi:id="_RiA1wArAEfCy7KhTqrRxJg" name="LegacyStyledElement">
         <modelElement href="StoreUniProject.uml#_FKYoMAq0EfCy7KhTqrRxJg"/>
       </stereotypes>
@@ -76,24 +51,24 @@
   </edges>
   <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_HJbu0Aq0EfCy7KhTqrRxJg" sourceAnchor="0.0,46.0" targetAnchor="125.0,0.0" target="_HL_6oAq0EfCy7KhTqrRxJg" source="_HJfZMAq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_FLai8Qq0EfCy7KhTqrRxJg"/>
-    <bendpoints xmi:id="_H97lggrCEfCy7KhTqrRxJg" sourceX="-542" targetX="-1382" targetY="466"/>
-    <bendpoints xmi:id="_H97lgwrCEfCy7KhTqrRxJg" sourceX="-542" sourceY="-936" targetX="-1382" targetY="-470"/>
-    <bendpoints xmi:id="_H97lhArCEfCy7KhTqrRxJg" sourceX="840" sourceY="-936" targetY="-470"/>
+    <bendpoints xmi:id="_2rZCAQwGEfCNffikzSLgAw" sourceX="-542" targetX="-1382" targetY="466"/>
+    <bendpoints xmi:id="_2rZCAgwGEfCNffikzSLgAw" sourceX="-542" sourceY="-936" targetX="-1382" targetY="-470"/>
+    <bendpoints xmi:id="_2rZpEAwGEfCNffikzSLgAw" sourceX="840" sourceY="-936" targetY="-470"/>
     <stereotypes xmi:id="_HJbu0Qq0EfCy7KhTqrRxJg" name="Reference">
       <modelElement href="StoreUniProject.uml#_FLbxEAq0EfCy7KhTqrRxJg"/>
     </stereotypes>
     <nameVisual xmi:id="_HJbu0gq0EfCy7KhTqrRxJg" text="">
-      <visualProperties xmi:id="_HlzhwAq0EfCy7KhTqrRxJg" position="1298.9999999999998,0.9999999999996589"/>
+      <visualProperties xmi:id="_HlzhwAq0EfCy7KhTqrRxJg" position="1299.0,1.0000000000001137"/>
     </nameVisual>
     <sourceRole xmi:id="_HJbu0wq0EfCy7KhTqrRxJg" aggregationKind="NONE" name="">
       <modelElement href="StoreUniProject.uml#_FLai8gq0EfCy7KhTqrRxJg"/>
-      <visualProperties xmi:id="_Hly6sAq0EfCy7KhTqrRxJg" position="-81.625,2.0"/>
+      <visualProperties xmi:id="_Hly6sAq0EfCy7KhTqrRxJg" position="-82.0,2.0"/>
       <visibility xmi:id="_HJbu1Aq0EfCy7KhTqrRxJg" label="+"/>
       <cardinality xmi:id="_HJbu1Qq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
     </sourceRole>
     <targetRole xmi:id="_HJbu1gq0EfCy7KhTqrRxJg" aggregationKind="NONE" name="cartManager" navigable="true">
       <modelElement href="StoreUniProject.uml#_FKYoMQq0EfCy7KhTqrRxJg"/>
-      <visualProperties xmi:id="_Hl0I0Aq0EfCy7KhTqrRxJg" position="2.0,-98.87499999999977"/>
+      <visualProperties xmi:id="_Hl0I0Aq0EfCy7KhTqrRxJg" position="2.0,-99.00000000000023"/>
       <stereotypes xmi:id="_RiBc0ArAEfCy7KhTqrRxJg" name="LegacyStyledElement">
         <modelElement href="StoreUniProject.uml#_FKZPQAq0EfCy7KhTqrRxJg"/>
       </stereotypes>
@@ -103,16 +78,16 @@
   </edges>
   <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_HJeLEAq0EfCy7KhTqrRxJg" sourceAnchor="151.0,0.0" targetAnchor="0.0,89.0" target="_HNLmYAq0EfCy7KhTqrRxJg" source="_HJfZMAq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_FLbxEQq0EfCy7KhTqrRxJg"/>
-    <bendpoints xmi:id="_H97lhQrCEfCy7KhTqrRxJg" sourceY="-90" targetX="-86"/>
+    <bendpoints xmi:id="_2rZpEQwGEfCNffikzSLgAw" sourceY="-90" targetX="-86"/>
     <stereotypes xmi:id="_HJeLEQq0EfCy7KhTqrRxJg" name="Reference">
       <modelElement href="StoreUniProject.uml#_FLcYIAq0EfCy7KhTqrRxJg"/>
     </stereotypes>
     <nameVisual xmi:id="_HJeLEgq0EfCy7KhTqrRxJg" text="">
-      <visualProperties xmi:id="_Hl1-AAq0EfCy7KhTqrRxJg" position="32.333333333333314,2.0"/>
+      <visualProperties xmi:id="_Hl1-AAq0EfCy7KhTqrRxJg" position="32.0,2.0"/>
     </nameVisual>
     <sourceRole xmi:id="_HJeLEwq0EfCy7KhTqrRxJg" aggregationKind="NONE" name="">
       <modelElement href="StoreUniProject.uml#_FLbxEgq0EfCy7KhTqrRxJg"/>
-      <visualProperties xmi:id="_Hl0v4Aq0EfCy7KhTqrRxJg" position="-17.0,-60.33333333333337"/>
+      <visualProperties xmi:id="_Hl0v4Aq0EfCy7KhTqrRxJg" position="-17.0,-61.0"/>
       <visibility xmi:id="_HJeLFAq0EfCy7KhTqrRxJg" label="+"/>
       <cardinality xmi:id="_HJeLFQq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
     </sourceRole>
@@ -126,15 +101,15 @@
       <cardinality xmi:id="_HJeLGAq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
     </targetRole>
   </edges>
-  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_HLHJ0Aq0EfCy7KhTqrRxJg" sourceAnchor="155.0,0.0" targetAnchor="124.0,268.0" superClass="_HLbS4Aq0EfCy7KhTqrRxJg" subClass="_HL_6oAq0EfCy7KhTqrRxJg">
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_HLHJ0Aq0EfCy7KhTqrRxJg" sourceAnchor="155.0,0.0" targetAnchor="130.0,287.0" superClass="_HLbS4Aq0EfCy7KhTqrRxJg" subClass="_HL_6oAq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_FJX7kQq0EfCy7KhTqrRxJg"/>
-    <bendpoints xmi:id="_H96XYArCEfCy7KhTqrRxJg" sourceY="-28" targetX="-534" targetY="27"/>
-    <bendpoints xmi:id="_H96XYQrCEfCy7KhTqrRxJg" sourceX="534" sourceY="-28" targetY="27"/>
+    <bendpoints xmi:id="_2rWlwAwGEfCNffikzSLgAw" sourceY="-19" targetX="-323" targetY="19"/>
+    <bendpoints xmi:id="_2rWlwQwGEfCNffikzSLgAw" sourceX="323" sourceY="-19" targetY="19"/>
   </edges>
-  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_HLHw4Qq0EfCy7KhTqrRxJg" sourceAnchor="116.0,154.0" targetAnchor="124.0,268.0" superClass="_HLbS4Aq0EfCy7KhTqrRxJg" subClass="_HMtsUAq0EfCy7KhTqrRxJg">
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_HLHw4Qq0EfCy7KhTqrRxJg" sourceAnchor="194.0,0.0" targetAnchor="130.0,287.0" superClass="_HLbS4Aq0EfCy7KhTqrRxJg" subClass="_HMtsUAq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_FJgecQq0EfCy7KhTqrRxJg"/>
-    <bendpoints xmi:id="_H96-dQrCEfCy7KhTqrRxJg" sourceY="343" targetX="-1182" targetY="580"/>
-    <bendpoints xmi:id="_H97lgArCEfCy7KhTqrRxJg" sourceX="1182" sourceY="343" targetY="580"/>
+    <bendpoints xmi:id="_2rYa8wwGEfCNffikzSLgAw" sourceY="-47" targetX="-893" targetY="19"/>
+    <bendpoints xmi:id="_2rZCAAwGEfCNffikzSLgAw" sourceX="893" sourceY="-47" targetY="19"/>
   </edges>
   <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_HLar0Aq0EfCy7KhTqrRxJg" source="_HLbS4Aq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_FLc_MAq0EfCy7KhTqrRxJg"/>
@@ -161,17 +136,17 @@
   </edges>
   <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_HLvb8Aq0EfCy7KhTqrRxJg" sourceAnchor="65.0,0.0" targetAnchor="85.0,99.0" superClass="_HL1ikAq0EfCy7KhTqrRxJg" subClass="_HMoMwAq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_FJdbIAq0EfCy7KhTqrRxJg"/>
-    <bendpoints xmi:id="_H96XZgrCEfCy7KhTqrRxJg" sourceY="-182" targetX="113" targetY="28"/>
-    <bendpoints xmi:id="_H96XZwrCEfCy7KhTqrRxJg" sourceX="-113" sourceY="-182" targetY="28"/>
+    <bendpoints xmi:id="_2rXM0gwGEfCNffikzSLgAw" sourceY="-182" targetX="113" targetY="28"/>
+    <bendpoints xmi:id="_2rXM0wwGEfCNffikzSLgAw" sourceX="-113" sourceY="-182" targetY="28"/>
   </edges>
   <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_HLvb8Qq0EfCy7KhTqrRxJg" sourceAnchor="72.0,0.0" targetAnchor="85.0,99.0" superClass="_HL1ikAq0EfCy7KhTqrRxJg" subClass="_HM7uwAq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_FJepQAq0EfCy7KhTqrRxJg"/>
-    <bendpoints xmi:id="_H96-cArCEfCy7KhTqrRxJg" sourceY="-162" targetX="959" targetY="28"/>
-    <bendpoints xmi:id="_H96-cQrCEfCy7KhTqrRxJg" sourceX="-959" sourceY="-162" targetY="28"/>
+    <bendpoints xmi:id="_2rXz4QwGEfCNffikzSLgAw" sourceY="-162" targetX="959" targetY="28"/>
+    <bendpoints xmi:id="_2rXz4gwGEfCNffikzSLgAw" sourceX="-959" sourceY="-162" targetY="28"/>
   </edges>
-  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_HMPyQAq0EfCy7KhTqrRxJg" sourceAnchor="0.0,55.0" targetAnchor="96.0,80.0" target="_HMV44Aq0EfCy7KhTqrRxJg" source="_HM7uwAq0EfCy7KhTqrRxJg">
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_HMPyQAq0EfCy7KhTqrRxJg" sourceAnchor="0.0,55.0" targetAnchor="96.0,137.0" target="_HMV44Aq0EfCy7KhTqrRxJg" source="_HM7uwAq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_FLL5cAq0EfCy7KhTqrRxJg"/>
-    <bendpoints xmi:id="_H96XaArCEfCy7KhTqrRxJg" sourceX="-649" targetY="110"/>
+    <bendpoints xmi:id="_2rXz4AwGEfCNffikzSLgAw" sourceX="-649" targetY="53"/>
     <nameVisual xmi:id="_HMQZUQq0EfCy7KhTqrRxJg" text="">
       <visualProperties xmi:id="_Hl62gAq0EfCy7KhTqrRxJg" position="641.0,-9.0"/>
     </nameVisual>
@@ -190,8 +165,8 @@
   </edges>
   <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_HMQZUAq0EfCy7KhTqrRxJg" sourceAnchor="96.0,0.0" targetAnchor="85.0,99.0" superClass="_HL1ikAq0EfCy7KhTqrRxJg" subClass="_HMV44Aq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_FJU4QAq0EfCy7KhTqrRxJg"/>
-    <bendpoints xmi:id="_H96XYgrCEfCy7KhTqrRxJg" sourceY="-27" targetX="238" targetY="28"/>
-    <bendpoints xmi:id="_H96XYwrCEfCy7KhTqrRxJg" sourceX="-238" sourceY="-27" targetY="28"/>
+    <bendpoints xmi:id="_2rXM0AwGEfCNffikzSLgAw" sourceY="-27" targetX="238" targetY="28"/>
+    <bendpoints xmi:id="_2rXM0QwGEfCNffikzSLgAw" sourceX="-238" sourceY="-27" targetY="28"/>
   </edges>
   <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_HMRAYQq0EfCy7KhTqrRxJg" source="_HMV44Aq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_FLdmQQq0EfCy7KhTqrRxJg"/>
@@ -216,10 +191,10 @@
       <cardinality xmi:id="_HMUqwAq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
     </targetRole>
   </edges>
-  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_HNCccAq0EfCy7KhTqrRxJg" sourceAnchor="415.0,0.0" targetAnchor="185.0,135.0" target="_HFN9MAq0EfCy7KhTqrRxJg" source="_HNLmYAq0EfCy7KhTqrRxJg">
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_HNCccAq0EfCy7KhTqrRxJg" sourceAnchor="415.0,0.0" targetAnchor="185.0,344.0" target="_HFN9MAq0EfCy7KhTqrRxJg" source="_HNLmYAq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_FLgpkQq0EfCy7KhTqrRxJg"/>
-    <bendpoints xmi:id="_H96-cgrCEfCy7KhTqrRxJg" sourceY="-269" targetX="493" targetY="139"/>
-    <bendpoints xmi:id="_H96-cwrCEfCy7KhTqrRxJg" sourceX="-493" sourceY="-269" targetY="139"/>
+    <bendpoints xmi:id="_2rYa8AwGEfCNffikzSLgAw" sourceY="-269" targetX="493" targetY="-70"/>
+    <bendpoints xmi:id="_2rYa8QwGEfCNffikzSLgAw" sourceX="-493" sourceY="-269" targetY="-70"/>
     <stereotypes xmi:id="_HNERogq0EfCy7KhTqrRxJg" name="Reference">
       <modelElement href="StoreUniProject.uml#_FLhQoAq0EfCy7KhTqrRxJg"/>
     </stereotypes>
@@ -234,7 +209,7 @@
     </sourceRole>
     <targetRole xmi:id="_HNERoQq0EfCy7KhTqrRxJg" aggregationKind="NONE" name="viewControllerListener" navigable="true">
       <modelElement href="StoreUniProject.uml#_FKq8EAq0EfCy7KhTqrRxJg"/>
-      <visualProperties xmi:id="_Hl8rsQq0EfCy7KhTqrRxJg" position="41.0,93.0"/>
+      <visualProperties xmi:id="_Hl8rsQq0EfCy7KhTqrRxJg" position="41.00000000000006,92.99999999999989"/>
       <stereotypes xmi:id="_RiMb8ArAEfCy7KhTqrRxJg" name="LegacyStyledElement">
         <modelElement href="StoreUniProject.uml#_FKrjIAq0EfCy7KhTqrRxJg"/>
       </stereotypes>
@@ -262,33 +237,31 @@
       <cardinality xmi:id="_HNK_WAq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
     </targetRole>
   </edges>
-  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_HNTiMAq0EfCy7KhTqrRxJg" sourceAnchor="0.0,59.0" targetAnchor="228.0,71.0" dashed="true" superClass="_HNVXYAq0EfCy7KhTqrRxJg" subClass="_HNLmYAq0EfCy7KhTqrRxJg">
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_HNTiMAq0EfCy7KhTqrRxJg" sourceAnchor="0.0,59.0" targetAnchor="228.0,97.0" dashed="true" superClass="_HNVXYAq0EfCy7KhTqrRxJg" subClass="_HNLmYAq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_FJ-_kAq0EfCy7KhTqrRxJg"/>
-    <bendpoints xmi:id="_H96-dArCEfCy7KhTqrRxJg" sourceX="-436" targetY="114"/>
+    <bendpoints xmi:id="_2rYa8gwGEfCNffikzSLgAw" sourceX="-436" targetY="88"/>
   </edges>
-  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_LTab4At4EfC_gOdKAE1FpA" target="_HMV44Aq0EfCy7KhTqrRxJg" source="_HL_6oAq0EfCy7KhTqrRxJg">
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_LTab4At4EfC_gOdKAE1FpA" sourceAnchor="130.0,125.0" targetAnchor="126.0,68.0" target="_HMV44Aq0EfCy7KhTqrRxJg" source="_HL_6oAq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_LPK1EAt4EfC_gOdKAE1FpA"/>
     <stereotypes xmi:id="_LTab4Qt4EfC_gOdKAE1FpA" name="Reference">
       <modelElement href="StoreUniProject.uml#_LPK1Egt4EfC_gOdKAE1FpA"/>
     </stereotypes>
-    <nameVisual xmi:id="_LTab4gt4EfC_gOdKAE1FpA" text=""/>
+    <nameVisual xmi:id="_LTab4gt4EfC_gOdKAE1FpA" text="">
+      <visualProperties xmi:id="_2ra3MAwGEfCNffikzSLgAw" position="-28.0,-8.000000000000114"/>
+    </nameVisual>
     <sourceRole xmi:id="_LTab4wt4EfC_gOdKAE1FpA" aggregationKind="NONE" name="">
       <modelElement href="StoreUniProject.uml#_LPK1EQt4EfC_gOdKAE1FpA"/>
+      <visualProperties xmi:id="_2rZpEgwGEfCNffikzSLgAw" position="-65.0,-34.0"/>
       <visibility xmi:id="_LTab5At4EfC_gOdKAE1FpA" label="+"/>
       <cardinality xmi:id="_LTab5Qt4EfC_gOdKAE1FpA" label="1" max="1" min="1"/>
     </sourceRole>
     <targetRole xmi:id="_LTab5gt4EfC_gOdKAE1FpA" aggregationKind="NONE" name="cart" navigable="true">
       <modelElement href="StoreUniProject.uml#_LOyakAt4EfC_gOdKAE1FpA"/>
+      <visualProperties xmi:id="_2ra3MQwGEfCNffikzSLgAw" position="20.000000000000114,-1.0000000000002274"/>
       <visibility xmi:id="_LTab5wt4EfC_gOdKAE1FpA" label="+"/>
       <cardinality xmi:id="_LTab6At4EfC_gOdKAE1FpA" label="1" max="1" min="1"/>
     </targetRole>
   </edges>
-  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_LjLWMAt4EfC_gOdKAE1FpA" targetItem="_LjMkUAt4EfC_gOdKAE1FpA" sourceItem="_Li6QcAt4EfC_gOdKAE1FpA"/>
-  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_LkIYcAt4EfC_gOdKAE1FpA" targetItem="_LkKNoAt4EfC_gOdKAE1FpA" sourceItem="_Ljk-0At4EfC_gOdKAE1FpA"/>
-  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_LkdIkAt4EfC_gOdKAE1FpA" targetItem="_LkeWsAt4EfC_gOdKAE1FpA" sourceItem="_LkLbwAt4EfC_gOdKAE1FpA"/>
-  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_LkvccAt4EfC_gOdKAE1FpA" targetItem="_LkxRoAt4EfC_gOdKAE1FpA" sourceItem="_Lke9wAt4EfC_gOdKAE1FpA"/>
-  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_LlZjwAt4EfC_gOdKAE1FpA" targetItem="_LlaK0At4EfC_gOdKAE1FpA" sourceItem="_LlGBwAt4EfC_gOdKAE1FpA"/>
-  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_LofUAAt4EfC_gOdKAE1FpA" targetItem="_HL_6oAq0EfCy7KhTqrRxJg" sourceItem="_LoNAIAt4EfC_gOdKAE1FpA"/>
   <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_MUmzIAt4EfC_gOdKAE1FpA" targetItem="_MUnaMAt4EfC_gOdKAE1FpA"/>
   <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_MVJlsAt4EfC_gOdKAE1FpA" targetItem="_MVUk0At4EfC_gOdKAE1FpA"/>
   <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_MVlqkAt4EfC_gOdKAE1FpA" targetItem="_HMtsUAq0EfCy7KhTqrRxJg"/>
@@ -339,7 +312,6 @@
   <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_Me3iYAt4EfC_gOdKAE1FpA" targetItem="_HL1ikAq0EfCy7KhTqrRxJg" sourceItem="_MeERIAt4EfC_gOdKAE1FpA"/>
   <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_MfZt4At4EfC_gOdKAE1FpA" targetItem="_Mf-VoAt4EfC_gOdKAE1FpA" sourceItem="_MfJPMAt4EfC_gOdKAE1FpA"/>
   <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_MgSesAt4EfC_gOdKAE1FpA" targetItem="_HLbS4Aq0EfCy7KhTqrRxJg" sourceItem="_Mf_jwAt4EfC_gOdKAE1FpA"/>
-  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_Mica0At4EfC_gOdKAE1FpA" targetItem="_HMoMwAq0EfCy7KhTqrRxJg" sourceItem="_MhkREAt4EfC_gOdKAE1FpA"/>
   <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_MjxQgAt4EfC_gOdKAE1FpA" targetItem="_HM7uwAq0EfCy7KhTqrRxJg" sourceItem="_Mi9_QAt4EfC_gOdKAE1FpA"/>
   <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_MmFksAt4EfC_gOdKAE1FpA" targetItem="_HL1imAq0EfCy7KhTqrRxJg" sourceItem="_Ml4JUAt4EfC_gOdKAE1FpA"/>
   <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_Mm75QAt4EfC_gOdKAE1FpA" targetItem="_HLbS7wq0EfCy7KhTqrRxJg" sourceItem="_Mm7SMAt4EfC_gOdKAE1FpA"/>
@@ -350,9 +322,6 @@
   <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_MrdM4At4EfC_gOdKAE1FpA" targetItem="_HLbTBwq0EfCy7KhTqrRxJg" sourceItem="_Mrb-wAt4EfC_gOdKAE1FpA"/>
   <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_MsSTUAt4EfC_gOdKAE1FpA" targetItem="_HLbTDwq0EfCy7KhTqrRxJg" sourceItem="_MsRsQAt4EfC_gOdKAE1FpA"/>
   <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_MtE9gAt4EfC_gOdKAE1FpA" targetItem="_HLbTFwq0EfCy7KhTqrRxJg" sourceItem="_MtEWcAt4EfC_gOdKAE1FpA"/>
-  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_Mt3AoAt4EfC_gOdKAE1FpA" targetItem="_HL_6swq0EfCy7KhTqrRxJg" sourceItem="_MtUOEAt4EfC_gOdKAE1FpA"/>
-  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_Mupq0At4EfC_gOdKAE1FpA" targetItem="_HL_6tgq0EfCy7KhTqrRxJg" sourceItem="_MuFqIAt4EfC_gOdKAE1FpA"/>
-  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_MveKMAt4EfC_gOdKAE1FpA" targetItem="_HL_6uQq0EfCy7KhTqrRxJg" sourceItem="_Mu5icAt4EfC_gOdKAE1FpA"/>
   <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_MwSCgAt4EfC_gOdKAE1FpA" targetItem="_HMtsdAq0EfCy7KhTqrRxJg"/>
   <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_MxEssAt4EfC_gOdKAE1FpA" targetItem="_HMtsbwq0EfCy7KhTqrRxJg"/>
   <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:GeneralizationVisual" xmi:id="_7J2scAt5EfC_gOdKAE1FpA" subClass="_HNLmYAq0EfCy7KhTqrRxJg">
@@ -367,6 +336,70 @@
   <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_SeeXkAt8EfC_gOdKAE1FpA" targetItem="_LPrLYAt4EfC_gOdKAE1FpA" sourceItem="_SedwgAt8EfC_gOdKAE1FpA"/>
   <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_SejQEAt8EfC_gOdKAE1FpA" targetItem="__X-AwAt7EfC_gOdKAE1FpA" sourceItem="_SeiB8At8EfC_gOdKAE1FpA"/>
   <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_SenhgQt8EfC_gOdKAE1FpA" targetItem="__YCSMAt7EfC_gOdKAE1FpA" sourceItem="_SenhgAt8EfC_gOdKAE1FpA"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_zP7nwAwGEfCNffikzSLgAw" targetItem="_HL_6oAq0EfCy7KhTqrRxJg" sourceItem="_zP7AsAwGEfCNffikzSLgAw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_zQ6fMAwGEfCNffikzSLgAw" targetItem="_HL_6swq0EfCy7KhTqrRxJg" sourceItem="_zQ5REAwGEfCNffikzSLgAw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_zRixUAwGEfCNffikzSLgAw" targetItem="_HL_6tgq0EfCy7KhTqrRxJg" sourceItem="_zRhjMAwGEfCNffikzSLgAw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_zSqysAwGEfCNffikzSLgAw" targetItem="_HL_6uQq0EfCy7KhTqrRxJg" sourceItem="_zSEVwAwGEfCNffikzSLgAw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_zTJT0AwGEfCNffikzSLgAw" targetItem="_LjMkUAt4EfC_gOdKAE1FpA" sourceItem="_zTIswAwGEfCNffikzSLgAw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_zTpDEAwGEfCNffikzSLgAw" targetItem="_LkKNoAt4EfC_gOdKAE1FpA" sourceItem="_zTocAAwGEfCNffikzSLgAw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_zUsL8AwGEfCNffikzSLgAw" targetItem="_LkeWsAt4EfC_gOdKAE1FpA" sourceItem="_zUglwAwGEfCNffikzSLgAw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_zVNJUAwGEfCNffikzSLgAw" targetItem="_LkxRoAt4EfC_gOdKAE1FpA" sourceItem="_zVMiQAwGEfCNffikzSLgAw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_zVtfoAwGEfCNffikzSLgAw" targetItem="_LlaK0At4EfC_gOdKAE1FpA" sourceItem="_zVs4kAwGEfCNffikzSLgAw"/>
+  <edges xsi:type="com.yattasolutions.diagrams:ConnectionVisual" xmi:id="_zXWeYAwGEfCNffikzSLgAw" targetItem="_HMoMwAq0EfCy7KhTqrRxJg" sourceItem="_zW5ycAwGEfCNffikzSLgAw"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_zf6kgAwGEfCNffikzSLgAw" source="_HJfZMAq0EfCy7KhTqrRxJg">
+    <modelElement href="StoreUniProject.uml#_zOePMAwGEfCNffikzSLgAw"/>
+    <stereotypes xmi:id="_zf6kgQwGEfCNffikzSLgAw" name="Reference">
+      <modelElement href="StoreUniProject.uml#_zOfdUAwGEfCNffikzSLgAw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_zf6kggwGEfCNffikzSLgAw" text=""/>
+    <sourceRole xmi:id="_zf6kgwwGEfCNffikzSLgAw" aggregationKind="NONE" name="">
+      <modelElement href="StoreUniProject.uml#_zOe2QAwGEfCNffikzSLgAw"/>
+      <visibility xmi:id="_zf6khAwGEfCNffikzSLgAw" label="+"/>
+      <cardinality xmi:id="_zf6khQwGEfCNffikzSLgAw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_zf6khgwGEfCNffikzSLgAw" aggregationKind="NONE" name="productManager" navigable="true">
+      <modelElement href="StoreUniProject.uml#_zOXhgAwGEfCNffikzSLgAw"/>
+      <stereotypes xmi:id="_ziKAMAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <visibility xmi:id="_zf6khwwGEfCNffikzSLgAw" label="-"/>
+      <cardinality xmi:id="_zf6kiAwGEfCNffikzSLgAw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_zgw5EAwGEfCNffikzSLgAw" source="_HJfZMAq0EfCy7KhTqrRxJg">
+    <modelElement href="StoreUniProject.uml#_zOfdUQwGEfCNffikzSLgAw"/>
+    <stereotypes xmi:id="_zgw5EQwGEfCNffikzSLgAw" name="Reference">
+      <modelElement href="StoreUniProject.uml#_zOgEYAwGEfCNffikzSLgAw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_zgw5EgwGEfCNffikzSLgAw" text=""/>
+    <sourceRole xmi:id="_zgw5EwwGEfCNffikzSLgAw" aggregationKind="NONE" name="">
+      <modelElement href="StoreUniProject.uml#_zOfdUgwGEfCNffikzSLgAw"/>
+      <visibility xmi:id="_zgw5FAwGEfCNffikzSLgAw" label="+"/>
+      <cardinality xmi:id="_zgw5FQwGEfCNffikzSLgAw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_zgxgIAwGEfCNffikzSLgAw" aggregationKind="NONE" name="cartView" navigable="true">
+      <modelElement href="StoreUniProject.uml#_zOYIkQwGEfCNffikzSLgAw"/>
+      <stereotypes xmi:id="_ziQG0AwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <visibility xmi:id="_zgxgIQwGEfCNffikzSLgAw" label="-"/>
+      <cardinality xmi:id="_zgxgIgwGEfCNffikzSLgAw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_zhBXwAwGEfCNffikzSLgAw" source="_HJfZMAq0EfCy7KhTqrRxJg">
+    <modelElement href="StoreUniProject.uml#_zOgEYQwGEfCNffikzSLgAw"/>
+    <stereotypes xmi:id="_zhBXwQwGEfCNffikzSLgAw" name="Reference">
+      <modelElement href="StoreUniProject.uml#_zOgrcAwGEfCNffikzSLgAw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_zhBXwgwGEfCNffikzSLgAw" text=""/>
+    <sourceRole xmi:id="_zhBXwwwGEfCNffikzSLgAw" aggregationKind="NONE" name="">
+      <modelElement href="StoreUniProject.uml#_zOgEYgwGEfCNffikzSLgAw"/>
+      <visibility xmi:id="_zhBXxAwGEfCNffikzSLgAw" label="+"/>
+      <cardinality xmi:id="_zhBXxQwGEfCNffikzSLgAw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_zhBXxgwGEfCNffikzSLgAw" aggregationKind="NONE" name="dialogUtil" navigable="true">
+      <modelElement href="StoreUniProject.uml#_zOYvoQwGEfCNffikzSLgAw"/>
+      <stereotypes xmi:id="_ziRU8AwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <visibility xmi:id="_zhBXxwwGEfCNffikzSLgAw" label="-"/>
+      <cardinality xmi:id="_zhBXyAwGEfCNffikzSLgAw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
   <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_HLBDMAq0EfCy7KhTqrRxJg" comments="_MdfCUAt4EfC_gOdKAE1FpA" targetConnectionVisual="_MdzycAt4EfC_gOdKAE1FpA" name="Main">
     <modelElement href="StoreUniProject.uml#_FECvoAq0EfCy7KhTqrRxJg"/>
     <visualProperties xmi:id="_HLBDMQq0EfCy7KhTqrRxJg" position="831.0,659.0" size="-1.0,-1.0"/>
@@ -384,210 +417,6 @@
       </parameters>
     </operations>
   </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_HLbS4Aq0EfCy7KhTqrRxJg" comments="_Mf_jwAt4EfC_gOdKAE1FpA" targetConnectionVisual="_MgSesAt4EfC_gOdKAE1FpA" name="BasePersistence" abstractClass="true" associationsOut="_HLar0Aq0EfCy7KhTqrRxJg" subclassedBy="_HLHJ0Aq0EfCy7KhTqrRxJg _HLHw4Qq0EfCy7KhTqrRxJg">
-    <modelElement href="StoreUniProject.uml#_FEQyEAq0EfCy7KhTqrRxJg"/>
-    <visualProperties xmi:id="_HLbS4Qq0EfCy7KhTqrRxJg" position="1340.0,-2.0" size="-1.0,-1.0"/>
-    <stereotypes xmi:id="_HLbS4gq0EfCy7KhTqrRxJg" name="Generics">
-      <modelElement href="StoreUniProject.uml#_FESnQAq0EfCy7KhTqrRxJg"/>
-    </stereotypes>
-    <visibility xmi:id="_HLbS4wq0EfCy7KhTqrRxJg" label="+"/>
-    <attributes xmi:id="_HLbS5Aq0EfCy7KhTqrRxJg" defaultValue="1" name="BASE_ID">
-      <modelElement href="StoreUniProject.uml#_FKbEcQq0EfCy7KhTqrRxJg"/>
-      <stereotypes xmi:id="_HLbS5Qq0EfCy7KhTqrRxJg" name="LegacyStyledElement">
-        <modelElement href="StoreUniProject.uml#_FKcSkAq0EfCy7KhTqrRxJg"/>
-      </stereotypes>
-      <visibility xmi:id="_HLbS5gq0EfCy7KhTqrRxJg" label="-"/>
-      <cardinality xmi:id="_HLbS5wq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
-      <type xmi:id="_HLbS6Aq0EfCy7KhTqrRxJg" name="int">
-        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-      </type>
-    </attributes>
-    <attributes xmi:id="_HLbS6Qq0EfCy7KhTqrRxJg" name="models">
-      <modelElement href="StoreUniProject.uml#_FKcSkQq0EfCy7KhTqrRxJg"/>
-      <stereotypes xmi:id="_RjQL4ArAEfCy7KhTqrRxJg" name="Generics"/>
-      <stereotypes xmi:id="_RjQL4QrAEfCy7KhTqrRxJg" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_RjRaAArAEfCy7KhTqrRxJg" name="Generics"/>
-      <stereotypes xmi:id="_RjSBEArAEfCy7KhTqrRxJg" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_RjxJQArAEfCy7KhTqrRxJg" name="Generics"/>
-      <stereotypes xmi:id="_RjxwUArAEfCy7KhTqrRxJg" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_2CdecArBEfCy7KhTqrRxJg" name="Generics"/>
-      <stereotypes xmi:id="_2CdecQrBEfCy7KhTqrRxJg" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_2CeFgArBEfCy7KhTqrRxJg" name="Generics"/>
-      <stereotypes xmi:id="_2CeFgQrBEfCy7KhTqrRxJg" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_2CkzMArBEfCy7KhTqrRxJg" name="Generics"/>
-      <stereotypes xmi:id="_2CkzMQrBEfCy7KhTqrRxJg" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_Iqq4AAt4EfC_gOdKAE1FpA" name="Generics"/>
-      <stereotypes xmi:id="_IqrfEAt4EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_IqsGIAt4EfC_gOdKAE1FpA" name="Generics"/>
-      <stereotypes xmi:id="_IqstMAt4EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_Iq4TYAt4EfC_gOdKAE1FpA" name="Generics"/>
-      <stereotypes xmi:id="_Iq46cAt4EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_7KBrkAt5EfC_gOdKAE1FpA" name="Generics"/>
-      <stereotypes xmi:id="_7KBrkQt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_7KDgwAt5EfC_gOdKAE1FpA" name="Generics"/>
-      <stereotypes xmi:id="_7KEH0At5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_7KNRwAt5EfC_gOdKAE1FpA" name="Generics"/>
-      <stereotypes xmi:id="_7KNRwQt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
-      <visibility xmi:id="_HLbS7Aq0EfCy7KhTqrRxJg" label="-"/>
-      <cardinality xmi:id="_HLbS7Qq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
-      <type xmi:id="_HLbS7gq0EfCy7KhTqrRxJg" name="ArrayList">
-        <modelElement href="StoreUniProject.uml#_FJOxoAq0EfCy7KhTqrRxJg"/>
-      </type>
-    </attributes>
-    <operations xmi:id="_HLbS7wq0EfCy7KhTqrRxJg" comments="_Mm7SMAt4EfC_gOdKAE1FpA" targetConnectionVisual="_Mm75QAt4EfC_gOdKAE1FpA" name="BasePersistence">
-      <modelElement href="StoreUniProject.uml#_FEUccAq0EfCy7KhTqrRxJg"/>
-      <keywords xmi:id="_HLbS8Aq0EfCy7KhTqrRxJg" keyword="create"/>
-      <visibility xmi:id="_HLbS8Qq0EfCy7KhTqrRxJg" label="+"/>
-      <cardinality xmi:id="_HLbS8gq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
-      <outParameters xmi:id="_HLbS8wq0EfCy7KhTqrRxJg">
-        <modelElement href="StoreUniProject.uml#_FEVDgQq0EfCy7KhTqrRxJg"/>
-        <type xmi:id="_HLbS9Aq0EfCy7KhTqrRxJg" name="BasePersistence">
-          <modelElement href="StoreUniProject.uml#_FEQyEAq0EfCy7KhTqrRxJg"/>
-        </type>
-      </outParameters>
-    </operations>
-    <operations xmi:id="_HLbS9Qq0EfCy7KhTqrRxJg" abstractOperation="true" name="init">
-      <modelElement href="StoreUniProject.uml#_FEVqkAq0EfCy7KhTqrRxJg"/>
-      <stereotypes xmi:id="_HLbS9gq0EfCy7KhTqrRxJg" name="LegacyStyledElement">
-        <modelElement href="StoreUniProject.uml#_FEWRoAq0EfCy7KhTqrRxJg"/>
-      </stereotypes>
-      <visibility xmi:id="_HLbS9wq0EfCy7KhTqrRxJg" label="+"/>
-      <cardinality xmi:id="_HLbS-Aq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
-    </operations>
-    <operations xmi:id="_HLbS-Qq0EfCy7KhTqrRxJg" comments="_MopwgAt4EfC_gOdKAE1FpA" targetConnectionVisual="_MpSpsAt4EfC_gOdKAE1FpA" name="getAll">
-      <modelElement href="StoreUniProject.uml#_FEXfwAq0EfCy7KhTqrRxJg"/>
-      <stereotypes xmi:id="_HLbS-gq0EfCy7KhTqrRxJg" name="Generics">
-        <modelElement href="StoreUniProject.uml#_FEYt4Aq0EfCy7KhTqrRxJg"/>
-      </stereotypes>
-      <visibility xmi:id="_HLbS-wq0EfCy7KhTqrRxJg" label="+"/>
-      <cardinality xmi:id="_HLbS_Aq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
-      <outParameters xmi:id="_HLbS_Qq0EfCy7KhTqrRxJg">
-        <modelElement href="StoreUniProject.uml#_FKQsYAq0EfCy7KhTqrRxJg"/>
-        <type xmi:id="_HLbS_gq0EfCy7KhTqrRxJg" name="ArrayList">
-          <modelElement href="StoreUniProject.uml#_FJOxoAq0EfCy7KhTqrRxJg"/>
-        </type>
-      </outParameters>
-    </operations>
-    <operations xmi:id="_HLbS_wq0EfCy7KhTqrRxJg" comments="_MpihUAt4EfC_gOdKAE1FpA" targetConnectionVisual="_MqYO0At4EfC_gOdKAE1FpA" name="getById">
-      <modelElement href="StoreUniProject.uml#_FEZU8Aq0EfCy7KhTqrRxJg"/>
-      <visibility xmi:id="_HLbTAAq0EfCy7KhTqrRxJg" label="#"/>
-      <cardinality xmi:id="_HLbTAQq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
-      <outParameters xmi:id="_HLbTAgq0EfCy7KhTqrRxJg">
-        <modelElement href="StoreUniProject.uml#_FKQsYQq0EfCy7KhTqrRxJg"/>
-        <type xmi:id="_HLbTAwq0EfCy7KhTqrRxJg" name="T">
-          <modelElement href="StoreUniProject.uml#_FKOQIAq0EfCy7KhTqrRxJg"/>
-        </type>
-      </outParameters>
-      <parameters xmi:id="_HLbTBAq0EfCy7KhTqrRxJg" name="id">
-        <modelElement href="StoreUniProject.uml#_FEZU8Qq0EfCy7KhTqrRxJg"/>
-        <cardinality xmi:id="_HLbTBQq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
-        <type xmi:id="_HLbTBgq0EfCy7KhTqrRxJg" name="String">
-          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </type>
-      </parameters>
-    </operations>
-    <operations xmi:id="_HLbTBwq0EfCy7KhTqrRxJg" comments="_Mrb-wAt4EfC_gOdKAE1FpA" targetConnectionVisual="_MrdM4At4EfC_gOdKAE1FpA" name="deleteById">
-      <modelElement href="StoreUniProject.uml#_FEajEAq0EfCy7KhTqrRxJg"/>
-      <visibility xmi:id="_HLbTCAq0EfCy7KhTqrRxJg" label="#"/>
-      <cardinality xmi:id="_HLbTCQq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
-      <outParameters xmi:id="_HLbTCgq0EfCy7KhTqrRxJg">
-        <modelElement href="StoreUniProject.uml#_FEajEgq0EfCy7KhTqrRxJg"/>
-        <type xmi:id="_HLbTCwq0EfCy7KhTqrRxJg" name="boolean">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
-        </type>
-      </outParameters>
-      <parameters xmi:id="_HLbTDAq0EfCy7KhTqrRxJg" name="id">
-        <modelElement href="StoreUniProject.uml#_FEajEQq0EfCy7KhTqrRxJg"/>
-        <cardinality xmi:id="_HLbTDQq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
-        <type xmi:id="_HLbTDgq0EfCy7KhTqrRxJg" name="String">
-          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </type>
-      </parameters>
-    </operations>
-    <operations xmi:id="_HLbTDwq0EfCy7KhTqrRxJg" comments="_MsRsQAt4EfC_gOdKAE1FpA" targetConnectionVisual="_MsSTUAt4EfC_gOdKAE1FpA" name="getIndexByID">
-      <modelElement href="StoreUniProject.uml#_FEbKIAq0EfCy7KhTqrRxJg"/>
-      <visibility xmi:id="_HLbTEAq0EfCy7KhTqrRxJg" label="#"/>
-      <cardinality xmi:id="_HLbTEQq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
-      <outParameters xmi:id="_HLbTEgq0EfCy7KhTqrRxJg">
-        <modelElement href="StoreUniProject.uml#_FEbxMQq0EfCy7KhTqrRxJg"/>
-        <type xmi:id="_HLbTEwq0EfCy7KhTqrRxJg" name="int">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-        </type>
-      </outParameters>
-      <parameters xmi:id="_HLbTFAq0EfCy7KhTqrRxJg" name="id">
-        <modelElement href="StoreUniProject.uml#_FEbxMAq0EfCy7KhTqrRxJg"/>
-        <cardinality xmi:id="_HLbTFQq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
-        <type xmi:id="_HLbTFgq0EfCy7KhTqrRxJg" name="String">
-          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </type>
-      </parameters>
-    </operations>
-    <operations xmi:id="_HLbTFwq0EfCy7KhTqrRxJg" comments="_MtEWcAt4EfC_gOdKAE1FpA" targetConnectionVisual="_MtE9gAt4EfC_gOdKAE1FpA" name="getIdModel">
-      <modelElement href="StoreUniProject.uml#_FEcYQAq0EfCy7KhTqrRxJg"/>
-      <visibility xmi:id="_HLbTGAq0EfCy7KhTqrRxJg" label="-"/>
-      <cardinality xmi:id="_HLbTGQq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
-      <outParameters xmi:id="_HLbTGgq0EfCy7KhTqrRxJg">
-        <modelElement href="StoreUniProject.uml#_FEcYQQq0EfCy7KhTqrRxJg"/>
-        <type xmi:id="_HLbTGwq0EfCy7KhTqrRxJg" name="int">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-        </type>
-      </outParameters>
-    </operations>
-    <operations xmi:id="_HLbTHAq0EfCy7KhTqrRxJg" comments="_MoXcoAt4EfC_gOdKAE1FpA" targetConnectionVisual="_MoZR0At4EfC_gOdKAE1FpA" name="add">
-      <modelElement href="StoreUniProject.uml#_FKPeQAq0EfCy7KhTqrRxJg"/>
-      <visibility xmi:id="_HLbTHQq0EfCy7KhTqrRxJg" label="#"/>
-      <cardinality xmi:id="_HLbTHgq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
-      <outParameters xmi:id="_HLbTHwq0EfCy7KhTqrRxJg">
-        <modelElement href="StoreUniProject.uml#_FKQFUAq0EfCy7KhTqrRxJg"/>
-        <type xmi:id="_HLbTIAq0EfCy7KhTqrRxJg" name="boolean">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
-        </type>
-      </outParameters>
-      <parameters xmi:id="_HLbTIQq0EfCy7KhTqrRxJg" name="model">
-        <modelElement href="StoreUniProject.uml#_FKPeQQq0EfCy7KhTqrRxJg"/>
-        <cardinality xmi:id="_HLbTIgq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
-        <type xmi:id="_HLbTIwq0EfCy7KhTqrRxJg" name="T">
-          <modelElement href="StoreUniProject.uml#_FKOQIAq0EfCy7KhTqrRxJg"/>
-        </type>
-      </parameters>
-    </operations>
-    <operations xmi:id="_HLbTJAq0EfCy7KhTqrRxJg" comments="_MqoGcAt4EfC_gOdKAE1FpA" targetConnectionVisual="_Mqp7oAt4EfC_gOdKAE1FpA" name="updateById">
-      <modelElement href="StoreUniProject.uml#_FKRTcAq0EfCy7KhTqrRxJg"/>
-      <visibility xmi:id="_HLbTJQq0EfCy7KhTqrRxJg" label="#"/>
-      <cardinality xmi:id="_HLbTJgq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
-      <outParameters xmi:id="_HLbTJwq0EfCy7KhTqrRxJg">
-        <modelElement href="StoreUniProject.uml#_FKR6gQq0EfCy7KhTqrRxJg"/>
-        <type xmi:id="_HLbTKAq0EfCy7KhTqrRxJg" name="boolean">
-          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
-        </type>
-      </outParameters>
-      <parameters xmi:id="_HLbTKQq0EfCy7KhTqrRxJg" name="model">
-        <modelElement href="StoreUniProject.uml#_FKR6gAq0EfCy7KhTqrRxJg"/>
-        <cardinality xmi:id="_HLbTKgq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
-        <type xmi:id="_HLbTKwq0EfCy7KhTqrRxJg" name="T">
-          <modelElement href="StoreUniProject.uml#_FKOQIAq0EfCy7KhTqrRxJg"/>
-        </type>
-      </parameters>
-    </operations>
-    <operations xmi:id="_Mf-VoAt4EfC_gOdKAE1FpA" comments="_MfJPMAt4EfC_gOdKAE1FpA" targetConnectionVisual="_MfZt4At4EfC_gOdKAE1FpA" name="getCopy">
-      <modelElement href="StoreUniProject.uml#_LNQwkAt4EfC_gOdKAE1FpA"/>
-      <visibility xmi:id="_Mf-VoQt4EfC_gOdKAE1FpA" label="-"/>
-      <cardinality xmi:id="_Mf-Vogt4EfC_gOdKAE1FpA" label="1" max="1" min="1"/>
-      <outParameters xmi:id="_Mf-Vowt4EfC_gOdKAE1FpA">
-        <modelElement href="StoreUniProject.uml#_LNRXoAt4EfC_gOdKAE1FpA"/>
-        <type xmi:id="_Mf-VpAt4EfC_gOdKAE1FpA" name="T">
-          <modelElement href="StoreUniProject.uml#_FKOQIAq0EfCy7KhTqrRxJg"/>
-        </type>
-      </outParameters>
-      <parameters xmi:id="_Mf-VpQt4EfC_gOdKAE1FpA" name="model">
-        <modelElement href="StoreUniProject.uml#_LNQwkQt4EfC_gOdKAE1FpA"/>
-        <cardinality xmi:id="_Mf-Vpgt4EfC_gOdKAE1FpA" label="1" max="1" min="1"/>
-        <type xmi:id="_Mf-Vpwt4EfC_gOdKAE1FpA" name="T">
-          <modelElement href="StoreUniProject.uml#_FKOQIAq0EfCy7KhTqrRxJg"/>
-        </type>
-      </parameters>
-    </operations>
-  </nodes>
   <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_HL83UAq0EfCy7KhTqrRxJg" name="CloneNotSupportedException">
     <modelElement href="StoreUniProject.uml#_FKJXoQq0EfCy7KhTqrRxJg"/>
     <visualProperties xmi:id="_HL83UQq0EfCy7KhTqrRxJg" position="837.0,787.0" size="-1.0,-1.0"/>
@@ -596,7 +425,7 @@
     </stereotypes>
     <visibility xmi:id="_HL83Uwq0EfCy7KhTqrRxJg" label="+"/>
   </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_HL_6oAq0EfCy7KhTqrRxJg" comments="_LoNAIAt4EfC_gOdKAE1FpA" targetConnectionVisual="_LofUAAt4EfC_gOdKAE1FpA" name="CartManager" associationsIn="_HJbu0Aq0EfCy7KhTqrRxJg" associationsOut="_LTab4At4EfC_gOdKAE1FpA" generalizations="_HLHJ0Aq0EfCy7KhTqrRxJg">
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_HL_6oAq0EfCy7KhTqrRxJg" comments="_zP7AsAwGEfCNffikzSLgAw" targetConnectionVisual="_zP7nwAwGEfCNffikzSLgAw" name="CartManager" associationsIn="_HJbu0Aq0EfCy7KhTqrRxJg" associationsOut="_LTab4At4EfC_gOdKAE1FpA" generalizations="_HLHJ0Aq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_FEjtAAq0EfCy7KhTqrRxJg"/>
     <visualProperties xmi:id="_HL_6oQq0EfCy7KhTqrRxJg" position="775.0,321.0" size="-1.0,-1.0"/>
     <visibility xmi:id="_HL_6ogq0EfCy7KhTqrRxJg" label="+"/>
@@ -630,17 +459,17 @@
       <visibility xmi:id="_HL_6sQq0EfCy7KhTqrRxJg" label="+"/>
       <cardinality xmi:id="_HL_6sgq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
     </operations>
-    <operations xmi:id="_HL_6swq0EfCy7KhTqrRxJg" comments="_MtUOEAt4EfC_gOdKAE1FpA" targetConnectionVisual="_Mt3AoAt4EfC_gOdKAE1FpA" name="startSale">
+    <operations xmi:id="_HL_6swq0EfCy7KhTqrRxJg" comments="_zQ5REAwGEfCNffikzSLgAw" targetConnectionVisual="_zQ6fMAwGEfCNffikzSLgAw" name="startSale">
       <modelElement href="StoreUniProject.uml#_FEliMwq0EfCy7KhTqrRxJg"/>
       <visibility xmi:id="_HL_6tAq0EfCy7KhTqrRxJg" label="+"/>
       <cardinality xmi:id="_HL_6tQq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
     </operations>
-    <operations xmi:id="_HL_6tgq0EfCy7KhTqrRxJg" comments="_MuFqIAt4EfC_gOdKAE1FpA" targetConnectionVisual="_Mupq0At4EfC_gOdKAE1FpA" name="completeSale">
+    <operations xmi:id="_HL_6tgq0EfCy7KhTqrRxJg" comments="_zRhjMAwGEfCNffikzSLgAw" targetConnectionVisual="_zRixUAwGEfCNffikzSLgAw" name="completeSale">
       <modelElement href="StoreUniProject.uml#_FEmJQAq0EfCy7KhTqrRxJg"/>
       <visibility xmi:id="_HL_6twq0EfCy7KhTqrRxJg" label="+"/>
       <cardinality xmi:id="_HL_6uAq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
     </operations>
-    <operations xmi:id="_HL_6uQq0EfCy7KhTqrRxJg" comments="_Mu5icAt4EfC_gOdKAE1FpA" targetConnectionVisual="_MveKMAt4EfC_gOdKAE1FpA" name="setUser">
+    <operations xmi:id="_HL_6uQq0EfCy7KhTqrRxJg" comments="_zSEVwAwGEfCNffikzSLgAw" targetConnectionVisual="_zSqysAwGEfCNffikzSLgAw" name="setUser">
       <modelElement href="StoreUniProject.uml#_FJWtcAq0EfCy7KhTqrRxJg"/>
       <visibility xmi:id="_HL_6ugq0EfCy7KhTqrRxJg" label="+"/>
       <cardinality xmi:id="_HL_6uwq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
@@ -652,7 +481,7 @@
         </type>
       </parameters>
     </operations>
-    <operations xmi:id="_LjMkUAt4EfC_gOdKAE1FpA" comments="_Li6QcAt4EfC_gOdKAE1FpA" targetConnectionVisual="_LjLWMAt4EfC_gOdKAE1FpA" name="addProduct">
+    <operations xmi:id="_LjMkUAt4EfC_gOdKAE1FpA" comments="_zTIswAwGEfCNffikzSLgAw" targetConnectionVisual="_zTJT0AwGEfCNffikzSLgAw" name="addProduct">
       <modelElement href="StoreUniProject.uml#_LNYsYAt4EfC_gOdKAE1FpA"/>
       <visibility xmi:id="_LjMkUQt4EfC_gOdKAE1FpA" label="+"/>
       <cardinality xmi:id="_LjMkUgt4EfC_gOdKAE1FpA" label="1" max="1" min="1"/>
@@ -664,7 +493,7 @@
         </type>
       </parameters>
     </operations>
-    <operations xmi:id="_LkKNoAt4EfC_gOdKAE1FpA" comments="_Ljk-0At4EfC_gOdKAE1FpA" targetConnectionVisual="_LkIYcAt4EfC_gOdKAE1FpA" name="updateProduct">
+    <operations xmi:id="_LkKNoAt4EfC_gOdKAE1FpA" comments="_zTocAAwGEfCNffikzSLgAw" targetConnectionVisual="_zTpDEAwGEfCNffikzSLgAw" name="updateProduct">
       <modelElement href="StoreUniProject.uml#_LNZTcAt4EfC_gOdKAE1FpA"/>
       <visibility xmi:id="_LkKNoQt4EfC_gOdKAE1FpA" label="+"/>
       <cardinality xmi:id="_LkKNogt4EfC_gOdKAE1FpA" label="1" max="1" min="1"/>
@@ -676,12 +505,12 @@
         </type>
       </parameters>
     </operations>
-    <operations xmi:id="_LkeWsAt4EfC_gOdKAE1FpA" comments="_LkLbwAt4EfC_gOdKAE1FpA" targetConnectionVisual="_LkdIkAt4EfC_gOdKAE1FpA" name="clearCart">
+    <operations xmi:id="_LkeWsAt4EfC_gOdKAE1FpA" comments="_zUglwAwGEfCNffikzSLgAw" targetConnectionVisual="_zUsL8AwGEfCNffikzSLgAw" name="clearCart">
       <modelElement href="StoreUniProject.uml#_LNZ6gAt4EfC_gOdKAE1FpA"/>
       <visibility xmi:id="_LkeWsQt4EfC_gOdKAE1FpA" label="+"/>
       <cardinality xmi:id="_LkeWsgt4EfC_gOdKAE1FpA" label="1" max="1" min="1"/>
     </operations>
-    <operations xmi:id="_LkxRoAt4EfC_gOdKAE1FpA" comments="_Lke9wAt4EfC_gOdKAE1FpA" targetConnectionVisual="_LkvccAt4EfC_gOdKAE1FpA" name="calculateTotal">
+    <operations xmi:id="_LkxRoAt4EfC_gOdKAE1FpA" comments="_zVMiQAwGEfCNffikzSLgAw" targetConnectionVisual="_zVNJUAwGEfCNffikzSLgAw" name="calculateTotal">
       <modelElement href="StoreUniProject.uml#_LNZ6gQt4EfC_gOdKAE1FpA"/>
       <visibility xmi:id="_LkxRoQt4EfC_gOdKAE1FpA" label="+"/>
       <cardinality xmi:id="_LkxRogt4EfC_gOdKAE1FpA" label="1" max="1" min="1"/>
@@ -703,7 +532,7 @@
         </type>
       </outParameters>
     </operations>
-    <operations xmi:id="_LlaK0At4EfC_gOdKAE1FpA" comments="_LlGBwAt4EfC_gOdKAE1FpA" targetConnectionVisual="_LlZjwAt4EfC_gOdKAE1FpA" name="getUserDefault">
+    <operations xmi:id="_LlaK0At4EfC_gOdKAE1FpA" comments="_zVs4kAwGEfCNffikzSLgAw" targetConnectionVisual="_zVtfoAwGEfCNffikzSLgAw" name="getUserDefault">
       <modelElement href="StoreUniProject.uml#_LNZ6gwt4EfC_gOdKAE1FpA"/>
       <visibility xmi:id="_LlaK0Qt4EfC_gOdKAE1FpA" label="-"/>
       <cardinality xmi:id="_LlaK0gt4EfC_gOdKAE1FpA" label="1" max="1" min="1"/>
@@ -745,6 +574,12 @@
       <stereotypes xmi:id="__YNRUAt7EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
       <stereotypes xmi:id="__YPtkAt7EfC_gOdKAE1FpA" name="Generics"/>
       <stereotypes xmi:id="__Y_UcAt7EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xkwfYAwGEfCNffikzSLgAw" name="Generics"/>
+      <stereotypes xmi:id="_xkxGcAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xkyUkAwGEfCNffikzSLgAw" name="Generics"/>
+      <stereotypes xmi:id="_xkyUkQwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xlA-EAwGEfCNffikzSLgAw" name="Generics"/>
+      <stereotypes xmi:id="_xlBlIAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
       <visibility xmi:id="_HMV46Qq0EfCy7KhTqrRxJg" label="-"/>
       <cardinality xmi:id="_HMV46gq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
       <type xmi:id="_HMV46wq0EfCy7KhTqrRxJg" name="ArrayList">
@@ -794,7 +629,7 @@
       </parameters>
     </operations>
   </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_HMoMwAq0EfCy7KhTqrRxJg" comments="_MhkREAt4EfC_gOdKAE1FpA" targetConnectionVisual="_Mica0At4EfC_gOdKAE1FpA" name="Product" generalizations="_HLvb8Aq0EfCy7KhTqrRxJg">
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_HMoMwAq0EfCy7KhTqrRxJg" comments="_zW5ycAwGEfCNffikzSLgAw" targetConnectionVisual="_zXWeYAwGEfCNffikzSLgAw" name="Product" generalizations="_HLvb8Aq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_FExIYAq0EfCy7KhTqrRxJg"/>
     <visualProperties xmi:id="_HMoMwQq0EfCy7KhTqrRxJg" position="-334.0,175.0" size="-1.0,-1.0"/>
     <visibility xmi:id="_HMoMwgq0EfCy7KhTqrRxJg" label="+"/>
@@ -851,6 +686,17 @@
       <outParameters xmi:id="_MhTyZQt4EfC_gOdKAE1FpA">
         <modelElement href="StoreUniProject.uml#_LOCMoAt4EfC_gOdKAE1FpA"/>
         <type xmi:id="_MhTyZgt4EfC_gOdKAE1FpA" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_zWdtkAwGEfCNffikzSLgAw" name="completeInfo">
+      <modelElement href="StoreUniProject.uml#_zNxroAwGEfCNffikzSLgAw"/>
+      <visibility xmi:id="_zWdtkQwGEfCNffikzSLgAw" label="+"/>
+      <cardinality xmi:id="_zWdtkgwGEfCNffikzSLgAw" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_zWdtkwwGEfCNffikzSLgAw">
+        <modelElement href="StoreUniProject.uml#_zN61kAwGEfCNffikzSLgAw"/>
+        <type xmi:id="_zWdtlAwGEfCNffikzSLgAw" name="String">
           <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </type>
       </outParameters>
@@ -936,6 +782,9 @@
       <stereotypes xmi:id="_7KKOcAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_7KK1gAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_7KPuAAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xk1-8AwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xk30IAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xlEBYAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
       <visibility xmi:id="_HNLmaQq0EfCy7KhTqrRxJg" label="-"/>
       <cardinality xmi:id="_HNLmagq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
       <type xmi:id="_HNLmawq0EfCy7KhTqrRxJg" name="JPanel">
@@ -956,6 +805,9 @@
       <stereotypes xmi:id="_7KHyMAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_7KJnYAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_7KQVEAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xkzisAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xk0w0AwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xlFPgAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
       <visibility xmi:id="_HNLmbgq0EfCy7KhTqrRxJg" label="-"/>
       <cardinality xmi:id="_HNLmbwq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
       <type xmi:id="_HNLmcAq0EfCy7KhTqrRxJg" name="ViewControllerListener">
@@ -1135,6 +987,50 @@
         <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
       </type>
     </attributes>
+    <attributes xmi:id="_zhUSsAwGEfCNffikzSLgAw" defaultValue="31" name="CMD_CART_SELECTED_USER">
+      <modelElement href="StoreUniProject.uml#_zNohsAwGEfCNffikzSLgAw"/>
+      <stereotypes xmi:id="_zhUSsQwGEfCNffikzSLgAw" name="LegacyStyledElement">
+        <modelElement href="StoreUniProject.uml#_zN0H4AwGEfCNffikzSLgAw"/>
+      </stereotypes>
+      <visibility xmi:id="_zhUSsgwGEfCNffikzSLgAw" label="+"/>
+      <cardinality xmi:id="_zhUSswwGEfCNffikzSLgAw" label="1" max="1" min="1"/>
+      <type xmi:id="_zhUStAwGEfCNffikzSLgAw" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_zhUStQwGEfCNffikzSLgAw" defaultValue="32" name="CMD_CART_SELECTED_PRODUCT">
+      <modelElement href="StoreUniProject.uml#_zNpIwAwGEfCNffikzSLgAw"/>
+      <stereotypes xmi:id="_zhUStgwGEfCNffikzSLgAw" name="LegacyStyledElement">
+        <modelElement href="StoreUniProject.uml#_zN1WAAwGEfCNffikzSLgAw"/>
+      </stereotypes>
+      <visibility xmi:id="_zhUStwwGEfCNffikzSLgAw" label="+"/>
+      <cardinality xmi:id="_zhUSuAwGEfCNffikzSLgAw" label="1" max="1" min="1"/>
+      <type xmi:id="_zhUSuQwGEfCNffikzSLgAw" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_zhUSugwGEfCNffikzSLgAw" defaultValue="33" name="CMD_CART_COMPLETE">
+      <modelElement href="StoreUniProject.uml#_zNpv0AwGEfCNffikzSLgAw"/>
+      <stereotypes xmi:id="_zhUSuwwGEfCNffikzSLgAw" name="LegacyStyledElement">
+        <modelElement href="StoreUniProject.uml#_zN1WAQwGEfCNffikzSLgAw"/>
+      </stereotypes>
+      <visibility xmi:id="_zhUSvAwGEfCNffikzSLgAw" label="+"/>
+      <cardinality xmi:id="_zhUSvQwGEfCNffikzSLgAw" label="1" max="1" min="1"/>
+      <type xmi:id="_zhUSvgwGEfCNffikzSLgAw" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_zhUSvwwGEfCNffikzSLgAw" defaultValue="34" name="CMD_CART_CLEAN">
+      <modelElement href="StoreUniProject.uml#_zNqW4AwGEfCNffikzSLgAw"/>
+      <stereotypes xmi:id="_zhUSwAwGEfCNffikzSLgAw" name="LegacyStyledElement">
+        <modelElement href="StoreUniProject.uml#_zN19EAwGEfCNffikzSLgAw"/>
+      </stereotypes>
+      <visibility xmi:id="_zhUSwQwGEfCNffikzSLgAw" label="+"/>
+      <cardinality xmi:id="_zhUSwgwGEfCNffikzSLgAw" label="1" max="1" min="1"/>
+      <type xmi:id="_zhUSwwwGEfCNffikzSLgAw" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
     <operations xmi:id="_HFOkUQq0EfCy7KhTqrRxJg" name="onReceiveComand">
       <modelElement href="StoreUniProject.uml#_FKFGMAq0EfCy7KhTqrRxJg"/>
       <visibility xmi:id="_HFOkUgq0EfCy7KhTqrRxJg" label="+"/>
@@ -1291,11 +1187,11 @@
       </outParameters>
     </operations>
   </nodes>
-  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_HJfZMAq0EfCy7KhTqrRxJg" name="StoreController" associationsOut="_HJCtQAq0EfCy7KhTqrRxJg _HJYEcAq0EfCy7KhTqrRxJg _HJagsAq0EfCy7KhTqrRxJg _HJbu0Aq0EfCy7KhTqrRxJg _HJeLEAq0EfCy7KhTqrRxJg _Mb68EAt4EfC_gOdKAE1FpA _McsYIAt4EfC_gOdKAE1FpA">
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_HJfZMAq0EfCy7KhTqrRxJg" name="StoreController" associationsOut="_HJCtQAq0EfCy7KhTqrRxJg _HJagsAq0EfCy7KhTqrRxJg _HJbu0Aq0EfCy7KhTqrRxJg _HJeLEAq0EfCy7KhTqrRxJg _Mb68EAt4EfC_gOdKAE1FpA _McsYIAt4EfC_gOdKAE1FpA _zf6kgAwGEfCNffikzSLgAw _zgw5EAwGEfCNffikzSLgAw _zhBXwAwGEfCNffikzSLgAw">
     <modelElement href="StoreUniProject.uml#_FDpHAAq0EfCy7KhTqrRxJg"/>
     <visualProperties xmi:id="_HJfZMQq0EfCy7KhTqrRxJg" position="60.0,741.0" size="-1.0,-1.0"/>
     <visibility xmi:id="_HJfZMgq0EfCy7KhTqrRxJg" label="+"/>
-    <attributes xmi:id="_HJfZMwq0EfCy7KhTqrRxJg" defaultValue="new ViewControllerListener() {&#xD;&#xA;&#x9;&#x9;@Override&#xD;&#xA;&#x9;&#x9;public void onReceiveComand(ActionEvent e, int cmd) {&#xD;&#xA;&#x9;&#x9;&#x9;// TODO Auto-generated method stub&#xD;&#xA;&#x9;&#x9;&#x9;System.out.println(&quot;StoreController onReceiveComand&quot; + cmd);&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_INVENTORY) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;showProductMenu();&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_USER) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;showUserMenu();&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_INVENTORY_ADD) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;inventory.createProduct(productView.getProductFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(inventory.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_INVENTORY_DELETE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;inventory.deleteProduct(productView.getProductFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(inventory.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_INVENTORY_UPDATE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;inventory.updateProduct(productView.getProductFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(inventory.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_USER_ADD) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userManager.createUser(userView.getUserFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userView.updateListUser(userManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_USER_UPDATE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userManager.updateUser(userView.getUserFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userView.updateListUser(userManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_USER_DELETE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userManager.deleteUser(userView.getUserFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(inventory.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_MENU) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;showMainMenu();&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}" name="viewControllerListener">
+    <attributes xmi:id="_HJfZMwq0EfCy7KhTqrRxJg" defaultValue="new ViewControllerListener() {&#xD;&#xA;&#x9;&#x9;@Override&#xD;&#xA;&#x9;&#x9;public void onReceiveComand(ActionEvent e, int cmd) {&#xD;&#xA;&#x9;&#x9;&#x9;// TODO Auto-generated method stub&#xD;&#xA;&#x9;&#x9;&#x9;System.out.println(&quot;StoreController onReceiveComand&quot; + cmd);&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_INVENTORY) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;showProductMenu();&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_INVENTORY_ADD) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productManager.createProduct(productView.getProductFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(productManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_INVENTORY_DELETE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productManager.deleteProduct(productView.getProductFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(productManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_INVENTORY_UPDATE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productManager.updateProduct(productView.getProductFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(productManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_USER) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;showUserMenu();&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_USER_ADD) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userManager.createUser(userView.getUserFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userView.updateListUser(userManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_USER_UPDATE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userManager.updateUser(userView.getUserFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userView.updateListUser(userManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_USER_DELETE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userManager.deleteUser(userView.getUserFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(productManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_CART) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if (productManager.getAll().isEmpty()) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dialogUtil.showMessage(&quot;No existen productos&quot;);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;} else {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;showCartMenu();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_CART_SELECTED_USER) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartManager.setUser(cartView.getSelectedUser());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_CART_SELECTED_PRODUCT) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartManager.updateProduct(cartView.getSelectedProduct());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartView.updateResult(cartManager.getCart().getTotalPrice(), cartManager.getCart().getProducts());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_CART_CLEAN) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartManager.clearCart();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartView.updateResult(cartManager.getCart().getTotalPrice(), cartManager.getCart().getProducts());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_CART_COMPLETE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if (cartManager.getCart().getProducts().isEmpty()) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dialogUtil.showMessage(&quot;Carrito Vacio&quot;);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;} else {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;cartManager.completeSale();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;cartView.showComplete(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;cartManager.getCart().getId(),&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;cartManager.getCart().getUser(),&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;cartManager.getCart().getTotalPrice());&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_MENU) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;showMainMenu();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartManager.clearCart();&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}" name="viewControllerListener">
       <modelElement href="StoreUniProject.uml#_FKWzAAq0EfCy7KhTqrRxJg"/>
       <stereotypes xmi:id="_Ri60sArAEfCy7KhTqrRxJg" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_Ri8p4ArAEfCy7KhTqrRxJg" name="LegacyStyledElement"/>
@@ -1309,32 +1205,13 @@
       <stereotypes xmi:id="_7J8zEAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_7J9aIAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_7KSxUAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xkgnwAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xkkSIAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xlIS0AwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
       <visibility xmi:id="_HJfZNQq0EfCy7KhTqrRxJg" label="-"/>
       <cardinality xmi:id="_HJfZNgq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
       <type xmi:id="_HJfZNwq0EfCy7KhTqrRxJg" name="ViewControllerListener">
         <modelElement href="StoreUniProject.uml#_FD6MwAq0EfCy7KhTqrRxJg"/>
-      </type>
-    </attributes>
-    <attributes xmi:id="_HJfZOAq0EfCy7KhTqrRxJg" name="inventory">
-      <modelElement href="StoreUniProject.uml#_FKXaEQq0EfCy7KhTqrRxJg"/>
-      <stereotypes xmi:id="_Ri-fEArAEfCy7KhTqrRxJg" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_Ri_tMArAEfCy7KhTqrRxJg" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_Rje1YArAEfCy7KhTqrRxJg" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_2CXX0ArBEfCy7KhTqrRxJg" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_2CX-4ArBEfCy7KhTqrRxJg" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_2Ci-AArBEfCy7KhTqrRxJg" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_IqeDsAt4EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_Iqf44At4EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_IrBdUAt4EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_MDIooQt4EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_Mk1AcAt4EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_7J-BMAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_7J-oQAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
-      <stereotypes xmi:id="_7KTYYAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
-      <visibility xmi:id="_HJfZOgq0EfCy7KhTqrRxJg" label="-"/>
-      <cardinality xmi:id="_HJfZOwq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
-      <type xmi:id="_MDIooAt4EfC_gOdKAE1FpA" name="ProductManager">
-        <modelElement href="StoreUniProject.uml#_LOanIAt4EfC_gOdKAE1FpA"/>
       </type>
     </attributes>
     <attributes xmi:id="_HJfZPQq0EfCy7KhTqrRxJg" name="userManager">
@@ -1351,6 +1228,9 @@
       <stereotypes xmi:id="_7J_PUAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_7J_PUQt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_7KT_cAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xknVcAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xkn8gAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xlKvEAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
       <visibility xmi:id="_HJfZPwq0EfCy7KhTqrRxJg" label="-"/>
       <cardinality xmi:id="_HJfZQAq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
       <type xmi:id="_HJfZQQq0EfCy7KhTqrRxJg" name="UserManager">
@@ -1371,6 +1251,9 @@
       <stereotypes xmi:id="_7J_2YAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_7KAdcAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_7KUmgAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xkpKoAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xkpxsAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xlMkQAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
       <visibility xmi:id="_HJfZRAq0EfCy7KhTqrRxJg" label="-"/>
       <cardinality xmi:id="_HJfZRQq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
       <type xmi:id="_HJfZRgq0EfCy7KhTqrRxJg" name="CartManager">
@@ -1391,6 +1274,9 @@
       <stereotypes xmi:id="_7KAdcQt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_7KBEgAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_7KV0oAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xkq_0AwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xkrm4AwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xlNyYAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
       <visibility xmi:id="_HJfZSQq0EfCy7KhTqrRxJg" label="-"/>
       <cardinality xmi:id="_HJfZSgq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
       <type xmi:id="_HJfZSwq0EfCy7KhTqrRxJg" name="MenuView">
@@ -1402,6 +1288,9 @@
       <stereotypes xmi:id="_7KMDoAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_7KMDoQt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_7KWbsAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xk5pUAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xk63cAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xlPAgAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
       <visibility xmi:id="_Mapwwgt4EfC_gOdKAE1FpA" label="-"/>
       <cardinality xmi:id="_Mapwwwt4EfC_gOdKAE1FpA" label="1" max="1" min="1"/>
       <type xmi:id="_MapwxAt4EfC_gOdKAE1FpA" name="ProductView">
@@ -1413,10 +1302,46 @@
       <stereotypes xmi:id="_7KMDogt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_7KMqsAt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
       <stereotypes xmi:id="_7KYQ4At5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xk7egAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xk9TsAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xlQOoAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
       <visibility xmi:id="_Mapwxwt4EfC_gOdKAE1FpA" label="-"/>
       <cardinality xmi:id="_MapwyAt4EfC_gOdKAE1FpA" label="1" max="1" min="1"/>
       <type xmi:id="_MapwyQt4EfC_gOdKAE1FpA" name="UserView">
         <modelElement href="StoreUniProject.uml#_LOdDYAt4EfC_gOdKAE1FpA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_zekgsAwGEfCNffikzSLgAw" name="productManager">
+      <modelElement href="StoreUniProject.uml#_zOXhgAwGEfCNffikzSLgAw"/>
+      <stereotypes xmi:id="_zekgsQwGEfCNffikzSLgAw" name="LegacyStyledElement">
+        <modelElement href="StoreUniProject.uml#_zOYIkAwGEfCNffikzSLgAw"/>
+      </stereotypes>
+      <visibility xmi:id="_zekgsgwGEfCNffikzSLgAw" label="-"/>
+      <cardinality xmi:id="_zekgswwGEfCNffikzSLgAw" label="1" max="1" min="1"/>
+      <type xmi:id="_zekgtAwGEfCNffikzSLgAw" name="ProductManager">
+        <modelElement href="StoreUniProject.uml#_LOanIAt4EfC_gOdKAE1FpA"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_zekgtQwGEfCNffikzSLgAw" name="cartView">
+      <modelElement href="StoreUniProject.uml#_zOYIkQwGEfCNffikzSLgAw"/>
+      <stereotypes xmi:id="_zekgtgwGEfCNffikzSLgAw" name="LegacyStyledElement">
+        <modelElement href="StoreUniProject.uml#_zOYvoAwGEfCNffikzSLgAw"/>
+      </stereotypes>
+      <visibility xmi:id="_zekgtwwGEfCNffikzSLgAw" label="-"/>
+      <cardinality xmi:id="_zekguAwGEfCNffikzSLgAw" label="1" max="1" min="1"/>
+      <type xmi:id="_zekguQwGEfCNffikzSLgAw" name="CartView">
+        <modelElement href="StoreUniProject.uml#_zOSB8AwGEfCNffikzSLgAw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_zekgugwGEfCNffikzSLgAw" name="dialogUtil">
+      <modelElement href="StoreUniProject.uml#_zOYvoQwGEfCNffikzSLgAw"/>
+      <stereotypes xmi:id="_zekguwwGEfCNffikzSLgAw" name="LegacyStyledElement">
+        <modelElement href="StoreUniProject.uml#_zOZWsAwGEfCNffikzSLgAw"/>
+      </stereotypes>
+      <visibility xmi:id="_zekgvAwGEfCNffikzSLgAw" label="-"/>
+      <cardinality xmi:id="_zekgvQwGEfCNffikzSLgAw" label="1" max="1" min="1"/>
+      <type xmi:id="_zekgvgwGEfCNffikzSLgAw" name="DialogUtil">
+        <modelElement href="StoreUniProject.uml#_zOTQEQwGEfCNffikzSLgAw"/>
       </type>
     </attributes>
     <operations xmi:id="_HJfZTAq0EfCy7KhTqrRxJg" name="init">
@@ -1487,24 +1412,11 @@
         </type>
       </parameters>
     </operations>
-  </nodes>
-  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_Li6QcAt4EfC_gOdKAE1FpA" sourceConnectionVisual="_LjLWMAt4EfC_gOdKAE1FpA" text="Agrega productos al carrito&#xD;&#xA;     * @param product el producto a agregar&#xD;&#xA;     * @param quantity la cantidad de productos a agregar" item="_LjMkUAt4EfC_gOdKAE1FpA">
-    <modelElement href="StoreUniProject.uml#_LPDgVgt4EfC_gOdKAE1FpA"/>
-  </nodes>
-  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_Ljk-0At4EfC_gOdKAE1FpA" sourceConnectionVisual="_LkIYcAt4EfC_gOdKAE1FpA" text="Actualiza productos del carrito&#xD;&#xA;     * @param product el producto a eliminar&#xD;&#xA;     * @param quantity la cantidad de productos a eliminar" item="_LkKNoAt4EfC_gOdKAE1FpA">
-    <modelElement href="StoreUniProject.uml#_LPDgVwt4EfC_gOdKAE1FpA"/>
-  </nodes>
-  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_LkLbwAt4EfC_gOdKAE1FpA" sourceConnectionVisual="_LkdIkAt4EfC_gOdKAE1FpA" text="Vacía el carrito y restablece el usuario por defecto" item="_LkeWsAt4EfC_gOdKAE1FpA">
-    <modelElement href="StoreUniProject.uml#_LPEucAt4EfC_gOdKAE1FpA"/>
-  </nodes>
-  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_Lke9wAt4EfC_gOdKAE1FpA" sourceConnectionVisual="_LkvccAt4EfC_gOdKAE1FpA" text="Calcula el total de la compra&#xD;&#xA;     * @return el total calculado" item="_LkxRoAt4EfC_gOdKAE1FpA">
-    <modelElement href="StoreUniProject.uml#_LPEucQt4EfC_gOdKAE1FpA"/>
-  </nodes>
-  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_LlGBwAt4EfC_gOdKAE1FpA" sourceConnectionVisual="_LlZjwAt4EfC_gOdKAE1FpA" text="Crea un usuario por defecto&#xD;&#xA;     * @return usuario por defecto" item="_LlaK0At4EfC_gOdKAE1FpA">
-    <modelElement href="StoreUniProject.uml#_LPEucwt4EfC_gOdKAE1FpA"/>
-  </nodes>
-  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_LoNAIAt4EfC_gOdKAE1FpA" sourceConnectionVisual="_LofUAAt4EfC_gOdKAE1FpA" text="Clase que gestiona el carrito de compras.&#xD;&#xA;Extiende de BasePersistence para manejar la persistencia de datos." item="_HL_6oAq0EfCy7KhTqrRxJg">
-    <modelElement href="StoreUniProject.uml#_LPDgUwt4EfC_gOdKAE1FpA"/>
+    <operations xmi:id="_zeVQIAwGEfCNffikzSLgAw" name="showCartMenu">
+      <modelElement href="StoreUniProject.uml#_zNjCIAwGEfCNffikzSLgAw"/>
+      <visibility xmi:id="_zeVQIQwGEfCNffikzSLgAw" label="-"/>
+      <cardinality xmi:id="_zeVQIgwGEfCNffikzSLgAw" label="1" max="1" min="1"/>
+    </operations>
   </nodes>
   <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_MXkAgAt4EfC_gOdKAE1FpA" sourceConnectionVisual="_MXlOoAt4EfC_gOdKAE1FpA" text="Create the frame." item="_HNLmcQq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_LPFVgAt4EfC_gOdKAE1FpA"/>
@@ -1520,9 +1432,6 @@
   </nodes>
   <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_Mf_jwAt4EfC_gOdKAE1FpA" sourceConnectionVisual="_MgSesAt4EfC_gOdKAE1FpA" text="Clase base abstracta para la persistencia de modelos.&#xD;&#xA;Proporciona operaciones CRUD básicas para cualquier modelo que extienda de BaseModel.&#xD;&#xA;@param &lt;T> tipo de modelo que debe extender de BaseModel" item="_HLbS4Aq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_LPCSMgt4EfC_gOdKAE1FpA"/>
-  </nodes>
-  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_MhkREAt4EfC_gOdKAE1FpA" sourceConnectionVisual="_Mica0At4EfC_gOdKAE1FpA" text="Clase que representa un producto en el sistema.&#xD;&#xA;Extiende de BaseModel para heredar funcionalidades básicas." item="_HMoMwAq0EfCy7KhTqrRxJg">
-    <modelElement href="StoreUniProject.uml#_LPEudAt4EfC_gOdKAE1FpA"/>
   </nodes>
   <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_Mi9_QAt4EfC_gOdKAE1FpA" sourceConnectionVisual="_MjxQgAt4EfC_gOdKAE1FpA" text="Clase que representa un usuario en el sistema.&#xD;&#xA;Extiende de BaseModel para heredar funcionalidades básicas." item="_HM7uwAq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_LPEudQt4EfC_gOdKAE1FpA"/>
@@ -1554,15 +1463,6 @@
   <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_MtEWcAt4EfC_gOdKAE1FpA" sourceConnectionVisual="_MtE9gAt4EfC_gOdKAE1FpA" text="Genera un nuevo ID para un modelo&#xD;&#xA;&#x9; * @return el siguiente ID disponible" item="_HLbTFwq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_LPDgUAt4EfC_gOdKAE1FpA"/>
   </nodes>
-  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_MtUOEAt4EfC_gOdKAE1FpA" sourceConnectionVisual="_Mt3AoAt4EfC_gOdKAE1FpA" text="Inicia una nueva venta creando un carrito vacío" item="_HL_6swq0EfCy7KhTqrRxJg">
-    <modelElement href="StoreUniProject.uml#_LPDgVAt4EfC_gOdKAE1FpA"/>
-  </nodes>
-  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_MuFqIAt4EfC_gOdKAE1FpA" sourceConnectionVisual="_Mupq0At4EfC_gOdKAE1FpA" text="Finaliza la venta guardando el carrito" item="_HL_6tgq0EfCy7KhTqrRxJg">
-    <modelElement href="StoreUniProject.uml#_LPDgVQt4EfC_gOdKAE1FpA"/>
-  </nodes>
-  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_Mu5icAt4EfC_gOdKAE1FpA" sourceConnectionVisual="_MveKMAt4EfC_gOdKAE1FpA" text="Establece el usuario del carrito&#xD;&#xA;     * @param user el usuario a establecer" item="_HL_6uQq0EfCy7KhTqrRxJg">
-    <modelElement href="StoreUniProject.uml#_LPEucgt4EfC_gOdKAE1FpA"/>
-  </nodes>
   <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_7J4hoAt5EfC_gOdKAE1FpA" sourceConnectionVisual="_7J4hoQt5EfC_gOdKAE1FpA" text="Clase que gestiona las operaciones CRUD de usuarios.&#xD;&#xA;Extiende de BasePersistence para manejar la persistencia de datos." item="_HMtsUAq0EfCy7KhTqrRxJg">
     <modelElement href="StoreUniProject.uml#_Of_QIAt5EfC_gOdKAE1FpA"/>
   </nodes>
@@ -1589,5 +1489,245 @@
   </nodes>
   <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_SenhgAt8EfC_gOdKAE1FpA" sourceConnectionVisual="_SenhgQt8EfC_gOdKAE1FpA" text="Establece la lista de productos del carrito y actualiza el precio total&#xD;&#xA;&#x9; * @param products lista de productos a establecer" item="__YCSMAt7EfC_gOdKAE1FpA">
     <modelElement href="StoreUniProject.uml#_SdlmwQt8EfC_gOdKAE1FpA"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_zP7AsAwGEfCNffikzSLgAw" sourceConnectionVisual="_zP7nwAwGEfCNffikzSLgAw" text="Clase que gestiona el carrito de compras.&#xD;&#xA;Extiende de BasePersistence para manejar la persistencia de datos." item="_HL_6oAq0EfCy7KhTqrRxJg">
+    <modelElement href="StoreUniProject.uml#_zOby8gwGEfCNffikzSLgAw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_zQ5REAwGEfCNffikzSLgAw" sourceConnectionVisual="_zQ6fMAwGEfCNffikzSLgAw" text="Inicia una nueva venta creando un carrito vacío" item="_HL_6swq0EfCy7KhTqrRxJg">
+    <modelElement href="StoreUniProject.uml#_zOcaAAwGEfCNffikzSLgAw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_zRhjMAwGEfCNffikzSLgAw" sourceConnectionVisual="_zRixUAwGEfCNffikzSLgAw" text="Finaliza la venta guardando el carrito" item="_HL_6tgq0EfCy7KhTqrRxJg">
+    <modelElement href="StoreUniProject.uml#_zOcaAQwGEfCNffikzSLgAw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_zSEVwAwGEfCNffikzSLgAw" sourceConnectionVisual="_zSqysAwGEfCNffikzSLgAw" text="Establece el usuario del carrito&#xD;&#xA;     * @param user el usuario a establecer" item="_HL_6uQq0EfCy7KhTqrRxJg">
+    <modelElement href="StoreUniProject.uml#_zOcaBgwGEfCNffikzSLgAw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_zTIswAwGEfCNffikzSLgAw" sourceConnectionVisual="_zTJT0AwGEfCNffikzSLgAw" text="Agrega productos al carrito&#xD;&#xA;     * @param product el producto a agregar&#xD;&#xA;     * @param quantity la cantidad de productos a agregar" item="_LjMkUAt4EfC_gOdKAE1FpA">
+    <modelElement href="StoreUniProject.uml#_zOcaAgwGEfCNffikzSLgAw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_zTocAAwGEfCNffikzSLgAw" sourceConnectionVisual="_zTpDEAwGEfCNffikzSLgAw" text="Actualiza productos del carrito&#xD;&#xA;     * @param product el producto a eliminar&#xD;&#xA;     * @param quantity la cantidad de productos a eliminar" item="_LkKNoAt4EfC_gOdKAE1FpA">
+    <modelElement href="StoreUniProject.uml#_zOcaAwwGEfCNffikzSLgAw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_zUglwAwGEfCNffikzSLgAw" sourceConnectionVisual="_zUsL8AwGEfCNffikzSLgAw" text="Vacía el carrito y restablece el usuario por defecto" item="_LkeWsAt4EfC_gOdKAE1FpA">
+    <modelElement href="StoreUniProject.uml#_zOcaBAwGEfCNffikzSLgAw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_zVMiQAwGEfCNffikzSLgAw" sourceConnectionVisual="_zVNJUAwGEfCNffikzSLgAw" text="Calcula el total de la compra&#xD;&#xA;     * @return el total calculado" item="_LkxRoAt4EfC_gOdKAE1FpA">
+    <modelElement href="StoreUniProject.uml#_zOcaBQwGEfCNffikzSLgAw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_zVs4kAwGEfCNffikzSLgAw" sourceConnectionVisual="_zVtfoAwGEfCNffikzSLgAw" text="Crea un usuario por defecto&#xD;&#xA;     * @return usuario por defecto" item="_LlaK0At4EfC_gOdKAE1FpA">
+    <modelElement href="StoreUniProject.uml#_zOcaBwwGEfCNffikzSLgAw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.diagrams:CommentVisual" xmi:id="_zW5ycAwGEfCNffikzSLgAw" sourceConnectionVisual="_zXWeYAwGEfCNffikzSLgAw" text="Clase que representa un producto en el sistema.&#xD;&#xA;Extiende de BaseModel para heredar funcionalidades básicas." item="_HMoMwAq0EfCy7KhTqrRxJg">
+    <modelElement href="StoreUniProject.uml#_zOcaCAwGEfCNffikzSLgAw"/>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_HLbS4Aq0EfCy7KhTqrRxJg" comments="_Mf_jwAt4EfC_gOdKAE1FpA" targetConnectionVisual="_MgSesAt4EfC_gOdKAE1FpA" name="BasePersistence" abstractClass="true" associationsOut="_HLar0Aq0EfCy7KhTqrRxJg" subclassedBy="_HLHJ0Aq0EfCy7KhTqrRxJg _HLHw4Qq0EfCy7KhTqrRxJg">
+    <modelElement href="StoreUniProject.uml#_FEQyEAq0EfCy7KhTqrRxJg"/>
+    <visualProperties xmi:id="_HLbS4Qq0EfCy7KhTqrRxJg" position="1123.0,-4.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_HLbS4gq0EfCy7KhTqrRxJg" name="Generics">
+      <modelElement href="StoreUniProject.uml#_FESnQAq0EfCy7KhTqrRxJg"/>
+    </stereotypes>
+    <visibility xmi:id="_HLbS4wq0EfCy7KhTqrRxJg" label="+"/>
+    <attributes xmi:id="_HLbS5Aq0EfCy7KhTqrRxJg" defaultValue="1" name="BASE_ID">
+      <modelElement href="StoreUniProject.uml#_FKbEcQq0EfCy7KhTqrRxJg"/>
+      <stereotypes xmi:id="_HLbS5Qq0EfCy7KhTqrRxJg" name="LegacyStyledElement">
+        <modelElement href="StoreUniProject.uml#_FKcSkAq0EfCy7KhTqrRxJg"/>
+      </stereotypes>
+      <visibility xmi:id="_HLbS5gq0EfCy7KhTqrRxJg" label="-"/>
+      <cardinality xmi:id="_HLbS5wq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
+      <type xmi:id="_HLbS6Aq0EfCy7KhTqrRxJg" name="int">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_HLbS6Qq0EfCy7KhTqrRxJg" name="models">
+      <modelElement href="StoreUniProject.uml#_FKcSkQq0EfCy7KhTqrRxJg"/>
+      <stereotypes xmi:id="_RjQL4ArAEfCy7KhTqrRxJg" name="Generics"/>
+      <stereotypes xmi:id="_RjQL4QrAEfCy7KhTqrRxJg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_RjRaAArAEfCy7KhTqrRxJg" name="Generics"/>
+      <stereotypes xmi:id="_RjSBEArAEfCy7KhTqrRxJg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_RjxJQArAEfCy7KhTqrRxJg" name="Generics"/>
+      <stereotypes xmi:id="_RjxwUArAEfCy7KhTqrRxJg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_2CdecArBEfCy7KhTqrRxJg" name="Generics"/>
+      <stereotypes xmi:id="_2CdecQrBEfCy7KhTqrRxJg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_2CeFgArBEfCy7KhTqrRxJg" name="Generics"/>
+      <stereotypes xmi:id="_2CeFgQrBEfCy7KhTqrRxJg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_2CkzMArBEfCy7KhTqrRxJg" name="Generics"/>
+      <stereotypes xmi:id="_2CkzMQrBEfCy7KhTqrRxJg" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_Iqq4AAt4EfC_gOdKAE1FpA" name="Generics"/>
+      <stereotypes xmi:id="_IqrfEAt4EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_IqsGIAt4EfC_gOdKAE1FpA" name="Generics"/>
+      <stereotypes xmi:id="_IqstMAt4EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_Iq4TYAt4EfC_gOdKAE1FpA" name="Generics"/>
+      <stereotypes xmi:id="_Iq46cAt4EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_7KBrkAt5EfC_gOdKAE1FpA" name="Generics"/>
+      <stereotypes xmi:id="_7KBrkQt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_7KDgwAt5EfC_gOdKAE1FpA" name="Generics"/>
+      <stereotypes xmi:id="_7KEH0At5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_7KNRwAt5EfC_gOdKAE1FpA" name="Generics"/>
+      <stereotypes xmi:id="_7KNRwQt5EfC_gOdKAE1FpA" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xks1AAwGEfCNffikzSLgAw" name="Generics"/>
+      <stereotypes xmi:id="_xks1AQwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xktcEAwGEfCNffikzSLgAw" name="Generics"/>
+      <stereotypes xmi:id="_xkuDIAwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <stereotypes xmi:id="_xk-h0AwGEfCNffikzSLgAw" name="Generics"/>
+      <stereotypes xmi:id="_xk_I4AwGEfCNffikzSLgAw" name="LegacyStyledElement"/>
+      <visibility xmi:id="_HLbS7Aq0EfCy7KhTqrRxJg" label="-"/>
+      <cardinality xmi:id="_HLbS7Qq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
+      <type xmi:id="_HLbS7gq0EfCy7KhTqrRxJg" name="ArrayList">
+        <modelElement href="StoreUniProject.uml#_FJOxoAq0EfCy7KhTqrRxJg"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_HLbS7wq0EfCy7KhTqrRxJg" comments="_Mm7SMAt4EfC_gOdKAE1FpA" targetConnectionVisual="_Mm75QAt4EfC_gOdKAE1FpA" name="BasePersistence">
+      <modelElement href="StoreUniProject.uml#_FEUccAq0EfCy7KhTqrRxJg"/>
+      <keywords xmi:id="_HLbS8Aq0EfCy7KhTqrRxJg" keyword="create"/>
+      <visibility xmi:id="_HLbS8Qq0EfCy7KhTqrRxJg" label="+"/>
+      <cardinality xmi:id="_HLbS8gq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_HLbS8wq0EfCy7KhTqrRxJg">
+        <modelElement href="StoreUniProject.uml#_FEVDgQq0EfCy7KhTqrRxJg"/>
+        <type xmi:id="_HLbS9Aq0EfCy7KhTqrRxJg" name="BasePersistence">
+          <modelElement href="StoreUniProject.uml#_FEQyEAq0EfCy7KhTqrRxJg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_HLbS9Qq0EfCy7KhTqrRxJg" abstractOperation="true" name="init">
+      <modelElement href="StoreUniProject.uml#_FEVqkAq0EfCy7KhTqrRxJg"/>
+      <stereotypes xmi:id="_HLbS9gq0EfCy7KhTqrRxJg" name="LegacyStyledElement">
+        <modelElement href="StoreUniProject.uml#_FEWRoAq0EfCy7KhTqrRxJg"/>
+      </stereotypes>
+      <visibility xmi:id="_HLbS9wq0EfCy7KhTqrRxJg" label="+"/>
+      <cardinality xmi:id="_HLbS-Aq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
+    </operations>
+    <operations xmi:id="_HLbS-Qq0EfCy7KhTqrRxJg" comments="_MopwgAt4EfC_gOdKAE1FpA" targetConnectionVisual="_MpSpsAt4EfC_gOdKAE1FpA" name="getAll">
+      <modelElement href="StoreUniProject.uml#_FEXfwAq0EfCy7KhTqrRxJg"/>
+      <stereotypes xmi:id="_HLbS-gq0EfCy7KhTqrRxJg" name="Generics">
+        <modelElement href="StoreUniProject.uml#_FEYt4Aq0EfCy7KhTqrRxJg"/>
+      </stereotypes>
+      <visibility xmi:id="_HLbS-wq0EfCy7KhTqrRxJg" label="+"/>
+      <cardinality xmi:id="_HLbS_Aq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_HLbS_Qq0EfCy7KhTqrRxJg">
+        <modelElement href="StoreUniProject.uml#_FKQsYAq0EfCy7KhTqrRxJg"/>
+        <type xmi:id="_HLbS_gq0EfCy7KhTqrRxJg" name="ArrayList">
+          <modelElement href="StoreUniProject.uml#_FJOxoAq0EfCy7KhTqrRxJg"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_HLbS_wq0EfCy7KhTqrRxJg" comments="_MpihUAt4EfC_gOdKAE1FpA" targetConnectionVisual="_MqYO0At4EfC_gOdKAE1FpA" name="getById">
+      <modelElement href="StoreUniProject.uml#_FEZU8Aq0EfCy7KhTqrRxJg"/>
+      <visibility xmi:id="_HLbTAAq0EfCy7KhTqrRxJg" label="#"/>
+      <cardinality xmi:id="_HLbTAQq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_HLbTAgq0EfCy7KhTqrRxJg">
+        <modelElement href="StoreUniProject.uml#_FKQsYQq0EfCy7KhTqrRxJg"/>
+        <type xmi:id="_HLbTAwq0EfCy7KhTqrRxJg" name="T">
+          <modelElement href="StoreUniProject.uml#_FKOQIAq0EfCy7KhTqrRxJg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_HLbTBAq0EfCy7KhTqrRxJg" name="id">
+        <modelElement href="StoreUniProject.uml#_FEZU8Qq0EfCy7KhTqrRxJg"/>
+        <cardinality xmi:id="_HLbTBQq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
+        <type xmi:id="_HLbTBgq0EfCy7KhTqrRxJg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_HLbTBwq0EfCy7KhTqrRxJg" comments="_Mrb-wAt4EfC_gOdKAE1FpA" targetConnectionVisual="_MrdM4At4EfC_gOdKAE1FpA" name="deleteById">
+      <modelElement href="StoreUniProject.uml#_FEajEAq0EfCy7KhTqrRxJg"/>
+      <visibility xmi:id="_HLbTCAq0EfCy7KhTqrRxJg" label="#"/>
+      <cardinality xmi:id="_HLbTCQq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_HLbTCgq0EfCy7KhTqrRxJg">
+        <modelElement href="StoreUniProject.uml#_FEajEgq0EfCy7KhTqrRxJg"/>
+        <type xmi:id="_HLbTCwq0EfCy7KhTqrRxJg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_HLbTDAq0EfCy7KhTqrRxJg" name="id">
+        <modelElement href="StoreUniProject.uml#_FEajEQq0EfCy7KhTqrRxJg"/>
+        <cardinality xmi:id="_HLbTDQq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
+        <type xmi:id="_HLbTDgq0EfCy7KhTqrRxJg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_HLbTDwq0EfCy7KhTqrRxJg" comments="_MsRsQAt4EfC_gOdKAE1FpA" targetConnectionVisual="_MsSTUAt4EfC_gOdKAE1FpA" name="getIndexByID">
+      <modelElement href="StoreUniProject.uml#_FEbKIAq0EfCy7KhTqrRxJg"/>
+      <visibility xmi:id="_HLbTEAq0EfCy7KhTqrRxJg" label="#"/>
+      <cardinality xmi:id="_HLbTEQq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_HLbTEgq0EfCy7KhTqrRxJg">
+        <modelElement href="StoreUniProject.uml#_FEbxMQq0EfCy7KhTqrRxJg"/>
+        <type xmi:id="_HLbTEwq0EfCy7KhTqrRxJg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_HLbTFAq0EfCy7KhTqrRxJg" name="id">
+        <modelElement href="StoreUniProject.uml#_FEbxMAq0EfCy7KhTqrRxJg"/>
+        <cardinality xmi:id="_HLbTFQq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
+        <type xmi:id="_HLbTFgq0EfCy7KhTqrRxJg" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_HLbTFwq0EfCy7KhTqrRxJg" comments="_MtEWcAt4EfC_gOdKAE1FpA" targetConnectionVisual="_MtE9gAt4EfC_gOdKAE1FpA" name="getIdModel">
+      <modelElement href="StoreUniProject.uml#_FEcYQAq0EfCy7KhTqrRxJg"/>
+      <visibility xmi:id="_HLbTGAq0EfCy7KhTqrRxJg" label="-"/>
+      <cardinality xmi:id="_HLbTGQq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_HLbTGgq0EfCy7KhTqrRxJg">
+        <modelElement href="StoreUniProject.uml#_FEcYQQq0EfCy7KhTqrRxJg"/>
+        <type xmi:id="_HLbTGwq0EfCy7KhTqrRxJg" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_HLbTHAq0EfCy7KhTqrRxJg" comments="_MoXcoAt4EfC_gOdKAE1FpA" targetConnectionVisual="_MoZR0At4EfC_gOdKAE1FpA" name="add">
+      <modelElement href="StoreUniProject.uml#_FKPeQAq0EfCy7KhTqrRxJg"/>
+      <visibility xmi:id="_HLbTHQq0EfCy7KhTqrRxJg" label="#"/>
+      <cardinality xmi:id="_HLbTHgq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_HLbTHwq0EfCy7KhTqrRxJg">
+        <modelElement href="StoreUniProject.uml#_FKQFUAq0EfCy7KhTqrRxJg"/>
+        <type xmi:id="_HLbTIAq0EfCy7KhTqrRxJg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_HLbTIQq0EfCy7KhTqrRxJg" name="model">
+        <modelElement href="StoreUniProject.uml#_FKPeQQq0EfCy7KhTqrRxJg"/>
+        <cardinality xmi:id="_HLbTIgq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
+        <type xmi:id="_HLbTIwq0EfCy7KhTqrRxJg" name="T">
+          <modelElement href="StoreUniProject.uml#_FKOQIAq0EfCy7KhTqrRxJg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_HLbTJAq0EfCy7KhTqrRxJg" comments="_MqoGcAt4EfC_gOdKAE1FpA" targetConnectionVisual="_Mqp7oAt4EfC_gOdKAE1FpA" name="updateById">
+      <modelElement href="StoreUniProject.uml#_FKRTcAq0EfCy7KhTqrRxJg"/>
+      <visibility xmi:id="_HLbTJQq0EfCy7KhTqrRxJg" label="#"/>
+      <cardinality xmi:id="_HLbTJgq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_HLbTJwq0EfCy7KhTqrRxJg">
+        <modelElement href="StoreUniProject.uml#_FKR6gQq0EfCy7KhTqrRxJg"/>
+        <type xmi:id="_HLbTKAq0EfCy7KhTqrRxJg" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_HLbTKQq0EfCy7KhTqrRxJg" name="model">
+        <modelElement href="StoreUniProject.uml#_FKR6gAq0EfCy7KhTqrRxJg"/>
+        <cardinality xmi:id="_HLbTKgq0EfCy7KhTqrRxJg" label="1" max="1" min="1"/>
+        <type xmi:id="_HLbTKwq0EfCy7KhTqrRxJg" name="T">
+          <modelElement href="StoreUniProject.uml#_FKOQIAq0EfCy7KhTqrRxJg"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_Mf-VoAt4EfC_gOdKAE1FpA" comments="_MfJPMAt4EfC_gOdKAE1FpA" targetConnectionVisual="_MfZt4At4EfC_gOdKAE1FpA" name="getCopy">
+      <modelElement href="StoreUniProject.uml#_LNQwkAt4EfC_gOdKAE1FpA"/>
+      <visibility xmi:id="_Mf-VoQt4EfC_gOdKAE1FpA" label="-"/>
+      <cardinality xmi:id="_Mf-Vogt4EfC_gOdKAE1FpA" label="1" max="1" min="1"/>
+      <outParameters xmi:id="_Mf-Vowt4EfC_gOdKAE1FpA">
+        <modelElement href="StoreUniProject.uml#_LNRXoAt4EfC_gOdKAE1FpA"/>
+        <type xmi:id="_Mf-VpAt4EfC_gOdKAE1FpA" name="T">
+          <modelElement href="StoreUniProject.uml#_FKOQIAq0EfCy7KhTqrRxJg"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_Mf-VpQt4EfC_gOdKAE1FpA" name="model">
+        <modelElement href="StoreUniProject.uml#_LNQwkQt4EfC_gOdKAE1FpA"/>
+        <cardinality xmi:id="_Mf-Vpgt4EfC_gOdKAE1FpA" label="1" max="1" min="1"/>
+        <type xmi:id="_Mf-Vpwt4EfC_gOdKAE1FpA" name="T">
+          <modelElement href="StoreUniProject.uml#_FKOQIAq0EfCy7KhTqrRxJg"/>
+        </type>
+      </parameters>
+    </operations>
   </nodes>
 </com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

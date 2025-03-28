@@ -4,7 +4,7 @@
     <eAnnotations xmi:id="_E2RZYAq0EfCy7KhTqrRxJg" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_E2SAcAq0EfCy7KhTqrRxJg" source="codegen">
         <details xmi:id="_E2SAcQq0EfCy7KhTqrRxJg" key="codegenDirectory" value="/StoreUniProject/src"/>
-        <details xmi:id="_HEUlUAq0EfCy7KhTqrRxJg" key="AssociatedSourceCode" value="/StoreUniProject/src/controller/StoreController.java;2081527536/1;/StoreUniProject/src/controller/ViewControllerListener.java;2850475882/1;/StoreUniProject/src/main/Main.java;1476352287/1;/StoreUniProject/src/model/base/BaseModel.java;2851195164/1;/StoreUniProject/src/model/base/BasePersistence.java;1422959765/1;/StoreUniProject/src/model/cart/Cart.java;1769809225/1;/StoreUniProject/src/model/cart/CartManager.java;3359599318/1;/StoreUniProject/src/model/product/Product.java;3475288584/1;/StoreUniProject/src/model/user/User.java;2945834077/1;/StoreUniProject/src/model/user/UserManager.java;1922253817/1;/StoreUniProject/src/view/BaseView.java;101862168/1;/StoreUniProject/src/view/MenuView.java;1090676136/1;"/>
+        <details xmi:id="_HEUlUAq0EfCy7KhTqrRxJg" key="AssociatedSourceCode" value="/StoreUniProject/src/controller/StoreController.java;2989703736/1;/StoreUniProject/src/controller/ViewControllerListener.java;1950744534/1;/StoreUniProject/src/main/Main.java;1476352287/1;/StoreUniProject/src/model/base/BaseModel.java;2851195164/1;/StoreUniProject/src/model/base/BasePersistence.java;1422959765/1;/StoreUniProject/src/model/cart/Cart.java;1769809225/1;/StoreUniProject/src/model/cart/CartManager.java;3352264328/1;/StoreUniProject/src/model/product/Product.java;58143642/1;/StoreUniProject/src/model/user/User.java;2945834077/1;/StoreUniProject/src/model/user/UserManager.java;1922253817/1;/StoreUniProject/src/view/BaseView.java;101862168/1;/StoreUniProject/src/view/MenuView.java;1090676136/1;"/>
       </contents>
       <contents xmi:type="ecore:EAnnotation" xmi:id="_KfdPYAt4EfC_gOdKAE1FpA" source="preferences">
         <contents xmi:type="ecore:EAnnotation" xmi:id="_Kfd2cAt4EfC_gOdKAE1FpA" source="com.yattasolutions.codegen.reverse">
@@ -122,7 +122,7 @@ Extiende de BaseModel para heredar funcionalidades básicas.</body>
           </ownedOperation>
         </packagedElement>
         <packagedElement xmi:type="uml:Class" xmi:id="_FEjtAAq0EfCy7KhTqrRxJg" name="CartManager">
-          <ownedComment xmi:id="_LPDgUwt4EfC_gOdKAE1FpA">
+          <ownedComment xmi:id="_zOby8gwGEfCNffikzSLgAw">
             <body>Clase que gestiona el carrito de compras.&#xD;
 Extiende de BasePersistence para manejar la persistencia de datos.</body>
           </ownedComment>
@@ -130,12 +130,12 @@ Extiende de BasePersistence para manejar la persistencia de datos.</body>
           <ownedAttribute xmi:id="_LOyakAt4EfC_gOdKAE1FpA" name="cart" type="_FEfbkAq0EfCy7KhTqrRxJg" isReadOnly="true" association="_LPK1EAt4EfC_gOdKAE1FpA"/>
           <ownedAttribute xmi:id="_LOyakQt4EfC_gOdKAE1FpA" name="productQuantities" isReadOnly="true">
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
-            <qualifier xmi:id="_LO1d4At4EfC_gOdKAE1FpA" type="_LOzosAt4EfC_gOdKAE1FpA"/>
+            <qualifier xmi:id="_zNszIAwGEfCNffikzSLgAw" type="_FExIYAq0EfCy7KhTqrRxJg"/>
           </ownedAttribute>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_FLEksgq0EfCy7KhTqrRxJg" name="startSale" specification="_FEliMwq0EfCy7KhTqrRxJg">
             <language>java</language>
-            <body>ArrayList&lt;Product> products = new ArrayList&lt;Product>();&#xD;
-&#xD;
+            <body>this.cart = new Cart();&#xD;
+     ArrayList&lt;Product> products = new ArrayList&lt;Product>();&#xD;
      this.cart.setUser(getUserDefault());&#xD;
      this.cart.setProducts(products);&#xD;
  </body>
@@ -192,10 +192,13 @@ Extiende de BasePersistence para manejar la persistencia de datos.</body>
  	}&#xD;
  	&#xD;
  	if (index == -1) {&#xD;
+ 		product.setQuantity(1);&#xD;
  		cart.getProducts().add(product);&#xD;
  	} else {&#xD;
  		if (product.getQuantity() != 0) {&#xD;
- 			cart.getProducts().set(index, product);&#xD;
+ 			Product p = cart.getProducts().get(index);&#xD;
+ 			p.setQuantity(p.getQuantity() + 1);&#xD;
+ 			cart.getProducts().set(index, p);&#xD;
  		} else {&#xD;
  			cart.getProducts().remove(index);&#xD;
  		}&#xD;
@@ -207,13 +210,16 @@ Extiende de BasePersistence para manejar la persistencia de datos.</body>
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_LO8yoAt4EfC_gOdKAE1FpA" name="clearCart" specification="_LNZ6gAt4EfC_gOdKAE1FpA">
             <language>java</language>
-            <body>this.cart.getProducts().clear();&#xD;
-     this.cart.setUser(getUserDefault());&#xD;
-     this.productQuantities.clear();&#xD;
+            <body>if (cart != null) {&#xD;
+         this.cart.getProducts().clear();&#xD;
+         this.cart.setUser(getUserDefault());&#xD;
+         //this.productQuantities.clear();	&#xD;
+ 	}&#xD;
  </body>
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_LO8yoQt4EfC_gOdKAE1FpA" name="calculateTotal" specification="_LNZ6gQt4EfC_gOdKAE1FpA">
             <ownedParameter xmi:id="_LO8yogt4EfC_gOdKAE1FpA" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
             </ownedParameter>
             <language>java</language>
@@ -224,6 +230,7 @@ Extiende de BasePersistence para manejar la persistencia de datos.</body>
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_LO8yowt4EfC_gOdKAE1FpA" name="getTotal" specification="_LNZ6ggt4EfC_gOdKAE1FpA">
             <ownedParameter xmi:id="_LO8ypAt4EfC_gOdKAE1FpA" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
             </ownedParameter>
             <language>java</language>
@@ -231,7 +238,9 @@ Extiende de BasePersistence para manejar la persistencia de datos.</body>
  </body>
           </ownedBehavior>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_LO8ypQt4EfC_gOdKAE1FpA" name="getUserDefault" specification="_LNZ6gwt4EfC_gOdKAE1FpA">
-            <ownedParameter xmi:id="_LO8ypgt4EfC_gOdKAE1FpA" type="_FE0LsAq0EfCy7KhTqrRxJg" direction="return"/>
+            <ownedParameter xmi:id="_LO8ypgt4EfC_gOdKAE1FpA" type="_FE0LsAq0EfCy7KhTqrRxJg" direction="return">
+              <name xsi:nil="true"/>
+            </ownedParameter>
             <language>java</language>
             <body>User user = new User();&#xD;
 &#xD;
@@ -245,24 +254,24 @@ Extiende de BasePersistence para manejar la persistencia de datos.</body>
           </ownedBehavior>
           <ownedOperation xmi:id="_FEk7IAq0EfCy7KhTqrRxJg" name="init"/>
           <ownedOperation xmi:id="_FEliMwq0EfCy7KhTqrRxJg" name="startSale" method="_FLEksgq0EfCy7KhTqrRxJg">
-            <ownedComment xmi:id="_LPDgVAt4EfC_gOdKAE1FpA">
+            <ownedComment xmi:id="_zOcaAAwGEfCNffikzSLgAw">
               <body>Inicia una nueva venta creando un carrito vacío</body>
             </ownedComment>
           </ownedOperation>
           <ownedOperation xmi:id="_FEmJQAq0EfCy7KhTqrRxJg" name="completeSale" method="_FLFy0gq0EfCy7KhTqrRxJg">
-            <ownedComment xmi:id="_LPDgVQt4EfC_gOdKAE1FpA">
+            <ownedComment xmi:id="_zOcaAQwGEfCNffikzSLgAw">
               <body>Finaliza la venta guardando el carrito</body>
             </ownedComment>
           </ownedOperation>
           <ownedOperation xmi:id="_FJWtcAq0EfCy7KhTqrRxJg" name="setUser" method="_FLFLwAq0EfCy7KhTqrRxJg">
-            <ownedComment xmi:id="_LPEucgt4EfC_gOdKAE1FpA">
+            <ownedComment xmi:id="_zOcaBgwGEfCNffikzSLgAw">
               <body>Establece el usuario del carrito&#xD;
      * @param user el usuario a establecer</body>
             </ownedComment>
             <ownedParameter xmi:id="_FJWtcQq0EfCy7KhTqrRxJg" name="user" type="_FE0LsAq0EfCy7KhTqrRxJg"/>
           </ownedOperation>
           <ownedOperation xmi:id="_LNYsYAt4EfC_gOdKAE1FpA" name="addProduct" method="_LO8LkQt4EfC_gOdKAE1FpA">
-            <ownedComment xmi:id="_LPDgVgt4EfC_gOdKAE1FpA">
+            <ownedComment xmi:id="_zOcaAgwGEfCNffikzSLgAw">
               <body>Agrega productos al carrito&#xD;
      * @param product el producto a agregar&#xD;
      * @param quantity la cantidad de productos a agregar</body>
@@ -270,7 +279,7 @@ Extiende de BasePersistence para manejar la persistencia de datos.</body>
             <ownedParameter xmi:id="_LNYsYQt4EfC_gOdKAE1FpA" name="product" type="_FExIYAq0EfCy7KhTqrRxJg"/>
           </ownedOperation>
           <ownedOperation xmi:id="_LNZTcAt4EfC_gOdKAE1FpA" name="updateProduct" method="_LO8Lkwt4EfC_gOdKAE1FpA">
-            <ownedComment xmi:id="_LPDgVwt4EfC_gOdKAE1FpA">
+            <ownedComment xmi:id="_zOcaAwwGEfCNffikzSLgAw">
               <body>Actualiza productos del carrito&#xD;
      * @param product el producto a eliminar&#xD;
      * @param quantity la cantidad de productos a eliminar</body>
@@ -278,12 +287,12 @@ Extiende de BasePersistence para manejar la persistencia de datos.</body>
             <ownedParameter xmi:id="_LNZTcQt4EfC_gOdKAE1FpA" name="product" type="_FExIYAq0EfCy7KhTqrRxJg"/>
           </ownedOperation>
           <ownedOperation xmi:id="_LNZ6gAt4EfC_gOdKAE1FpA" name="clearCart" method="_LO8yoAt4EfC_gOdKAE1FpA">
-            <ownedComment xmi:id="_LPEucAt4EfC_gOdKAE1FpA">
+            <ownedComment xmi:id="_zOcaBAwGEfCNffikzSLgAw">
               <body>Vacía el carrito y restablece el usuario por defecto</body>
             </ownedComment>
           </ownedOperation>
           <ownedOperation xmi:id="_LNZ6gQt4EfC_gOdKAE1FpA" name="calculateTotal" method="_LO8yoQt4EfC_gOdKAE1FpA">
-            <ownedComment xmi:id="_LPEucQt4EfC_gOdKAE1FpA">
+            <ownedComment xmi:id="_zOcaBQwGEfCNffikzSLgAw">
               <body>Calcula el total de la compra&#xD;
      * @return el total calculado</body>
             </ownedComment>
@@ -297,7 +306,7 @@ Extiende de BasePersistence para manejar la persistencia de datos.</body>
             </ownedParameter>
           </ownedOperation>
           <ownedOperation xmi:id="_LNZ6gwt4EfC_gOdKAE1FpA" name="getUserDefault" visibility="private" method="_LO8ypQt4EfC_gOdKAE1FpA">
-            <ownedComment xmi:id="_LPEucwt4EfC_gOdKAE1FpA">
+            <ownedComment xmi:id="_zOcaBwwGEfCNffikzSLgAw">
               <body>Crea un usuario por defecto&#xD;
      * @return usuario por defecto</body>
             </ownedComment>
@@ -317,7 +326,7 @@ Extiende de BasePersistence para manejar la persistencia de datos.</body>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_FCq2oQq0EfCy7KhTqrRxJg" name="product">
         <packagedElement xmi:type="uml:Class" xmi:id="_FExIYAq0EfCy7KhTqrRxJg" name="Product">
-          <ownedComment xmi:id="_LPEudAt4EfC_gOdKAE1FpA">
+          <ownedComment xmi:id="_zOcaCAwGEfCNffikzSLgAw">
             <body>Clase que representa un producto en el sistema.&#xD;
 Extiende de BaseModel para heredar funcionalidades básicas.</body>
           </ownedComment>
@@ -339,14 +348,28 @@ Extiende de BaseModel para heredar funcionalidades básicas.</body>
           </ownedAttribute>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_LO9ZsAt4EfC_gOdKAE1FpA" name="toString" specification="_LNc90At4EfC_gOdKAE1FpA">
             <ownedParameter xmi:id="_LO9ZsQt4EfC_gOdKAE1FpA" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedParameter>
             <language>java</language>
             <body>return &quot;[productId=&quot; + productId + &quot;, name=&quot; + name + &quot;, price=&quot; + price + &quot;]&quot;;&#xD;
 	</body>
           </ownedBehavior>
+          <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_zOby8AwGEfCNffikzSLgAw" name="completeInfo" specification="_zNxroAwGEfCNffikzSLgAw">
+            <ownedParameter xmi:id="_zOby8QwGEfCNffikzSLgAw" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+            <language>java</language>
+            <body>return &quot;[productId=&quot; + productId + &quot;, name=&quot; + name  + &quot;, quantity=&quot; + quantity +  &quot;, price=&quot; + price + &quot;]&quot;;&#xD;
+	</body>
+          </ownedBehavior>
           <ownedOperation xmi:id="_LNc90At4EfC_gOdKAE1FpA" name="toString" method="_LO9ZsAt4EfC_gOdKAE1FpA">
             <ownedParameter xmi:id="_LOCMoAt4EfC_gOdKAE1FpA" direction="return">
+              <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            </ownedParameter>
+          </ownedOperation>
+          <ownedOperation xmi:id="_zNxroAwGEfCNffikzSLgAw" name="completeInfo" method="_zOby8AwGEfCNffikzSLgAw">
+            <ownedParameter xmi:id="_zN61kAwGEfCNffikzSLgAw" direction="return">
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedParameter>
           </ownedOperation>
@@ -859,23 +882,28 @@ Proporciona operaciones CRUD básicas para cualquier modelo que extienda de Base
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_LOb1QAt4EfC_gOdKAE1FpA" name="ProductView"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_LOdDYAt4EfC_gOdKAE1FpA" name="UserView"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_zOSB8AwGEfCNffikzSLgAw" name="CartView"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_zOTQEQwGEfCNffikzSLgAw" name="DialogUtil"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_FC11wAq0EfCy7KhTqrRxJg" name="controller">
       <packagedElement xmi:type="uml:Class" xmi:id="_FDpHAAq0EfCy7KhTqrRxJg" name="StoreController">
         <ownedAttribute xmi:id="_FKWzAAq0EfCy7KhTqrRxJg" name="viewControllerListener" visibility="private" type="_FD6MwAq0EfCy7KhTqrRxJg" association="_FLYGsAq0EfCy7KhTqrRxJg">
-          <defaultValue xmi:type="uml:LiteralString" xmi:id="_FKWzAQq0EfCy7KhTqrRxJg" value="new ViewControllerListener() {&#xD;&#xA;&#x9;&#x9;@Override&#xD;&#xA;&#x9;&#x9;public void onReceiveComand(ActionEvent e, int cmd) {&#xD;&#xA;&#x9;&#x9;&#x9;// TODO Auto-generated method stub&#xD;&#xA;&#x9;&#x9;&#x9;System.out.println(&quot;StoreController onReceiveComand&quot; + cmd);&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_INVENTORY) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;showProductMenu();&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_USER) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;showUserMenu();&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_INVENTORY_ADD) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;inventory.createProduct(productView.getProductFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(inventory.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_INVENTORY_DELETE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;inventory.deleteProduct(productView.getProductFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(inventory.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_INVENTORY_UPDATE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;inventory.updateProduct(productView.getProductFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(inventory.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_USER_ADD) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userManager.createUser(userView.getUserFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userView.updateListUser(userManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_USER_UPDATE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userManager.updateUser(userView.getUserFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userView.updateListUser(userManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_USER_DELETE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userManager.deleteUser(userView.getUserFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(inventory.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_MENU) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;showMainMenu();&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_FKWzAQq0EfCy7KhTqrRxJg" value="new ViewControllerListener() {&#xD;&#xA;&#x9;&#x9;@Override&#xD;&#xA;&#x9;&#x9;public void onReceiveComand(ActionEvent e, int cmd) {&#xD;&#xA;&#x9;&#x9;&#x9;// TODO Auto-generated method stub&#xD;&#xA;&#x9;&#x9;&#x9;System.out.println(&quot;StoreController onReceiveComand&quot; + cmd);&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_INVENTORY) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;showProductMenu();&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_INVENTORY_ADD) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productManager.createProduct(productView.getProductFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(productManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_INVENTORY_DELETE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productManager.deleteProduct(productView.getProductFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(productManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_INVENTORY_UPDATE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productManager.updateProduct(productView.getProductFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(productManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_USER) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;showUserMenu();&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_USER_ADD) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userManager.createUser(userView.getUserFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userView.updateListUser(userManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_USER_UPDATE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userManager.updateUser(userView.getUserFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userView.updateListUser(userManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_USER_DELETE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userManager.deleteUser(userView.getUserFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(productManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_CART) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if (productManager.getAll().isEmpty()) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dialogUtil.showMessage(&quot;No existen productos&quot;);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;} else {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;showCartMenu();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_CART_SELECTED_USER) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartManager.setUser(cartView.getSelectedUser());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_CART_SELECTED_PRODUCT) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartManager.updateProduct(cartView.getSelectedProduct());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartView.updateResult(cartManager.getCart().getTotalPrice(), cartManager.getCart().getProducts());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_CART_CLEAN) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartManager.clearCart();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartView.updateResult(cartManager.getCart().getTotalPrice(), cartManager.getCart().getProducts());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_CART_COMPLETE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if (cartManager.getCart().getProducts().isEmpty()) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dialogUtil.showMessage(&quot;Carrito Vacio&quot;);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;} else {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;cartManager.completeSale();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;cartView.showComplete(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;cartManager.getCart().getId(),&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;cartManager.getCart().getUser(),&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;cartManager.getCart().getTotalPrice());&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_MENU) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;showMainMenu();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartManager.clearCart();&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}"/>
         </ownedAttribute>
-        <ownedAttribute xmi:id="_FKXaEQq0EfCy7KhTqrRxJg" name="inventory" visibility="private" type="_LOanIAt4EfC_gOdKAE1FpA" association="_FLYtwQq0EfCy7KhTqrRxJg"/>
         <ownedAttribute xmi:id="_FKYBIQq0EfCy7KhTqrRxJg" name="userManager" visibility="private" type="_FE2n8Aq0EfCy7KhTqrRxJg" association="_FLZ74Aq0EfCy7KhTqrRxJg"/>
         <ownedAttribute xmi:id="_FKYoMQq0EfCy7KhTqrRxJg" name="cartManager" visibility="private" type="_FEjtAAq0EfCy7KhTqrRxJg" association="_FLai8Qq0EfCy7KhTqrRxJg"/>
         <ownedAttribute xmi:id="_FKZPQQq0EfCy7KhTqrRxJg" name="menuView" visibility="private" type="_FE98sAq0EfCy7KhTqrRxJg" association="_FLbxEQq0EfCy7KhTqrRxJg"/>
         <ownedAttribute xmi:id="_LOvXQAt4EfC_gOdKAE1FpA" name="productView" visibility="private" type="_LOb1QAt4EfC_gOdKAE1FpA" association="_LPJm8At4EfC_gOdKAE1FpA"/>
         <ownedAttribute xmi:id="_LOv-UAt4EfC_gOdKAE1FpA" name="userView" visibility="private" type="_LOdDYAt4EfC_gOdKAE1FpA" association="_LPKOAAt4EfC_gOdKAE1FpA"/>
+        <ownedAttribute xmi:id="_zOXhgAwGEfCNffikzSLgAw" name="productManager" visibility="private" type="_LOanIAt4EfC_gOdKAE1FpA" association="_zOePMAwGEfCNffikzSLgAw"/>
+        <ownedAttribute xmi:id="_zOYIkQwGEfCNffikzSLgAw" name="cartView" visibility="private" type="_zOSB8AwGEfCNffikzSLgAw" association="_zOfdUQwGEfCNffikzSLgAw"/>
+        <ownedAttribute xmi:id="_zOYvoQwGEfCNffikzSLgAw" name="dialogUtil" visibility="private" type="_zOTQEQwGEfCNffikzSLgAw" association="_zOgEYQwGEfCNffikzSLgAw"/>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_FK4-gAq0EfCy7KhTqrRxJg" name="init" specification="_FDxp4Aq0EfCy7KhTqrRxJg">
           <language>java</language>
-          <body>inventory = new ProductManager();&#xD;
+          <body>productManager = new ProductManager();&#xD;
 		userManager = new UserManager();&#xD;
 		cartManager = new CartManager();&#xD;
+		dialogUtil = new DialogUtil();&#xD;
 		&#xD;
 		showMainMenu();&#xD;
 	</body>
@@ -896,7 +924,7 @@ Proporciona operaciones CRUD básicas para cualquier modelo que extienda de Base
 		}&#xD;
 		productView.clean();&#xD;
 		productView.setViewControllerListener(viewControllerListener);&#xD;
-		productView.updateListProduct(inventory.getAll());&#xD;
+		productView.updateListProduct(productManager.getAll());&#xD;
 		showView(productView);&#xD;
 	</body>
         </ownedBehavior>
@@ -915,6 +943,7 @@ Proporciona operaciones CRUD básicas para cualquier modelo que extienda de Base
           <body>dismissView(menuView);&#xD;
 		dismissView(productView);&#xD;
 		dismissView(userView);&#xD;
+		dismissView(cartView);&#xD;
 	</body>
         </ownedBehavior>
         <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_LO5vUAt4EfC_gOdKAE1FpA" name="showView" specification="_LM8ngQt4EfC_gOdKAE1FpA">
@@ -940,6 +969,21 @@ Proporciona operaciones CRUD básicas para cualquier modelo que extienda de Base
 		}&#xD;
 	</body>
         </ownedBehavior>
+        <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_zOZ9wAwGEfCNffikzSLgAw" name="showCartMenu" specification="_zNjCIAwGEfCNffikzSLgAw">
+          <language>java</language>
+          <body>if (cartView == null) {&#xD;
+			cartView = new CartView();&#xD;
+		}&#xD;
+		&#xD;
+		cartManager.startSale();&#xD;
+		cartView.setViewControllerListener(viewControllerListener);&#xD;
+		cartView.updateListProduct(productManager.getAll());&#xD;
+		cartView.updateListUser(userManager.getAll());&#xD;
+		cartView.updateResult(0.0, new ArrayList&lt;Product>());&#xD;
+		&#xD;
+		showView(cartView);&#xD;
+	</body>
+        </ownedBehavior>
         <ownedOperation xmi:id="_FDxp4Aq0EfCy7KhTqrRxJg" name="init" method="_FK4-gAq0EfCy7KhTqrRxJg"/>
         <ownedOperation xmi:id="_FD17UAq0EfCy7KhTqrRxJg" name="showMainMenu" visibility="private" method="_FLATQAq0EfCy7KhTqrRxJg"/>
         <ownedOperation xmi:id="_0Jw3cArBEfCy7KhTqrRxJg" name="showProductMenu" visibility="private" method="_0JyFkArBEfCy7KhTqrRxJg"/>
@@ -957,6 +1001,7 @@ Proporciona operaciones CRUD básicas para cualquier modelo que extienda de Base
             <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
           </ownedParameter>
         </ownedOperation>
+        <ownedOperation xmi:id="_zNjCIAwGEfCNffikzSLgAw" name="showCartMenu" visibility="private" method="_zOZ9wAwGEfCNffikzSLgAw"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Interface" xmi:id="_FD6MwAq0EfCy7KhTqrRxJg" name="ViewControllerListener">
         <ownedAttribute xmi:id="_FD8B8Aq0EfCy7KhTqrRxJg" name="CMD_USER">
@@ -999,6 +1044,22 @@ Proporciona operaciones CRUD básicas para cualquier modelo que extienda de Base
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
           <defaultValue xmi:type="uml:LiteralString" xmi:id="_LNFxcQt4EfC_gOdKAE1FpA" value="23"/>
         </ownedAttribute>
+        <ownedAttribute xmi:id="_zNohsAwGEfCNffikzSLgAw" name="CMD_CART_SELECTED_USER">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_zNohsQwGEfCNffikzSLgAw" value="31"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_zNpIwAwGEfCNffikzSLgAw" name="CMD_CART_SELECTED_PRODUCT">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_zNpIwQwGEfCNffikzSLgAw" value="32"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_zNpv0AwGEfCNffikzSLgAw" name="CMD_CART_COMPLETE">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_zNpv0QwGEfCNffikzSLgAw" value="33"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:id="_zNqW4AwGEfCNffikzSLgAw" name="CMD_CART_CLEAN">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_zNqW4QwGEfCNffikzSLgAw" value="34"/>
+        </ownedAttribute>
         <ownedOperation xmi:id="_FKFGMAq0EfCy7KhTqrRxJg" name="onReceiveComand">
           <ownedParameter xmi:id="_FKFtQAq0EfCy7KhTqrRxJg" name="e" type="_FJJSEAq0EfCy7KhTqrRxJg"/>
           <ownedParameter xmi:id="_FKFtQQq0EfCy7KhTqrRxJg" name="cmd">
@@ -1008,9 +1069,6 @@ Proporciona operaciones CRUD básicas para cualquier modelo que extienda de Base
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_FLYGsAq0EfCy7KhTqrRxJg" name="" memberEnd="_FLYGsQq0EfCy7KhTqrRxJg _FKWzAAq0EfCy7KhTqrRxJg">
         <ownedEnd xmi:id="_FLYGsQq0EfCy7KhTqrRxJg" name="" type="_FDpHAAq0EfCy7KhTqrRxJg" association="_FLYGsAq0EfCy7KhTqrRxJg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_FLYtwQq0EfCy7KhTqrRxJg" name="" memberEnd="_FLYtwgq0EfCy7KhTqrRxJg _FKXaEQq0EfCy7KhTqrRxJg">
-        <ownedEnd xmi:id="_FLYtwgq0EfCy7KhTqrRxJg" name="" type="_FDpHAAq0EfCy7KhTqrRxJg" association="_FLYtwQq0EfCy7KhTqrRxJg"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_FLZ74Aq0EfCy7KhTqrRxJg" name="" memberEnd="_FLZ74Qq0EfCy7KhTqrRxJg _FKYBIQq0EfCy7KhTqrRxJg">
         <ownedEnd xmi:id="_FLZ74Qq0EfCy7KhTqrRxJg" name="" type="_FDpHAAq0EfCy7KhTqrRxJg" association="_FLZ74Aq0EfCy7KhTqrRxJg"/>
@@ -1026,6 +1084,15 @@ Proporciona operaciones CRUD básicas para cualquier modelo que extienda de Base
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_LPKOAAt4EfC_gOdKAE1FpA" name="" memberEnd="_LPKOAQt4EfC_gOdKAE1FpA _LOv-UAt4EfC_gOdKAE1FpA">
         <ownedEnd xmi:id="_LPKOAQt4EfC_gOdKAE1FpA" name="" type="_FDpHAAq0EfCy7KhTqrRxJg" association="_LPKOAAt4EfC_gOdKAE1FpA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_zOePMAwGEfCNffikzSLgAw" name="" memberEnd="_zOe2QAwGEfCNffikzSLgAw _zOXhgAwGEfCNffikzSLgAw">
+        <ownedEnd xmi:id="_zOe2QAwGEfCNffikzSLgAw" name="" type="_FDpHAAq0EfCy7KhTqrRxJg" association="_zOePMAwGEfCNffikzSLgAw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_zOfdUQwGEfCNffikzSLgAw" name="" memberEnd="_zOfdUgwGEfCNffikzSLgAw _zOYIkQwGEfCNffikzSLgAw">
+        <ownedEnd xmi:id="_zOfdUgwGEfCNffikzSLgAw" name="" type="_FDpHAAq0EfCy7KhTqrRxJg" association="_zOfdUQwGEfCNffikzSLgAw"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_zOgEYQwGEfCNffikzSLgAw" name="" memberEnd="_zOgEYgwGEfCNffikzSLgAw _zOYvoQwGEfCNffikzSLgAw">
+        <ownedEnd xmi:id="_zOgEYgwGEfCNffikzSLgAw" name="" type="_FDpHAAq0EfCy7KhTqrRxJg" association="_zOgEYQwGEfCNffikzSLgAw"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_FC-_sAq0EfCy7KhTqrRxJg" name="main">
@@ -1112,7 +1179,6 @@ Proporciona operaciones CRUD básicas para cualquier modelo que extienda de Base
   <UMLLabProfile:Reference xmi:id="_FKLM0Aq0EfCy7KhTqrRxJg" base_Element="_FKJXoQq0EfCy7KhTqrRxJg"/>
   <UMLLabProfile:Reference xmi:id="_FKO3MAq0EfCy7KhTqrRxJg" base_Element="_FKOQIAq0EfCy7KhTqrRxJg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="_FKXaEAq0EfCy7KhTqrRxJg" base_Element="_FKWzAAq0EfCy7KhTqrRxJg"/>
-  <UMLLabProfile:LegacyStyledElement xmi:id="_FKYBIAq0EfCy7KhTqrRxJg" base_Element="_FKXaEQq0EfCy7KhTqrRxJg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="_FKYoMAq0EfCy7KhTqrRxJg" base_Element="_FKYBIQq0EfCy7KhTqrRxJg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="_FKZPQAq0EfCy7KhTqrRxJg" base_Element="_FKYoMQq0EfCy7KhTqrRxJg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="_FKZ2UAq0EfCy7KhTqrRxJg" base_Element="_FKZPQQq0EfCy7KhTqrRxJg"/>
@@ -1125,7 +1191,6 @@ Proporciona operaciones CRUD básicas para cualquier modelo que extienda de Base
   <UMLLabProfile:LegacyStyledElement xmi:id="_FKqVAAq0EfCy7KhTqrRxJg" base_Element="_FKpt8Qq0EfCy7KhTqrRxJg"/>
   <UMLLabProfile:LegacyStyledElement xmi:id="_FKrjIAq0EfCy7KhTqrRxJg" base_Element="_FKq8EAq0EfCy7KhTqrRxJg"/>
   <UMLLabProfile:Reference xmi:id="_FLYtwAq0EfCy7KhTqrRxJg" base_Element="_FLYGsAq0EfCy7KhTqrRxJg"/>
-  <UMLLabProfile:Reference xmi:id="_FLZU0Aq0EfCy7KhTqrRxJg" base_Element="_FLYtwQq0EfCy7KhTqrRxJg"/>
   <UMLLabProfile:Reference xmi:id="_FLai8Aq0EfCy7KhTqrRxJg" base_Element="_FLZ74Aq0EfCy7KhTqrRxJg"/>
   <UMLLabProfile:Reference xmi:id="_FLbxEAq0EfCy7KhTqrRxJg" base_Element="_FLai8Qq0EfCy7KhTqrRxJg"/>
   <UMLLabProfile:Reference xmi:id="_FLcYIAq0EfCy7KhTqrRxJg" base_Element="_FLbxEQq0EfCy7KhTqrRxJg"/>
@@ -1164,7 +1229,9 @@ Proporciona operaciones CRUD básicas para cualquier modelo que extienda de Base
   <UMLLabProfile:Reference xmi:id="_LO0PwAt4EfC_gOdKAE1FpA" base_Element="_LOzosAt4EfC_gOdKAE1FpA"/>
   <UMLLabProfile:Generics xmi:id="_LO020At4EfC_gOdKAE1FpA" genericsValue="Product, Integer" base_Element="_LO0PwQt4EfC_gOdKAE1FpA"/>
   <uml:OpaqueBehavior xmi:id="_LO7kgQt4EfC_gOdKAE1FpA" name="getProductQuantities" specification="_LO0PwQt4EfC_gOdKAE1FpA">
-    <ownedParameter xmi:id="_LO8LkAt4EfC_gOdKAE1FpA" type="_LOh74At4EfC_gOdKAE1FpA" direction="return"/>
+    <ownedParameter xmi:id="_LO8LkAt4EfC_gOdKAE1FpA" type="_LOh74At4EfC_gOdKAE1FpA" direction="return">
+      <name xsi:nil="true"/>
+    </ownedParameter>
     <language>java</language>
     <body>return new HashMap&lt;>(productQuantities);&#xD;
  </body>
@@ -1197,4 +1264,16 @@ Proporciona operaciones CRUD básicas para cualquier modelo que extienda de Base
 		return totalPrice;&#xD;
 	</body>
   </uml:OpaqueBehavior>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_zN0H4AwGEfCNffikzSLgAw" base_Element="_zNohsAwGEfCNffikzSLgAw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_zN1WAAwGEfCNffikzSLgAw" base_Element="_zNpIwAwGEfCNffikzSLgAw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_zN1WAQwGEfCNffikzSLgAw" base_Element="_zNpv0AwGEfCNffikzSLgAw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_zN19EAwGEfCNffikzSLgAw" base_Element="_zNqW4AwGEfCNffikzSLgAw"/>
+  <UMLLabProfile:Reference xmi:id="_zOTQEAwGEfCNffikzSLgAw" base_Element="_zOSB8AwGEfCNffikzSLgAw"/>
+  <UMLLabProfile:Reference xmi:id="_zOT3IAwGEfCNffikzSLgAw" base_Element="_zOTQEQwGEfCNffikzSLgAw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_zOYIkAwGEfCNffikzSLgAw" base_Element="_zOXhgAwGEfCNffikzSLgAw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_zOYvoAwGEfCNffikzSLgAw" base_Element="_zOYIkQwGEfCNffikzSLgAw"/>
+  <UMLLabProfile:LegacyStyledElement xmi:id="_zOZWsAwGEfCNffikzSLgAw" base_Element="_zOYvoQwGEfCNffikzSLgAw"/>
+  <UMLLabProfile:Reference xmi:id="_zOfdUAwGEfCNffikzSLgAw" base_Element="_zOePMAwGEfCNffikzSLgAw"/>
+  <UMLLabProfile:Reference xmi:id="_zOgEYAwGEfCNffikzSLgAw" base_Element="_zOfdUQwGEfCNffikzSLgAw"/>
+  <UMLLabProfile:Reference xmi:id="_zOgrcAwGEfCNffikzSLgAw" base_Element="_zOgEYQwGEfCNffikzSLgAw"/>
 </xmi:XMI>
