@@ -3,12 +3,15 @@ package view;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
+import java.text.NumberFormat;
 
 import javax.swing.BorderFactory;
+import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
+import javax.swing.text.NumberFormatter;
 
 import model.product.Product;
 
@@ -17,7 +20,7 @@ public class ProductDataView extends JPanel {
 	// Atributos
 	//------------------
 	private JTextField 	txtNombre;
-	private JTextField 	txtPrecio;
+	private JFormattedTextField 	txtPrecio;
 
 	public ProductDataView() {
 		
@@ -33,8 +36,17 @@ public class ProductDataView extends JPanel {
 		JLabel labNombre = new JLabel("Nombre");
 		txtNombre = new JTextField();
 		
+	    NumberFormat format = NumberFormat.getInstance();
+	    NumberFormatter formatter = new NumberFormatter(format);
+	    formatter.setValueClass(Integer.class);
+	    formatter.setMinimum(0);
+	    formatter.setMaximum(999);
+	    formatter.setAllowsInvalid(false);
+	    // If you want the value to be committed on each keystroke instead of focus lost
+	    formatter.setCommitsOnValidEdit(true);
+		
 		JLabel labPrecio = new JLabel("Precio");
-		txtPrecio = new JTextField();
+		txtPrecio = new JFormattedTextField(formatter);
 				
 		informacion.add(labNombre);
 		informacion.add(txtNombre);		

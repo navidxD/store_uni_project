@@ -8,6 +8,7 @@ import model.cart.CartManager;
 import model.product.Product;
 import model.product.ProductManager;
 import model.user.UserManager;
+import view.CartView;
 import view.MenuView;
 import view.ProductView;
 import view.UserView;
@@ -24,10 +25,7 @@ public class StoreController {
 				dismissAllView();
 				showProductMenu();
 			}
-			if (cmd == ViewControllerListener.CMD_USER) {
-				dismissAllView();
-				showUserMenu();
-			}
+			
 			if (cmd == ViewControllerListener.CMD_INVENTORY_ADD) {
 				inventory.createProduct(productView.getProductFromForm());
 				productView.updateListProduct(inventory.getAll());
@@ -40,6 +38,13 @@ public class StoreController {
 				inventory.updateProduct(productView.getProductFromForm());
 				productView.updateListProduct(inventory.getAll());
 			}
+			
+			
+			if (cmd == ViewControllerListener.CMD_USER) {
+				dismissAllView();
+				showUserMenu();
+			}
+			
 			if (cmd == ViewControllerListener.CMD_USER_ADD) {
 				userManager.createUser(userView.getUserFromForm());
 				userView.updateListUser(userManager.getAll());
@@ -51,6 +56,12 @@ public class StoreController {
 			if (cmd == ViewControllerListener.CMD_USER_DELETE) {
 				userManager.deleteUser(userView.getUserFromForm());
 				productView.updateListProduct(inventory.getAll());
+			}
+			
+			
+			if (cmd == ViewControllerListener.CMD_CART) {
+				dismissAllView();
+				showUserMenu();
 			}
 			
 			if (cmd == ViewControllerListener.CMD_MENU) {
@@ -66,6 +77,7 @@ public class StoreController {
 	private MenuView menuView;
 	private ProductView productView;
 	private UserView userView;
+	private CartView cartView;
 	
 	public void init() {
 		inventory = new ProductManager();
@@ -99,6 +111,15 @@ public class StoreController {
 		}
 		userView.setViewControllerListener(viewControllerListener);
 		userView.updateListUser(userManager.getAll());
+		showView(userView);
+	}
+	
+	private void showCartMenu() {
+		if (cartView == null) {
+			cartView = new CartView();
+		}
+		cartView.setViewControllerListener(viewControllerListener);
+		cartView.updateListUser(userManager.getAll());
 		showView(userView);
 	}
 

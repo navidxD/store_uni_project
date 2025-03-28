@@ -3,12 +3,15 @@ package view;
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.GridLayout;
+import java.text.NumberFormat;
 
 import javax.swing.BorderFactory;
+import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
+import javax.swing.text.NumberFormatter;
 
 public class UserDataView extends JPanel {
 	//-----------------
@@ -17,7 +20,7 @@ public class UserDataView extends JPanel {
 	private JTextField 	txtNombre;
 	private JTextField 	txtApellido;
 	private JTextField 	txtMail;
-	private JTextField 	txtId;
+	private JFormattedTextField txtId;
 
 	public UserDataView() {
 		
@@ -29,8 +32,17 @@ public class UserDataView extends JPanel {
 		informacion.setLayout(new GridLayout(4,2,10,5));
 		add(informacion, BorderLayout.CENTER);
 		
+	    NumberFormat format = NumberFormat.getInstance();
+	    NumberFormatter formatter = new NumberFormatter(format);
+	    formatter.setValueClass(Integer.class);
+	    formatter.setMinimum(0);
+	    formatter.setMaximum(999);
+	    formatter.setAllowsInvalid(false);
+	    // If you want the value to be committed on each keystroke instead of focus lost
+	    formatter.setCommitsOnValidEdit(true);
+
 		JLabel labCedula = new JLabel("Cedula");
-		txtId = new JTextField();
+		txtId = new JFormattedTextField(formatter);
 		
 		JLabel labNombre = new JLabel("Nombre");
 		txtNombre = new JTextField();
