@@ -29,8 +29,8 @@ public class CartManager extends BasePersistence<Cart> {
      * Inicia una nueva venta creando un carrito vacío
      */
     public void startSale() {
+    	this.cart = new Cart();
         ArrayList<Product> products = new ArrayList<Product>();
-
         this.cart.setUser(getUserDefault());
         this.cart.setProducts(products);
     }
@@ -106,9 +106,11 @@ public class CartManager extends BasePersistence<Cart> {
      * Vacía el carrito y restablece el usuario por defecto
      */
     public void clearCart() {
-        this.cart.getProducts().clear();
-        this.cart.setUser(getUserDefault());
-        this.productQuantities.clear();
+    	if (cart != null) {
+            this.cart.getProducts().clear();
+            this.cart.setUser(getUserDefault());
+            //this.productQuantities.clear();	
+    	}
     }
 
     /**

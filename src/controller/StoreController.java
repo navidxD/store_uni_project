@@ -9,6 +9,7 @@ import model.product.Product;
 import model.product.ProductManager;
 import model.user.UserManager;
 import view.CartView;
+import view.DialogUtil;
 import view.MenuView;
 import view.ProductView;
 import view.UserView;
@@ -25,64 +26,86 @@ public class StoreController {
 				dismissAllView();
 				showProductMenu();
 			}
-			
-			if (cmd == ViewControllerListener.CMD_INVENTORY_ADD) {
-				inventory.createProduct(productView.getProductFromForm());
-				productView.updateListProduct(inventory.getAll());
+			else if (cmd == ViewControllerListener.CMD_INVENTORY_ADD) {
+				productManager.createProduct(productView.getProductFromForm());
+				productView.updateListProduct(productManager.getAll());
 			}
-			if (cmd == ViewControllerListener.CMD_INVENTORY_DELETE) {
-				inventory.deleteProduct(productView.getProductFromForm());
-				productView.updateListProduct(inventory.getAll());
+			else if (cmd == ViewControllerListener.CMD_INVENTORY_DELETE) {
+				productManager.deleteProduct(productView.getProductFromForm());
+				productView.updateListProduct(productManager.getAll());
 			}
-			if (cmd == ViewControllerListener.CMD_INVENTORY_UPDATE) {
-				inventory.updateProduct(productView.getProductFromForm());
-				productView.updateListProduct(inventory.getAll());
+			else if (cmd == ViewControllerListener.CMD_INVENTORY_UPDATE) {
+				productManager.updateProduct(productView.getProductFromForm());
+				productView.updateListProduct(productManager.getAll());
 			}
-			
-			
-			if (cmd == ViewControllerListener.CMD_USER) {
+			else if (cmd == ViewControllerListener.CMD_USER) {
 				dismissAllView();
 				showUserMenu();
 			}
-			
-			if (cmd == ViewControllerListener.CMD_USER_ADD) {
+			else if (cmd == ViewControllerListener.CMD_USER_ADD) {
 				userManager.createUser(userView.getUserFromForm());
 				userView.updateListUser(userManager.getAll());
 			}
-			if (cmd == ViewControllerListener.CMD_USER_UPDATE) {
+			else if (cmd == ViewControllerListener.CMD_USER_UPDATE) {
 				userManager.updateUser(userView.getUserFromForm());
 				userView.updateListUser(userManager.getAll());
 			}
-			if (cmd == ViewControllerListener.CMD_USER_DELETE) {
+			else if (cmd == ViewControllerListener.CMD_USER_DELETE) {
 				userManager.deleteUser(userView.getUserFromForm());
-				productView.updateListProduct(inventory.getAll());
+				productView.updateListProduct(productManager.getAll());
 			}
-			
-			
-			if (cmd == ViewControllerListener.CMD_CART) {
-				dismissAllView();
-				showCartMenu();
+			else if (cmd == ViewControllerListener.CMD_CART) {
+				if (productManager.getAll().isEmpty()) {
+					dialogUtil.showMessage("No existen productos");
+				} else {
+					dismissAllView();
+					showCartMenu();
+				}
 			}
-			
-			if (cmd == ViewControllerListener.CMD_MENU) {
+			else if (cmd == ViewControllerListener.CMD_CART_SELECTED_USER) {
+				cartManager.setUser(cartView.getSelectedUser());
+			}
+			else if (cmd == ViewControllerListener.CMD_CART_SELECTED_PRODUCT) {
+				cartManager.updateProduct(cartView.getSelectedProduct());
+				cartView.updateResult(cartManager.getCart().getTotalPrice(), cartManager.getCart().getProducts());
+			}
+			else if (cmd == ViewControllerListener.CMD_CART_CLEAN) {
+				cartManager.clearCart();
+				cartView.updateResult(cartManager.getCart().getTotalPrice(), cartManager.getCart().getProducts());
+			}
+			else if (cmd == ViewControllerListener.CMD_CART_COMPLETE) {
+				if (cartManager.getCart().getProducts().isEmpty()) {
+					dialogUtil.showMessage("Carrito Vacio");
+				} else {
+					cartManager.completeSale();
+					cartView.showComplete(
+							cartManager.getCart().getId(),
+							cartManager.getCart().getUser(),
+							cartManager.getCart().getTotalPrice());	
+				}
+			}
+			else if (cmd == ViewControllerListener.CMD_MENU) {
 				dismissAllView();
 				showMainMenu();
+				cartManager.clearCart();
 			}
 		}
 	};
 	
-	private ProductManager inventory;
+	private ProductManager productManager;
 	private UserManager userManager;
 	private CartManager cartManager;
 	private MenuView menuView;
 	private ProductView productView;
 	private UserView userView;
 	private CartView cartView;
+	private DialogUtil dialogUtil;
 	
 	public void init() {
-		inventory = new ProductManager();
+		productManager = new ProductManager();
 		userManager = new UserManager();
 		cartManager = new CartManager();
+		dialogUtil = new DialogUtil();
 		
 		showMainMenu();
 	}
@@ -101,7 +124,7 @@ public class StoreController {
 		}
 		productView.clean();
 		productView.setViewControllerListener(viewControllerListener);
-		productView.updateListProduct(inventory.getAll());
+		productView.updateListProduct(productManager.getAll());
 		showView(productView);
 	}
 	
@@ -118,7 +141,10 @@ public class StoreController {
 		if (cartView == null) {
 			cartView = new CartView();
 		}
+		
+		cartManager.startSale();
 		cartView.setViewControllerListener(viewControllerListener);
+		cartView.updateListProduct(productManager.getAll());
 		cartView.updateListUser(userManager.getAll());
 		
 		showView(cartView);
@@ -128,6 +154,7 @@ public class StoreController {
 		dismissView(menuView);
 		dismissView(productView);
 		dismissView(userView);
+		dismissView(cartView);
 	}
 	
 	private void showView(JFrame view) {

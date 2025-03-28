@@ -15,6 +15,9 @@ public interface ViewControllerListener {
 	public int CMD_INVENTORY_DELETE = 23;
 	public int CMD_CART = 3;
 	public int CMD_CART_SELECTED_USER = 31;
+	public int CMD_CART_SELECTED_PRODUCT = 32;
+	public int CMD_CART_COMPLETE = 33;
+	public int CMD_CART_CLEAN = 34;
 	
 	
 	void onReceiveComand(ActionEvent e, int cmd);

@@ -99,4 +99,8 @@ public class Product extends BaseModel {
 	public String toString() {
 		return "[productId=" + productId + ", name=" + name + ", price=" + price + "]";
 	}
+	
+	public String completeInfo() {
+		return "[productId=" + productId + ", name=" + name  + ", quantity=" + quantity +  ", price=" + price + "]";
+	}
 }
