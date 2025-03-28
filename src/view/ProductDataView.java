@@ -83,7 +83,7 @@ public class ProductDataView extends JPanel {
 	
 	public void clean() {
 		txtNombre.setText("");
-		txtPrecio.setText("");
+		txtPrecio.setText("0");
 	}
 	
 	

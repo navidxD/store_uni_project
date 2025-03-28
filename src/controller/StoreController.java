@@ -53,7 +53,7 @@ public class StoreController {
 			}
 			else if (cmd == ViewControllerListener.CMD_USER_DELETE) {
 				userManager.deleteUser(userView.getUserFromForm());
-				productView.updateListProduct(productManager.getAll());
+				userView.updateListUser(userManager.getAll());
 			}
 			else if (cmd == ViewControllerListener.CMD_CART) {
 				if (productManager.getAll().isEmpty()) {
@@ -133,6 +133,7 @@ public class StoreController {
 		if (userView == null) {
 			userView = new UserView();
 		}
+		userView.clean();
 		userView.setViewControllerListener(viewControllerListener);
 		userView.updateListUser(userManager.getAll());
 		showView(userView);
