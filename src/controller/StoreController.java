@@ -61,7 +61,7 @@ public class StoreController {
 			
 			if (cmd == ViewControllerListener.CMD_CART) {
 				dismissAllView();
-				showUserMenu();
+				showCartMenu();
 			}
 			
 			if (cmd == ViewControllerListener.CMD_MENU) {
@@ -120,7 +120,8 @@ public class StoreController {
 		}
 		cartView.setViewControllerListener(viewControllerListener);
 		cartView.updateListUser(userManager.getAll());
-		showView(userView);
+		
+		showView(cartView);
 	}
 
 	private void dismissAllView() {

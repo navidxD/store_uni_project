@@ -20,7 +20,7 @@ public class ProductDataView extends JPanel {
 	// Atributos
 	//------------------
 	private JTextField 	txtNombre;
-	private JFormattedTextField 	txtPrecio;
+	private JFormattedTextField txtPrecio;
 
 	public ProductDataView() {
 		
