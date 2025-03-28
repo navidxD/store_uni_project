@@ -89,10 +89,13 @@ public class CartManager extends BasePersistence<Cart> {
     	}
     	
     	if (index == -1) {
+    		product.setQuantity(1);
     		cart.getProducts().add(product);
     	} else {
     		if (product.getQuantity() != 0) {
-    			cart.getProducts().set(index, product);
+    			Product p = cart.getProducts().get(index);
+    			p.setQuantity(p.getQuantity() + 1);
+    			cart.getProducts().set(index, p);
     		} else {
     			cart.getProducts().remove(index);
     		}

@@ -4,12 +4,15 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
 import javax.swing.DefaultListModel;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -35,6 +38,19 @@ public class CartView extends JFrame implements BaseView {
 	private ArrayList<User> users;
 	private User selectedUser;
 	
+	private JList productList;//declaramos La Lista
+	private DefaultListModel modelProducts;//declaramos el Modelo
+	private JScrollPane scrollListProducts;
+	private ArrayList<Product> products;
+	private Product selectedProduct;
+	
+	private JList productListResult;//declaramos La Lista
+	private DefaultListModel modelProductsResult;//declaramos el Modelo
+	private JScrollPane scrollListProductsResult;
+	private Product selectedProductResult;
+	
+	private JLabel jlTotal;
+	
 	private ListSelectionListener userListSelectionListener = new ListSelectionListener() {
 	    public void valueChanged(ListSelectionEvent event) {
 	        if (!event.getValueIsAdjusting() && !users.isEmpty()){
@@ -47,11 +63,7 @@ public class CartView extends JFrame implements BaseView {
 	        }
 	    }
 	};
-	
-	private JList productListResult;//declaramos La Lista
-	private DefaultListModel modelProductsResult;//declaramos el Modelo
-	private JScrollPane scrollListProductsResult;
-	private Product selectedProductResult;
+
 	
 	private ListSelectionListener productListSelectionListener = new ListSelectionListener() {
 	    public void valueChanged(ListSelectionEvent event) {
@@ -59,6 +71,7 @@ public class CartView extends JFrame implements BaseView {
 	            JList source = (JList)event.getSource();
 	            int selected = source.getSelectedIndex();
 	            if (selected >= 0) {	
+	            	source.clearSelection();
 	            	selectedProduct = products.get(selected);
 	            	viewControllerListener.onReceiveComand(null, ViewControllerListener.CMD_CART_SELECTED_PRODUCT);
 	            }
@@ -66,11 +79,6 @@ public class CartView extends JFrame implements BaseView {
 	    }
 	};
 	
-	private JList productList;//declaramos La Lista
-	private DefaultListModel modelProducts;//declaramos el Modelo
-	private JScrollPane scrollListProducts;
-	private ArrayList<Product> products;
-	private Product selectedProduct;
 	
 	public CartView() {
 		setTitle(BaseView.title);
@@ -162,6 +170,10 @@ public class CartView extends JFrame implements BaseView {
 		scrollListProductsResult.setViewportView(productListResult);
 		panelSelectProduct.add(scrollListProductsResult, BorderLayout.CENTER);
 		
+		jlTotal = new JLabel("TOTAL: 0.0");
+		
+		panelSelectProduct.add(jlTotal, BorderLayout.SOUTH);
+		
 		
 		TitledBorder borderOptions = BorderFactory.createTitledBorder("OPCIONES");
 		borderOptions.setTitleColor(Color.BLUE);
@@ -213,9 +225,7 @@ public class CartView extends JFrame implements BaseView {
 		return selectedUser;
 	}
 	
-	public Product getSelectedProduct() {
-		selectedProduct.setQuantity(1);
-		
+	public Product getSelectedProduct() {		
 		return selectedProduct;
 	}
 	
@@ -242,6 +252,7 @@ public class CartView extends JFrame implements BaseView {
 	}
 	
 	public void updateResult(Double total, ArrayList<Product> list) {
+		jlTotal.setText("Total :" + total);
 		modelProductsResult = new DefaultListModel();
 		
 		for (Product p : list) {

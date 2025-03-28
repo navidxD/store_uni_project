@@ -1,6 +1,7 @@
 package controller;
 
 import java.awt.event.ActionEvent;
+import java.util.ArrayList;
 
 import javax.swing.JFrame;
 
@@ -146,6 +147,7 @@ public class StoreController {
 		cartView.setViewControllerListener(viewControllerListener);
 		cartView.updateListProduct(productManager.getAll());
 		cartView.updateListUser(userManager.getAll());
+		cartView.updateResult(0.0, new ArrayList<Product>());
 		
 		showView(cartView);
 	}
