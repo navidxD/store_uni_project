@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"StoreUniProject","l":"controller"},{"m":"StoreUniProject","l":"main"},{"m":"StoreUniProject","l":"model.base"},{"m":"StoreUniProject","l":"model.cart"},{"m":"StoreUniProject","l":"model.product"},{"m":"StoreUniProject","l":"model.user"},{"m":"StoreUniProject","l":"view"}];updateSearchResults();

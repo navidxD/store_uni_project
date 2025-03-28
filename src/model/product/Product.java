@@ -16,6 +16,8 @@ public class Product extends BaseModel {
     private String descrption;
     /** Precio del producto */
     private double price;
+    /** Cantidad del producto */
+    private int quantity;
 
     /**
      * Obtiene el ID del producto
@@ -81,7 +83,15 @@ public class Product extends BaseModel {
 		this.descrption = descrption;
 	}
 
-    /**
+    public int getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int quantity) {
+		this.quantity = quantity;
+	}
+
+	/**
      * Devuelve una representación en cadena del objeto Product
      * @return cadena con los datos del producto
      */

@@ -23,7 +23,8 @@ public class ProductManager extends BasePersistence<Product> {
 	 * @param p el producto a crear
 	 * @return true si la creación fue exitosa, false en caso contrario
 	 */
-	public boolean createProduct(Product p) {		
+	public boolean createProduct(Product p) {	
+		p.setProductId(getIdProduct());
 		return add(p);
 	}
 

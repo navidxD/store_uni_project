@@ -49,21 +49,7 @@ public class Cart extends BaseModel {
 	 */
 	public void setProducts(ArrayList<Product> products) {
 		this.products = products;
-		updateTotalPrice();  
-	}
-
-	/**
-	 * Calcula el total del carrito sumando los precios de todos los productos
-	 * @return el total calculado
-	 */
-	public double calculateTotal() {
-		double total = 0;
-
-		for (Product p : products) {
-			total = total + p.getPrice();
-		}
-
-		return total;
+		getTotalPrice();
 	}
 
 	/**
@@ -71,13 +57,19 @@ public class Cart extends BaseModel {
 	 * @return el precio total actual
 	 */
 	public double getTotalPrice() {
+		this.totalPrice = 0;
+		
+		for (Product p : products) {
+			totalPrice += p.getPrice() * p.getQuantity();
+		}
+		
 		return totalPrice;
 	}
 
 	/**
 	 * Actualiza el precio total del carrito basado en los productos actuales
 	 */
-	private void updateTotalPrice() {
+	public void updateTotalPrice() {
 		this.totalPrice = products != null ?
 			products.stream()
 				.mapToDouble(Product::getPrice)

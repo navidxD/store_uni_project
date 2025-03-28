@@ -24,7 +24,7 @@ public class UserManager extends BasePersistence<User> {
 	 * @param user el usuario a crear
 	 * @return true si la creación fue exitosa, false en caso contrario
 	 */
-	public boolean createUser(User user) {		
+	public boolean createUser(User user) {
 		return add(user);
 	}
 

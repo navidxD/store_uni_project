@@ -47,19 +47,24 @@ public class CartManager extends BasePersistence<Cart> {
      * @param product el producto a agregar
      * @param quantity la cantidad de productos a agregar
      */
-    public void addProduct(Product product, int quantity) {
+    public void addProduct(Product product) {
+    	/**
         for (int i = 0; i < quantity; i++) {
             this.cart.getProducts().add(product);
         }
         productQuantities.merge(product, quantity, Integer::sum);
+        **/
+        
+        this.cart.getProducts().add(product);
     }
 
     /**
-     * Elimina productos del carrito
+     * Actualiza productos del carrito
      * @param product el producto a eliminar
      * @param quantity la cantidad de productos a eliminar
      */
-    public void removeProduct(Product product, int quantity) {
+    public void updateProduct(Product product) {
+    	/**
         int currentQuantity = productQuantities.getOrDefault(product, 0);
 
         for (int i = 0; i < quantity; i++) {
@@ -71,6 +76,30 @@ public class CartManager extends BasePersistence<Cart> {
         } else {
             productQuantities.put(product, currentQuantity - quantity);
         }
+        **/
+    	
+    	int index = -1;
+    	
+    	for (int i = 0; i < cart.getProducts().size(); i++) {
+    		Product p = cart.getProducts().get(i);
+    		if(p.getProductId() == product.getProductId()) {
+    			index = i;
+    			break;
+    		}
+    	}
+    	
+    	if (index == -1) {
+    		cart.getProducts().add(product);
+    	} else {
+    		if (product.getQuantity() != 0) {
+    			cart.getProducts().set(index, product);
+    		} else {
+    			cart.getProducts().remove(index);
+    		}
+    	}
+    	
+    	cart.updateTotalPrice();
+    	
     }
 
     /**
@@ -90,6 +119,10 @@ public class CartManager extends BasePersistence<Cart> {
         return this.cart.getProducts().stream()
                 .mapToDouble(Product::getPrice)
                 .sum();
+    }
+    
+    public double getTotal() {
+    	return cart.getTotalPrice();
     }
 
     /**
