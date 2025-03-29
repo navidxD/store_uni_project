@@ -276,7 +276,7 @@ public class CartView extends JFrame implements BaseView {
 	// Método para mostrar el mensaje de venta completada
 	public void showComplete(String id, User user, Double total) {
 		DialogUtil dialogUtil = new DialogUtil();
-		dialogUtil.showMessage("Venta completa con ID -> " + id + " USUARIO :: " + user.getIdUser() + " TOTAL = " + total);
+		dialogUtil.showMessage("Venta completa con ID DE COMPRA -> " + id + " TOTAL = " + total);
 		viewControllerListener.onReceiveComand(null, ViewControllerListener.CMD_MENU);
 	}
 }
