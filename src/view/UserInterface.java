@@ -5,13 +5,17 @@ import model.product.Product;
 import model.user.User;
 import model.cart.CartManager;
 
+// Clase que maneja la interfaz de usuario por consola
 public class UserInterface {
+    // Scanner para leer entrada del usuario
     private Scanner scanner;
 
+    // Constructor de la interfaz
     public UserInterface() {
         this.scanner = new Scanner(System.in);
     }
 
+    // Muestra el menú principal y maneja las opciones del usuario
     public void showMainMenu() {
         while (true) {
             System.out.println("\n=== Sistema de Gestión de Tienda ===");
@@ -22,7 +26,7 @@ public class UserInterface {
             System.out.print("Seleccione una opción: ");
 
             int choice = scanner.nextInt();
-            scanner.nextLine(); 
+            scanner.nextLine(); // Limpia el buffer del scanner
 
             switch (choice) {
                 case 1:
@@ -43,6 +47,7 @@ public class UserInterface {
         }
     }
 
+    // Método para crear un nuevo producto
     private void createProduct() {
         System.out.println("\n=== Crear Producto ===");
         System.out.print("Ingrese el nombre del producto: ");
@@ -54,6 +59,7 @@ public class UserInterface {
         System.out.print("Ingrese el precio del producto: ");
         double price = scanner.nextDouble();
         
+        // Crea y configura el nuevo producto
         Product product = new Product();
         product.setName(name);
         product.setPrice(price);
@@ -61,6 +67,7 @@ public class UserInterface {
         System.out.println("¡Producto creado exitosamente!");
     }
 
+    // Método para crear un nuevo usuario
     private void createUser() {
         System.out.println("\n=== Crear Usuario ===");
         System.out.print("Ingrese el nombre de usuario: ");
@@ -72,6 +79,7 @@ public class UserInterface {
         System.out.print("Ingrese la contraseña: ");
         String password = scanner.nextLine();
         
+        // Crea y configura el nuevo usuario
         User user = new User();
         user.setEmail(email);
         user.setName(username);
@@ -79,11 +87,13 @@ public class UserInterface {
         System.out.println("¡Usuario creado exitosamente!");
     }
 
+    // Método para crear un nuevo carrito de compras
     private void createShoppingCart() {
         System.out.println("\n=== Crear Carrito de Compras ===");
         System.out.print("Ingrese el correo electrónico del usuario para crear el carrito: ");
         String email = scanner.nextLine();
         
+        // Busca el usuario y crea el carrito si existe
         User user = findUserByEmail(email);
         if (user != null) {
             CartManager cartManager = new CartManager();
@@ -95,11 +105,13 @@ public class UserInterface {
         }
     }
 
+    // Método para buscar un usuario por su correo electrónico
     private User findUserByEmail(String email) {
-
+        // TODO: Implementar búsqueda de usuario
         return null;
     }
 
+    // Método principal que inicia la aplicación
     public static void main(String[] args) {
         UserInterface ui = new UserInterface();
         ui.showMainMenu();

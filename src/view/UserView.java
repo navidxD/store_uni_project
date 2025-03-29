@@ -19,16 +19,21 @@ import controller.ViewControllerListener;
 import model.product.Product;
 import model.user.User;
 
+// Clase que representa la vista para gestionar usuarios
 public class UserView extends JFrame implements BaseView {
 	
+	// Listener para comunicación con el controlador
 	private ViewControllerListener viewControllerListener;
+	// Panel para mostrar/editar datos del usuario
 	private UserDataView userDataView;
 	
-	private JList userList;//declaramos La Lista
-	private DefaultListModel model;//declaramos el Modelo
-	private JScrollPane scrollList;
-	private ArrayList<User> users;
+	// Componentes para la lista de usuarios
+	private JList userList;           // Lista de usuarios
+	private DefaultListModel model;    // Modelo de datos para la lista
+	private JScrollPane scrollList;    // Panel de desplazamiento
+	private ArrayList<User> users;     // Almacena los usuarios
 	
+	// Listener para manejar la selección de usuarios en la lista
 	private ListSelectionListener liListSelectionListener = new ListSelectionListener() {
 	    public void valueChanged(ListSelectionEvent event) {
 	        if (!event.getValueIsAdjusting() && !users.isEmpty()){
@@ -45,33 +50,37 @@ public class UserView extends JFrame implements BaseView {
 	    }
 	};
 	
+	// Constructor de la vista
 	public UserView() {
 		setTitle(BaseView.title);
 		setSize(600, 350);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		
+		// Configuración del panel principal
 		JPanel centro = new JPanel();
 		centro.setLayout(new BorderLayout());
 		add(centro, BorderLayout.NORTH);
 		
+		// Inicialización del panel de datos del usuario
 		userDataView = new UserDataView();
 		centro.add(userDataView, BorderLayout.CENTER);
 		
-		//instanciamos la lista
+		// Configuración de la lista de usuarios
 		userList = new JList();
 		userList.setSelectionMode(ListSelectionModel.SINGLE_SELECTION );
 		userList.addListSelectionListener(liListSelectionListener);
 		  
-		//instanciamos el modelo
+		// Configuración del modelo de datos
 		model = new DefaultListModel();
 		userList.setModel(model);
 		     
-		//instanciamos el Scroll que tendra la lista
+		// Configuración del panel de desplazamiento
 		scrollList = new JScrollPane();
 		scrollList.setBounds(20, 120,220, 80);
 		scrollList.setViewportView(userList);
 		add(scrollList, BorderLayout.CENTER);
 		
+		// Botones de acción
 		JButton btnNewButton_1 = new JButton("AGREGAR");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -97,7 +106,7 @@ public class UserView extends JFrame implements BaseView {
 			}
 		});
 		
-		
+		// Panel para los botones
 		JPanel buttons = new JPanel();
 		add(buttons, BorderLayout.SOUTH);
 		
@@ -107,12 +116,13 @@ public class UserView extends JFrame implements BaseView {
 		buttons.add(btnNewButton_0, BorderLayout.SOUTH);
 	}
 
+	// Método para establecer el listener del controlador
 	@Override
 	public void setViewControllerListener(ViewControllerListener viewControllerListener) {
-		// TODO Auto-generated method stub
 		this.viewControllerListener = viewControllerListener;
 	}
 	
+	// Método para obtener los datos del usuario del formulario
 	public User getUserFromForm() {
 		User user = new User();
 		
@@ -128,6 +138,7 @@ public class UserView extends JFrame implements BaseView {
 		return user;
 	}
 	
+	// Método para actualizar la lista de usuarios
 	public void updateListUser(ArrayList<User> list) {
 		this.users = list;
 		model = new DefaultListModel();
@@ -139,8 +150,8 @@ public class UserView extends JFrame implements BaseView {
 		userList.setModel(model);
 	}
 	
+	// Método para limpiar el formulario
 	public void clean() {
 		userDataView.clean();
 	}
-
 }

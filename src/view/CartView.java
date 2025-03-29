@@ -1,5 +1,6 @@
 package view;
 
+// Importaciones necesarias para la interfaz gráfica y manejo de eventos
 import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
@@ -26,31 +27,36 @@ import controller.ViewControllerListener;
 import model.product.Product;
 import model.user.User;
 
+// Clase que representa la vista del carrito de compras
 public class CartView extends JFrame implements BaseView {
 	
+	// Listener para comunicación con el controlador
 	private ViewControllerListener viewControllerListener;
 	
-	// user -----------------------------------------------------------------
+	// Componentes para la lista de usuarios
+	private JList userList; // Lista de usuarios
+	private DefaultListModel modelUser; // Modelo de datos para la lista de usuarios
+	private JScrollPane scrollListUser; // Panel de desplazamiento para la lista
+	private ArrayList<User> users; // Almacena los usuarios
+	private User selectedUser; // Usuario seleccionado actualmente
 	
-	private JList userList;//declaramos La Lista
-	private DefaultListModel modelUser;//declaramos el Modelo
-	private JScrollPane scrollListUser;
-	private ArrayList<User> users;
-	private User selectedUser;
-	
-	private JList productList;//declaramos La Lista
-	private DefaultListModel modelProducts;//declaramos el Modelo
+	// Componentes para la lista de productos
+	private JList productList;
+	private DefaultListModel modelProducts;
 	private JScrollPane scrollListProducts;
 	private ArrayList<Product> products;
 	private Product selectedProduct;
 	
-	private JList productListResult;//declaramos La Lista
-	private DefaultListModel modelProductsResult;//declaramos el Modelo
+	// Componentes para la lista de productos seleccionados
+	private JList productListResult;
+	private DefaultListModel modelProductsResult;
 	private JScrollPane scrollListProductsResult;
 	private Product selectedProductResult;
 	
+	// Etiqueta para mostrar el total
 	private JLabel jlTotal;
 	
+	// Listener para la selección de usuarios
 	private ListSelectionListener userListSelectionListener = new ListSelectionListener() {
 	    public void valueChanged(ListSelectionEvent event) {
 	        if (!event.getValueIsAdjusting() && !users.isEmpty()){
@@ -64,7 +70,7 @@ public class CartView extends JFrame implements BaseView {
 	    }
 	};
 
-	
+	// Listener para la selección de productos
 	private ListSelectionListener productListSelectionListener = new ListSelectionListener() {
 	    public void valueChanged(ListSelectionEvent event) {
 	        if (!event.getValueIsAdjusting() && !products.isEmpty()){
@@ -79,7 +85,7 @@ public class CartView extends JFrame implements BaseView {
 	    }
 	};
 	
-	
+	// Constructor de la vista
 	public CartView() {
 		setTitle(BaseView.title);
 		setSize(600, 1000);
@@ -90,6 +96,7 @@ public class CartView extends JFrame implements BaseView {
 		createResultSection();
 	}
 	
+	// Método para crear la sección de lista de usuarios
 	private void createUserList() {
 		JPanel panelSelectUser = new JPanel();
 		
@@ -117,6 +124,7 @@ public class CartView extends JFrame implements BaseView {
 		add(panelSelectUser, BorderLayout.NORTH);
 	}
 	
+	// Método para crear la sección de lista de productos
 	private void createProductList() {
 		JPanel panelSelectProduct = new JPanel();
 		
@@ -144,8 +152,8 @@ public class CartView extends JFrame implements BaseView {
 		add(panelSelectProduct, BorderLayout.CENTER);
 	}
 	
+	// Método para crear la sección de resultados y botones
 	private void createResultSection() {
-		
 		JPanel panelResult = new JPanel();
 		
 		
@@ -214,13 +222,13 @@ public class CartView extends JFrame implements BaseView {
 		add(panelResult, BorderLayout.SOUTH);
 	}
 
-
+	// Método para establecer el listener del controlador
 	@Override
 	public void setViewControllerListener(ViewControllerListener viewControllerListener) {
-		// TODO Auto-generated method stub
 		this.viewControllerListener = viewControllerListener;
 	}
 
+	// Métodos getter para obtener elementos seleccionados
 	public User getSelectedUser() {
 		return selectedUser;
 	}
@@ -229,6 +237,7 @@ public class CartView extends JFrame implements BaseView {
 		return selectedProduct;
 	}
 	
+	// Método para actualizar la lista de productos
 	public void updateListProduct(ArrayList<Product> list) {
 		this.products = list;
 		modelProducts = new DefaultListModel();
@@ -240,6 +249,7 @@ public class CartView extends JFrame implements BaseView {
 		productList.setModel(modelProducts);
 	}
 	
+	// Método para actualizar la lista de usuarios
 	public void updateListUser(ArrayList<User> list) {
 		this.users = list;
 		modelUser = new DefaultListModel();
@@ -251,6 +261,7 @@ public class CartView extends JFrame implements BaseView {
 		userList.setModel(modelUser);
 	}
 	
+	// Método para actualizar la sección de resultados
 	public void updateResult(Double total, ArrayList<Product> list) {
 		jlTotal.setText("Total :" + total);
 		modelProductsResult = new DefaultListModel();
@@ -262,10 +273,10 @@ public class CartView extends JFrame implements BaseView {
 		productListResult.setModel(modelProductsResult);
 	}
 	
+	// Método para mostrar el mensaje de venta completada
 	public void showComplete(String id, User user, Double total) {
 		DialogUtil dialogUtil = new DialogUtil();
 		dialogUtil.showMessage("Venta completa con ID -> " + id + " USUARIO :: " + user.getIdUser() + " TOTAL = " + total);
 		viewControllerListener.onReceiveComand(null, ViewControllerListener.CMD_MENU);
 	}
-
 }
