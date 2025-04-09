@@ -17,7 +17,7 @@ public class User extends BaseModel {
 	/** Correo electrónico del usuario */
 	private String email;
 	
-	/**
+	/**             
 	 * Obtiene el ID del usuario
 	 * @return el ID del usuario
 	 */

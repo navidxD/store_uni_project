@@ -4,7 +4,7 @@
     <eAnnotations xmi:id="_E2RZYAq0EfCy7KhTqrRxJg" source="http://ns.yatta.de/umllab">
       <contents xmi:type="ecore:EAnnotation" xmi:id="_E2SAcAq0EfCy7KhTqrRxJg" source="codegen">
         <details xmi:id="_E2SAcQq0EfCy7KhTqrRxJg" key="codegenDirectory" value="/StoreUniProject/src"/>
-        <details xmi:id="_HEUlUAq0EfCy7KhTqrRxJg" key="AssociatedSourceCode" value="/StoreUniProject/src/controller/StoreController.java;2989703736/1;/StoreUniProject/src/controller/ViewControllerListener.java;1950744534/1;/StoreUniProject/src/main/Main.java;1476352287/1;/StoreUniProject/src/model/base/BaseModel.java;2851195164/1;/StoreUniProject/src/model/base/BasePersistence.java;1422959765/1;/StoreUniProject/src/model/cart/Cart.java;1769809225/1;/StoreUniProject/src/model/cart/CartManager.java;3352264328/1;/StoreUniProject/src/model/product/Product.java;1477268608/1;/StoreUniProject/src/model/user/User.java;2945834077/1;/StoreUniProject/src/model/user/UserManager.java;1922253817/1;/StoreUniProject/src/view/BaseView.java;101862168/1;/StoreUniProject/src/view/MenuView.java;1090676136/1;"/>
+        <details xmi:id="_HEUlUAq0EfCy7KhTqrRxJg" key="AssociatedSourceCode" value="/StoreUniProject/src/controller/StoreController.java;2987742884/1;/StoreUniProject/src/controller/ViewControllerListener.java;1950744534/1;/StoreUniProject/src/main/Main.java;1476352287/1;/StoreUniProject/src/model/base/BaseModel.java;2851195164/1;/StoreUniProject/src/model/base/BasePersistence.java;1422959765/1;/StoreUniProject/src/model/cart/Cart.java;1769809225/1;/StoreUniProject/src/model/cart/CartManager.java;3352264328/1;/StoreUniProject/src/model/product/Product.java;1477268608/1;/StoreUniProject/src/model/user/User.java;1447972526/1;/StoreUniProject/src/model/user/UserManager.java;1922253817/1;/StoreUniProject/src/view/BaseView.java;3959999004/1;/StoreUniProject/src/view/MenuView.java;1038050391/1;"/>
       </contents>
       <contents xmi:type="ecore:EAnnotation" xmi:id="_KfdPYAt4EfC_gOdKAE1FpA" source="preferences">
         <contents xmi:type="ecore:EAnnotation" xmi:id="_Kfd2cAt4EfC_gOdKAE1FpA" source="com.yattasolutions.codegen.reverse">
@@ -376,7 +376,7 @@ Extiende de BaseModel para heredar funcionalidades básicas.</body>
       </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_FCrdsAq0EfCy7KhTqrRxJg" name="user">
         <packagedElement xmi:type="uml:Class" xmi:id="_FE0LsAq0EfCy7KhTqrRxJg" name="User">
-          <ownedComment xmi:id="_LPEudQt4EfC_gOdKAE1FpA">
+          <ownedComment xmi:id="_Xh7KMAy3EfCNffikzSLgAw">
             <body>Clase que representa un usuario en el sistema.&#xD;
 Extiende de BaseModel para heredar funcionalidades básicas.</body>
           </ownedComment>
@@ -395,6 +395,7 @@ Extiende de BaseModel para heredar funcionalidades básicas.</body>
           </ownedAttribute>
           <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_LO9Zsgt4EfC_gOdKAE1FpA" name="toString" specification="_LNgBIAt4EfC_gOdKAE1FpA">
             <ownedParameter xmi:id="_LO9Zswt4EfC_gOdKAE1FpA" direction="return">
+              <name xsi:nil="true"/>
               <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
             </ownedParameter>
             <language>java</language>
@@ -817,7 +818,8 @@ Proporciona operaciones CRUD básicas para cualquier modelo que extienda de Base
             <name xsi:nil="true"/>
           </ownedParameter>
           <language>java</language>
-          <body>setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);&#xD;
+          <body>// Configuración básica de la ventana&#xD;
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);&#xD;
 		setBounds(100, 100, 450, 300);&#xD;
 		setResizable(false);&#xD;
 		contentPane = new JPanel();&#xD;
@@ -825,9 +827,11 @@ Proporciona operaciones CRUD básicas para cualquier modelo que extienda de Base
 &#xD;
 		setContentPane(contentPane);&#xD;
 		&#xD;
+		// Panel que contendrá los botones&#xD;
 		JPanel panel = new JPanel();&#xD;
 		contentPane.add(panel);&#xD;
 		&#xD;
+		// Botón para gestionar usuarios&#xD;
 		JButton btnNewButton_1 = new JButton(&quot;USUARIO&quot;);&#xD;
 		btnNewButton_1.addActionListener(new ActionListener() {&#xD;
 			public void actionPerformed(ActionEvent e) {&#xD;
@@ -836,6 +840,7 @@ Proporciona operaciones CRUD básicas para cualquier modelo que extienda de Base
 		});&#xD;
 		panel.add(btnNewButton_1);&#xD;
 		&#xD;
+		// Botón para gestionar el inventario&#xD;
 		JButton btnNewButton_2 = new JButton(&quot;INVENTARIO&quot;);&#xD;
 		btnNewButton_2.addActionListener(new ActionListener() {&#xD;
 			public void actionPerformed(ActionEvent e) {&#xD;
@@ -844,6 +849,7 @@ Proporciona operaciones CRUD básicas para cualquier modelo que extienda de Base
 		});&#xD;
 		panel.add(btnNewButton_2);&#xD;
 		&#xD;
+		// Botón para gestionar ventas&#xD;
 		JButton btnNewButton = new JButton(&quot;VENTA&quot;);&#xD;
 		btnNewButton.addActionListener(new ActionListener() {&#xD;
 			public void actionPerformed(ActionEvent e) {&#xD;
@@ -863,8 +869,8 @@ Proporciona operaciones CRUD básicas para cualquier modelo que extienda de Base
           <eAnnotations xmi:id="_FE_K0Qq0EfCy7KhTqrRxJg" source="http://www.eclipse.org/uml2/2.0.0/UML">
             <details xmi:id="_FE_K0gq0EfCy7KhTqrRxJg" key="create"/>
           </eAnnotations>
-          <ownedComment xmi:id="_LPFVgAt4EfC_gOdKAE1FpA">
-            <body>Create the frame.</body>
+          <ownedComment xmi:id="_H8QYIAxPEfCNffikzSLgAw">
+            <body>Crear el frame principal</body>
           </ownedComment>
           <ownedParameter xmi:id="_FE_x4Aq0EfCy7KhTqrRxJg" type="_FE98sAq0EfCy7KhTqrRxJg" direction="return"/>
         </ownedOperation>
@@ -886,7 +892,7 @@ Proporciona operaciones CRUD básicas para cualquier modelo que extienda de Base
     <packagedElement xmi:type="uml:Package" xmi:id="_FC11wAq0EfCy7KhTqrRxJg" name="controller">
       <packagedElement xmi:type="uml:Class" xmi:id="_FDpHAAq0EfCy7KhTqrRxJg" name="StoreController">
         <ownedAttribute xmi:id="_FKWzAAq0EfCy7KhTqrRxJg" name="viewControllerListener" visibility="private" type="_FD6MwAq0EfCy7KhTqrRxJg" association="_FLYGsAq0EfCy7KhTqrRxJg">
-          <defaultValue xmi:type="uml:LiteralString" xmi:id="_FKWzAQq0EfCy7KhTqrRxJg" value="new ViewControllerListener() {&#xD;&#xA;&#x9;&#x9;@Override&#xD;&#xA;&#x9;&#x9;public void onReceiveComand(ActionEvent e, int cmd) {&#xD;&#xA;&#x9;&#x9;&#x9;// TODO Auto-generated method stub&#xD;&#xA;&#x9;&#x9;&#x9;System.out.println(&quot;StoreController onReceiveComand&quot; + cmd);&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_INVENTORY) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;showProductMenu();&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_INVENTORY_ADD) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productManager.createProduct(productView.getProductFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(productManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_INVENTORY_DELETE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productManager.deleteProduct(productView.getProductFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(productManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_INVENTORY_UPDATE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productManager.updateProduct(productView.getProductFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(productManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_USER) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;showUserMenu();&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_USER_ADD) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userManager.createUser(userView.getUserFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userView.updateListUser(userManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_USER_UPDATE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userManager.updateUser(userView.getUserFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userView.updateListUser(userManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_USER_DELETE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userManager.deleteUser(userView.getUserFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(productManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_CART) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if (productManager.getAll().isEmpty()) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dialogUtil.showMessage(&quot;No existen productos&quot;);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;} else {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;showCartMenu();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_CART_SELECTED_USER) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartManager.setUser(cartView.getSelectedUser());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_CART_SELECTED_PRODUCT) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartManager.updateProduct(cartView.getSelectedProduct());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartView.updateResult(cartManager.getCart().getTotalPrice(), cartManager.getCart().getProducts());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_CART_CLEAN) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartManager.clearCart();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartView.updateResult(cartManager.getCart().getTotalPrice(), cartManager.getCart().getProducts());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_CART_COMPLETE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if (cartManager.getCart().getProducts().isEmpty()) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dialogUtil.showMessage(&quot;Carrito Vacio&quot;);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;} else {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;cartManager.completeSale();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;cartView.showComplete(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;cartManager.getCart().getId(),&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;cartManager.getCart().getUser(),&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;cartManager.getCart().getTotalPrice());&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_MENU) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;showMainMenu();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartManager.clearCart();&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}"/>
+          <defaultValue xmi:type="uml:LiteralString" xmi:id="_FKWzAQq0EfCy7KhTqrRxJg" value="new ViewControllerListener() {&#xD;&#xA;&#x9;&#x9;@Override&#xD;&#xA;&#x9;&#x9;public void onReceiveComand(ActionEvent e, int cmd) {&#xD;&#xA;&#x9;&#x9;&#x9;// TODO Auto-generated method stub&#xD;&#xA;&#x9;&#x9;&#x9;System.out.println(&quot;StoreController onReceiveComand&quot; + cmd);&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;if (cmd == ViewControllerListener.CMD_INVENTORY) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;showProductMenu();&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_INVENTORY_ADD) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productManager.createProduct(productView.getProductFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(productManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_INVENTORY_DELETE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productManager.deleteProduct(productView.getProductFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(productManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_INVENTORY_UPDATE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productManager.updateProduct(productView.getProductFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;productView.updateListProduct(productManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_USER) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;showUserMenu();&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_USER_ADD) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userManager.createUser(userView.getUserFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userView.updateListUser(userManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_USER_UPDATE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userManager.updateUser(userView.getUserFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userView.updateListUser(userManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_USER_DELETE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userManager.deleteUser(userView.getUserFromForm());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;userView.updateListUser(userManager.getAll());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_CART) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if (productManager.getAll().isEmpty()) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dialogUtil.showMessage(&quot;No existen productos&quot;);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;} else {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;showCartMenu();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_CART_SELECTED_USER) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartManager.setUser(cartView.getSelectedUser());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_CART_SELECTED_PRODUCT) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartManager.updateProduct(cartView.getSelectedProduct());&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartView.updateResult(cartManager.getCart().getTotalPrice(), cartManager.getCart().getProducts());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_CART_CLEAN) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartManager.clearCart();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartView.updateResult(cartManager.getCart().getTotalPrice(), cartManager.getCart().getProducts());&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_CART_COMPLETE) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;if (cartManager.getCart().getProducts().isEmpty()) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;dialogUtil.showMessage(&quot;Carrito Vacio&quot;);&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;} else {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;cartManager.completeSale();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;cartView.showComplete(&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;cartManager.getCart().getId(),&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;cartManager.getCart().getUser(),&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;cartManager.getCart().getTotalPrice());&#x9;&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;&#x9;else if (cmd == ViewControllerListener.CMD_MENU) {&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;dismissAllView();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;showMainMenu();&#xD;&#xA;&#x9;&#x9;&#x9;&#x9;cartManager.clearCart();&#xD;&#xA;&#x9;&#x9;&#x9;}&#xD;&#xA;&#x9;&#x9;}&#xD;&#xA;&#x9;}"/>
         </ownedAttribute>
         <ownedAttribute xmi:id="_FKYBIQq0EfCy7KhTqrRxJg" name="userManager" visibility="private" type="_FE2n8Aq0EfCy7KhTqrRxJg" association="_FLZ74Aq0EfCy7KhTqrRxJg"/>
         <ownedAttribute xmi:id="_FKYoMQq0EfCy7KhTqrRxJg" name="cartManager" visibility="private" type="_FEjtAAq0EfCy7KhTqrRxJg" association="_FLai8Qq0EfCy7KhTqrRxJg"/>
@@ -931,6 +937,7 @@ Proporciona operaciones CRUD básicas para cualquier modelo que extienda de Base
           <body>if (userView == null) {&#xD;
 			userView = new UserView();&#xD;
 		}&#xD;
+		userView.clean();&#xD;
 		userView.setViewControllerListener(viewControllerListener);&#xD;
 		userView.updateListUser(userManager.getAll());&#xD;
 		showView(userView);&#xD;
