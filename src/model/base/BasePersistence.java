@@ -1,6 +1,9 @@
 package model.base;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.function.ObjDoubleConsumer;
 import java.util.function.Predicate;
 
 /**
@@ -27,6 +30,8 @@ public abstract class BasePersistence<T extends BaseModel> {
 	 */
 	abstract public void init();
 	
+	//CREATE -------------------------------------------------------------------
+	
 	/**
 	 * Agrega un nuevo modelo a la lista
 	 * @param model el modelo a agregar
@@ -38,11 +43,13 @@ public abstract class BasePersistence<T extends BaseModel> {
 		return models.add(getCopy(model));
 	}
 	
+	//READ ---------------------------------------------------------------------
+	
 	/**
 	 * Obtiene todos los modelos almacenados
 	 * @return lista con copias de todos los modelos
 	 */
-	public ArrayList<T> getAll() {
+	protected ArrayList<T> getAll() {
 		ArrayList<T> res = new ArrayList<T>();
 		
 		for (T m : models) {
@@ -69,6 +76,43 @@ public abstract class BasePersistence<T extends BaseModel> {
 	}
 	
 	/**
+	 * 
+	 * @param condition
+	 * @return
+	 */
+	protected ArrayList<T> getListSortedByCondition(BaseModelSortComparator<T> condition) {
+		
+		ArrayList<T> res = new ArrayList<T>();
+		T[] array = bubbleSort(getAll(), condition);
+		
+		for (T m : array) {
+			res.add(getCopy(m));
+		}
+		
+		return res;
+	}
+	
+	/**
+	 * 
+	 * @param condition
+	 * @return
+	 */
+	protected ArrayList<T> getListFilterByCondition(BaseModelFilter<T> condition) {
+		
+		ArrayList<T> res = new ArrayList<T>();
+		
+		for (T m : models) {
+			if (condition.checkConditionToFilter(m)) {
+				res.add(getCopy(m));	
+			}
+		}
+		
+		return res;
+	}
+	
+	//UPDATE --------------------------------------------------------------------
+	
+	/**
 	 * Actualiza un modelo existente
 	 * @param model modelo con los datos actualizados
 	 * @return true si se actualizó correctamente
@@ -84,6 +128,8 @@ public abstract class BasePersistence<T extends BaseModel> {
 		
 		return res;
 	}
+	
+	//DELETE ------------------------------------------------------------------
 	
 	/**
 	 * Elimina un modelo por su ID
@@ -102,6 +148,8 @@ public abstract class BasePersistence<T extends BaseModel> {
 		return res;
 	}
 	
+	//UTILS /------------------------------------------------------------------
+	
 	/**
 	 * Busca el índice de un modelo por su ID
 	 * @param id identificador del modelo
@@ -109,11 +157,16 @@ public abstract class BasePersistence<T extends BaseModel> {
 	 */
 	protected int getIndexByID(String id) {
 		int i = -1;
-		for (int pos = 0; pos < models.size(); pos++) {
-			if (models.get(pos).id.equals(id)) {
-				i = pos;
+		T m = null;
+		for (T model : models) {
+			if (model.id.equals(id)) {
+				m = model;
 				break;
 			}
+		}
+		
+		if (m != null) {
+			i = models.indexOf(m);
 		}
 		
 		return i;
@@ -141,4 +194,27 @@ public abstract class BasePersistence<T extends BaseModel> {
 			return null;
 		}
 	}
+	
+	private T[] bubbleSort(ArrayList<T> list, BaseModelSortComparator<T> comparator) {
+
+		  T[] myArray = (T[])Array.newInstance(BaseModel.class, list.size());
+		  myArray = list.toArray(myArray);
+	      T temp = null;  //  temporary element for swapping
+	      int counter = 0;  //  element to count quantity of steps
+
+	      for (int i = 0; i < myArray.length; i++) {
+	          counter = i + 1;
+	          for (int j = 1; j < (myArray.length - i); j++) {
+	        	  
+	        	  if (comparator.checkConditionToSort(myArray[j - 1], (myArray[j]))) {
+	                   //  swap array’s elements using temporary element
+	                   temp = myArray[j - 1];
+	                   myArray[j - 1] = myArray[j];
+	                   myArray[j] = temp;
+	              }
+	           }
+	       }
+	      
+	       return myArray;
+	   }
 }

@@ -1,5 +1,8 @@
 package model.product;
 
+import java.util.ArrayList;
+
+import model.base.BaseModelSortComparator;
 import model.base.BasePersistence;
 
 /**
@@ -52,6 +55,26 @@ public class ProductManager extends BasePersistence<Product> {
 			return true;
 		}
 		return false;
+	}
+	
+	
+	public ArrayList<Product> getAllProducts() {
+		return getAll();
+	}
+	
+	public ArrayList<Product> getProductsSortedByPrice(boolean asc) {
+		return getListSortedByCondition(new BaseModelSortComparator<Product>() {
+			
+			@Override
+			public boolean checkConditionToSort(model.product.Product obj1, model.product.Product obj2) {
+				if (asc) {
+					return obj2.getPrice() < obj1.getPrice();	
+				} else {
+					return obj2.getPrice() > obj1.getPrice();
+				}
+			}
+			
+		});
 	}
 	
 	/**

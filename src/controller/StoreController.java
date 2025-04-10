@@ -29,15 +29,15 @@ public class StoreController {
 			}
 			else if (cmd == ViewControllerListener.CMD_INVENTORY_ADD) {
 				productManager.createProduct(productView.getProductFromForm());
-				productView.updateListProduct(productManager.getAll());
+				productView.updateListProduct(productManager.getAllProducts());
 			}
 			else if (cmd == ViewControllerListener.CMD_INVENTORY_DELETE) {
 				productManager.deleteProduct(productView.getProductFromForm());
-				productView.updateListProduct(productManager.getAll());
+				productView.updateListProduct(productManager.getAllProducts());
 			}
 			else if (cmd == ViewControllerListener.CMD_INVENTORY_UPDATE) {
 				productManager.updateProduct(productView.getProductFromForm());
-				productView.updateListProduct(productManager.getAll());
+				productView.updateListProduct(productManager.getAllProducts());
 			}
 			else if (cmd == ViewControllerListener.CMD_USER) {
 				dismissAllView();
@@ -45,18 +45,18 @@ public class StoreController {
 			}
 			else if (cmd == ViewControllerListener.CMD_USER_ADD) {
 				userManager.createUser(userView.getUserFromForm());
-				userView.updateListUser(userManager.getAll());
+				userView.updateListUser(userManager.getAllUsers());
 			}
 			else if (cmd == ViewControllerListener.CMD_USER_UPDATE) {
 				userManager.updateUser(userView.getUserFromForm());
-				userView.updateListUser(userManager.getAll());
+				userView.updateListUser(userManager.getAllUsers());
 			}
 			else if (cmd == ViewControllerListener.CMD_USER_DELETE) {
 				userManager.deleteUser(userView.getUserFromForm());
-				userView.updateListUser(userManager.getAll());
+				userView.updateListUser(userManager.getAllUsers());
 			}
 			else if (cmd == ViewControllerListener.CMD_CART) {
-				if (productManager.getAll().isEmpty()) {
+				if (productManager.getAllProducts().isEmpty()) {
 					dialogUtil.showMessage("No existen productos");
 				} else {
 					dismissAllView();
@@ -125,7 +125,7 @@ public class StoreController {
 		}
 		productView.clean();
 		productView.setViewControllerListener(viewControllerListener);
-		productView.updateListProduct(productManager.getAll());
+		productView.updateListProduct(productManager.getAllProducts());
 		showView(productView);
 	}
 	
@@ -135,7 +135,7 @@ public class StoreController {
 		}
 		userView.clean();
 		userView.setViewControllerListener(viewControllerListener);
-		userView.updateListUser(userManager.getAll());
+		userView.updateListUser(userManager.getAllUsers());
 		showView(userView);
 	}
 	
@@ -146,8 +146,8 @@ public class StoreController {
 		
 		cartManager.startSale();
 		cartView.setViewControllerListener(viewControllerListener);
-		cartView.updateListProduct(productManager.getAll());
-		cartView.updateListUser(userManager.getAll());
+		cartView.updateListProduct(productManager.getAllProducts());
+		cartView.updateListUser(userManager.getAllUsers());
 		cartView.updateResult(0.0, new ArrayList<Product>());
 		
 		showView(cartView);

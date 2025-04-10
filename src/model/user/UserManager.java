@@ -1,5 +1,7 @@
 package model.user;
 
+import java.util.ArrayList;
+
 import model.base.BasePersistence;
 import model.product.Product;
 
@@ -26,6 +28,10 @@ public class UserManager extends BasePersistence<User> {
 	 */
 	public boolean createUser(User user) {
 		return add(user);
+	}
+	
+	public ArrayList<User> getAllUsers() {
+		return getAll();
 	}
 
 	/**
