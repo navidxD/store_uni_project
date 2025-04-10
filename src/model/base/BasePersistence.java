@@ -66,10 +66,10 @@ public abstract class BasePersistence<T extends BaseModel> {
 	 */
 	protected T getById(String id) {
 		T res = null;
-		int index = getIndexByID(id);
+		T m = getModelByID(id);
 		
-		if (index != -1) {
-			res = getCopy(models.get(index));
+		if (m != null) {
+			res = getCopy(m);
 		}
 		
 		return res;
@@ -80,10 +80,10 @@ public abstract class BasePersistence<T extends BaseModel> {
 	 * @param condition
 	 * @return
 	 */
-	protected ArrayList<T> getListSortedByCondition(BaseModelSortComparator<T> condition) {
+	protected ArrayList<T> getListSortedByCondition(BaseModelSortComparator<T> comparator) {
 		
 		ArrayList<T> res = new ArrayList<T>();
-		T[] array = bubbleSort(getAll(), condition);
+		T[] array = bubbleSort(models, comparator);
 		
 		for (T m : array) {
 			res.add(getCopy(m));
@@ -138,10 +138,10 @@ public abstract class BasePersistence<T extends BaseModel> {
 	 */
 	protected boolean deleteById(String id) {
 		boolean res = false;
-		int index = getIndexByID(id);
+		T m = getModelByID(id);
 		
-		if (index != -1) {
-			models.remove(index);
+		if (m != null) {
+			models.remove(m);
 			res = true;
 		}
 		
@@ -157,6 +157,16 @@ public abstract class BasePersistence<T extends BaseModel> {
 	 */
 	protected int getIndexByID(String id) {
 		int i = -1;
+		T m = getModelByID(id);
+		
+		if (m != null) {
+			i = models.indexOf(m);
+		}
+		
+		return i;
+	}
+	
+	protected T getModelByID(String id) {
 		T m = null;
 		for (T model : models) {
 			if (model.id.equals(id)) {
@@ -165,11 +175,7 @@ public abstract class BasePersistence<T extends BaseModel> {
 			}
 		}
 		
-		if (m != null) {
-			i = models.indexOf(m);
-		}
-		
-		return i;
+		return m;
 	}
 	
 	/**

@@ -4,7 +4,6 @@ module StoreUniProject {
 	exports model.user;
 	exports model.product;
 	exports main;
-	exports model;
 	exports model.base;
 	exports model.cart;
 
