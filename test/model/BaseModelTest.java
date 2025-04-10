@@ -6,7 +6,6 @@ import java.util.ArrayList;
 
 import org.junit.jupiter.api.Test;
 
-import model.base.BaseModelComparator;
 import model.product.Product;
 import model.product.ProductManager;
 
